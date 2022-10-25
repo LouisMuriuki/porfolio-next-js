@@ -5,7 +5,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'lato': ['Lato', 'sans-serif'] ,
+        'fuzzy-bubbles':['Fuzzy Bubbles','sans-serif'],
+        'poppins':['Poppins','sans-serif'],
+        'kalam':['Kalam','sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

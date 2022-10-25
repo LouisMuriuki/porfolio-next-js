@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -8,29 +9,37 @@ const Main = () => {
     <div id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          <p className="uppercase text-sm tracking-widest text-gray-600">
-            Developer
+          <p className="uppercase text-xl tracking-widest text-[#fff]  font-fuzzy-bubbles">
+            MERN FULLSTACK DEVELOPER
           </p>
-          <h1 className="py-4 text-gray-700">
-            Hi I'm <span className="text-[#5651e5]">Louis</span>
+          <h1 className="py-4 text-[#fff]">
+          Hello, I'm <span className="text-[#08d1d1]">LOUIS MURIUKI</span>
           </h1>
-          <h1 className="py-4 text-gray-700">
+          <h1 className="py-4 text-[#fff]">
             A Full Stack Web and Mobile Developer
           </h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto"></p>
           <div className="flex items-center justify-between nax-w-[330px] m-auto py-4">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-400">
-              <FaLinkedinIn />
+            <Link href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/">
+            <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <FaLinkedinIn/>
             </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-400">
+            </Link>
+            <Link href="https://github.com/LouisMuriuki">
+            <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <FaGithub/>
             </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-400">
+            </Link>
+            <a href="mailto:luihugo247@gmail.com">
+            <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <AiOutlineMail/>
             </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-400">
+            </a>
+            <a href="tel:+254759266327">
+            <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <BsFillPersonLinesFill />
             </div>
+            </a>
           </div>
         </div>
       </div>

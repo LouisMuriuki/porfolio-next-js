@@ -18,8 +18,8 @@ const Navbar = () => {
       setNavbg("transparent")
       setLinkColor("#ecf0f3")
     }else{
-      setNavbg('#ecf0f3')
-      setLinkColor("#1f2937")
+      setNavbg('#000d17')
+      setLinkColor("#05a1a1")
     } 
 
   },[router])
@@ -43,11 +43,11 @@ const Navbar = () => {
     style={{backgroundColor:`${navbg}`}}
       className={
         shadow
-          ? "fixed w-full h-20 shadow-xl z-[100]"
-          : "fixed w-full h-20 z-[100]"
+          ? "fixed w-full h-20 shadow-sm shadow-teal-900 z-[100] flex justify-center font-kalam font-bold"
+          : "fixed w-full h-20 z-[100] flex justify-center font-kalam font-bold"
       }
     >
-      <div className="flex justify-between items-center w-full px-2 2xl:px-16">
+      <div className="flex justify-between items-center w-full px-2 2xl:px-20">
         <Link href="/#home">
           <Image
             src="/../public/assests/name.png"
@@ -59,21 +59,21 @@ const Navbar = () => {
         <div>
           <ul style={{color:`${linkColor}`}} className="hidden md:flex ">
             <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
+              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">Home</li>
             </Link>
             <Link href="/#about">
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
+              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">About</li>
             </Link>
             <Link href="/#skills">
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">Skills</li>
             </Link>
             <Link href="/#projects">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">
                 Projects
               </li>
             </Link>
             <Link href="/#contact">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="ml-10 mr-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">
                 Contact
               </li>
             </Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#000d17] p-10 ease-in duration-500"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
@@ -107,16 +107,16 @@ const Navbar = () => {
               </Link>
               <div
                 onClick={handlenav}
-                className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer"
               >
                 <AiOutlineClose />
               </div>
             </div>
-            <div className="border-b border-gray-300 my-4">
+            <div className="border-b border-white-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4">Hello, i am a MERN</p>
             </div>
             <div className="py-4 flex-col">
-              <ul className="uppercase">
+              <ul className="uppercase font-kalam font-bold">
                 <Link href="/">
                   <li
                     onClick={() => {
@@ -127,7 +127,7 @@ const Navbar = () => {
                     Home
                   </li>
                 </Link>
-                <Link href="/#about">
+                <Link href="/#about" >
                   <li
                     onClick={() => {
                       setNav(false);
@@ -169,20 +169,20 @@ const Navbar = () => {
                 </Link>
               </ul>
               <div className="pt-40">
-                <p className="uppercase tracking-widest text-[#5651e5]">
+                <p className="uppercase tracking-widest text-[#FFF]">
                   lets Connect
                 </p>
                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
+                  <div className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
                     <FaLinkedinIn />
                   </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
+                  <div className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
                     <FaGithub />
                   </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
+                  <div className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
                     <AiOutlineMail />
                   </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
+                  <div className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
                     <BsFillPersonLinesFill />
                   </div>
                 </div>
