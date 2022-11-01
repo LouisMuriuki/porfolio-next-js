@@ -10,7 +10,7 @@ const ProjectItem = ({title,bgImage,projectUrl}) => {
              {title}
             </h3>
             <p className="pb-4 pt-2 text-white text-center">React Js</p>
-            <a href={projectUrl} target="_blank">
+            <a href={projectUrl} target="_blank" rel='noreferrer'>
               <p className="text-center py-3 rounded-lg bg-white text-grey-700 font-bold text-lg cursor-pointer">
                 More Info
               </p>

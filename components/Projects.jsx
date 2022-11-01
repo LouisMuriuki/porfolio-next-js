@@ -89,15 +89,15 @@ const Projects = () => {
         <h2 className={width<728?"githubTitlesmall":"githubTitle"}>Want to see all my Projects?</h2>
         {width>728 &&<div className="githubChart">
           <div className="dates">
-            {dates.map((date) => {
-              return <span key={date}>{date}</span>;
+            {dates.map((date,i) => {
+              return <span key={i}>{date}</span>;
             })}
           </div>
           <div className="boxContainer">
             <Githuboxes />
           </div>
         </div>}
-        <a href="https://github.com/LouisMuriuki" target="_blank">
+        <a href="https://github.com/LouisMuriuki" target="_blank" rel='noreferrer'>
         <h2 className={width<728?"githubTitlesmall text-xl underline":"githubTitle text-xl underline"}>Find me on Github😎💻</h2>
         </a>
       </div>
