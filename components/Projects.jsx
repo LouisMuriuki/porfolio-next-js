@@ -27,7 +27,7 @@ const Projects = () => {
   };
 
   const Githuboxes = () => {
-    return Array.from({ length: days }, (element,index) => <Box  index={index}/>);
+    return Array.from({ length: days }, (element,index) => <Box key={index}  index={index}/>);
   };
 
   const dates = [
