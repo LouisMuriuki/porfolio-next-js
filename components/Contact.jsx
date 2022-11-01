@@ -6,21 +6,44 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import lui from "../public/assests/lui.jpg";
 import Image from "next/image";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
+  const [submitted, setSubmitted] = useState("");
 
-  const handleMessageChange = () => {
-    let inputValue = e.target.value;
-    setMessage(inputValue);
+  const notify = () => toast("Message received!");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let data = { name, phone, email, subject, message };
+    fetch("/api/email", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      console.log("Response received");
+      if (res.status === 200) {
+        console.log("Response succeeded!");
+        setSubmitted(true);
+        notify()
+        setName("");
+        setEmail("");
+        setPhone("");
+        setSubject("");
+        setMessage("");
+      }
+    });
   };
-  const handleEmailChange = () => {
-    let inputValue = e.target.value;
-    ;
-  };
+
   return (
     <div id="contact" className="w-full h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
@@ -78,7 +101,6 @@ const Contact = () => {
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-
                   />
                 </div>
                 <div className="flex flex-col">
@@ -87,7 +109,7 @@ const Contact = () => {
                     className="border-2 outline-0 text-[#000] rounded-lg p-3 flex border-gray-300"
                     type="text"
                     value={phone}
-                    onChange={(e)=>setPhone(e.target.value)}
+                    onChange={(e) => setPhone(e.target.value)}
                   />
                 </div>
               </div>
@@ -96,7 +118,7 @@ const Contact = () => {
                 <input
                   className="border-2 outline-0 text-[#000] rounded-lg p-3 flex border-gray-300"
                   type="email"
-                  onChange={(e)=>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   value={email}
                 />
               </div>
@@ -106,7 +128,7 @@ const Contact = () => {
                   className="border-2 outline-0 text-[#000] rounded-lg p-3 flex border-gray-300"
                   type="type"
                   value={subject}
-                  onChange={(e)=>setSubject(e.target.value)}
+                  onChange={(e) => setSubject(e.target.value)}
                 />
               </div>
               <div className="flex flex-col py-2">
@@ -114,11 +136,15 @@ const Contact = () => {
                 <textarea
                   className="border-2 text-[#000] outline-0 rounded-lg p-3 border-gray-300"
                   rows="10"
-                  onChange={(e)=>setMessage(e.target.value)}
+                  onChange={(e) => setMessage(e.target.value)}
                   value={message}
                 ></textarea>
               </div>
-              <button className="w-full p-4 text-gray-100 mt-4">
+              <button
+                type="submit"
+                onClick={(e) => handleSubmit(e)}
+                className="w-full p-4 text-gray-100 mt-4"
+              >
                 Send Message
               </button>
             </form>
@@ -132,6 +158,7 @@ const Contact = () => {
           </Link>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

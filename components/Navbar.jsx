@@ -5,6 +5,7 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
+import Lui from "../public/Louis.png"
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
@@ -43,17 +44,18 @@ const Navbar = () => {
     style={{backgroundColor:`${navbg}`}}
       className={
         shadow
-          ? "fixed w-full h-20 shadow-sm shadow-teal-900 z-[100] flex justify-center font-kalam font-bold"
-          : "fixed w-full h-20 z-[100] flex justify-center font-kalam font-bold"
+          ? "fixed w-full h-20 shadow-sm shadow-teal-900 z-[100] flex justify-center font-fuzzy-bubbles font-bold"
+          : "fixed w-full h-20 z-[100] flex justify-center font-fuzzy-bubbles font-bold"
       }
     >
-      <div className="flex justify-between items-center w-full px-2 2xl:px-20">
+      <div className="flex justify-between items-center w-full px-2 2xl:px-20 ">
         <Link href="/#home">
           <Image
-            src="/../public/assests/name.png"
-            alt="/"
-            width="124"
-            height="50"
+            src={Lui}
+            alt="Lui"
+            className="object-cover hover:cursor-pointer"
+            width="205"
+            height="80"
           />
         </Link>
         <div>
@@ -99,15 +101,16 @@ const Navbar = () => {
             <div className="flex w-full items-center justify-between">
               <Link href="/">
                 <Image
-                  src="/../public/assests/name.png"
-                  alt="/"
-                  width="87"
-                  height="35"
+                  src={Lui}
+                  alt="lui"
+                  className="object-cover"
+                  width="117"
+                  height="97"
                 />
               </Link>
               <div
                 onClick={handlenav}
-                className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer"
+                className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer"
               >
                 <AiOutlineClose />
               </div>
@@ -173,18 +176,26 @@ const Navbar = () => {
                   lets Connect
                 </p>
                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                  <div className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
-                    <FaLinkedinIn />
-                  </div>
-                  <div className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
-                    <FaGithub />
-                  </div>
-                  <div className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
-                    <AiOutlineMail />
-                  </div>
-                  <div className="rounded-full shadow-md shadow-teal-400 p-3 cursor-pointer hover:scale-105 ease-in duration-400">
-                    <BsFillPersonLinesFill />
-                  </div>
+                <Link href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/">
+              <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaLinkedinIn />
+              </div>
+            </Link>
+            <Link href="https://github.com/LouisMuriuki">
+              <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaGithub />
+              </div>
+            </Link>
+            <a href="mailto:luihugo247@gmail.com">
+              <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
+                <AiOutlineMail />
+              </div>
+            </a>
+            <a href="tel:+254759266327">
+              <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
+                <BsFillPersonLinesFill />
+              </div>
+            </a>
                 </div>
               </div>
             </div>
