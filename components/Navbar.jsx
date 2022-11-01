@@ -116,7 +116,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="border-b border-white-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4">Hello, i am a MERN</p>
+              <p className="w-[85%] md:w-[90%] py-4">Hello, i am a MERN DEV</p>
             </div>
             <div className="py-4 flex-col">
               <ul className="uppercase font-kalam font-bold">
