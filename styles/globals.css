@@ -8,6 +8,61 @@ html{
 body{
   scroll-behavior: smooth;
 }
+
+.githubContainer {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.githubTitle {
+  font-size: 40px;
+  /* color: rgb(255, 255, 255); */
+}
+.githubTitlesmall{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.githubChart {
+  width: 820px;
+  text-align: center;
+}
+
+.dates {
+  padding: 10px;
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  cursor: pointer;
+}
+.box{
+  width:15px;
+  height: 15px;
+  background-color: #171c25;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 1s all ease-in;
+}
+.active:nth-child(4n){
+  background-color: #195b2c;
+}
+.githubChart:hover .active:nth-child(2n+1){
+  background-color: #195b2c;
+}
+.githubChart:hover .active:nth-child(2n){
+  background-color: #063f24;
+}
+
 @layer base{
   body{
     @apply bg-[#000d17] text-[#05a1a1] tracking-wide
