@@ -21,6 +21,10 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!email&&!message){
+      toast("Please enter your message first")
+      return
+    }
     let data = { name, phone, email, subject, message };
     fetch("/api/email", {
       method: "POST",
