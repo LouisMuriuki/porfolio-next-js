@@ -10,7 +10,7 @@ const About = () => {
     });
 
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window.removeEventListener("scroll", () => { });
     };
   }, []);
   return (
@@ -22,33 +22,35 @@ const About = () => {
           </p>
           <h2 className="py-4 font-lato">Who i Am</h2>
           <div className="flex flex-col md:flex-row gap-x-8 ">
-            <div id="image" className="p-2 rounded-xl hover:shadow-md shadow-teal-900">
+            <div id="image" className="pt-6 rounded-xl">
               <Image
-              id="luiimage"
-                className="rounded-xl hover:scale-110 ease-in duration-300 hover:rounded-xl cursor-pointer"
+                id="luiimage"
+                className="pt-0 md:pt-20 xl:pt-40   rounded-xl hover:scale-110 ease-in duration-300 hover:rounded-xl cursor-pointer "
                 src={Lui}
                 alt="Lui"
-                width="500px"
-                height="500px"
+
               />
             </div>
-            <div id="text" className="flex flex-col">
-              <p className="py-2 text-md font-poppins text-[#fff]">
-                Hello, my name is Louis Muriuki. I am a self-taught Web and
-                Mobile developer.
+            <div id="text" className="flex flex-col z-10 rounded-xl h-max hover:shadow-md overflow-hidden shadow-teal-900">
+              <p className="py-2 z-10 text-xs md:text-sm lg:text-base font-poppins text-[#fff]">
+                Hi there👋, My name is <span className="text-[#08d1d1] text-sm md:text-lg font-kalam">Louis Muriuki Hugo</span> and I am a full-stack JavaScript developer with a focus on building intuitive,
+                user-friendly web applications. I have a strong foundation in React,
+                and have experience using Next.js to build server-rendered applications and React Native to build cross-platform mobile apps.
               </p>
-              <p className="py-2 text-md font-poppins text-[#fff]">
-                I enjoy build interactive applications and spend most of my time
-                writing code.
-                <br />I love building applications from scratch as that exposes
-                me to challenges that eventually turn out to be learning
-                opportunities.
+              <p className="py-2 z-10 text-xs md:text-base font-poppins text-[#fff]">
+                I have a passion for clean, efficient code and enjoy the process of turning complex problems into simple, elegant solutions.
+                I am comfortable working on both front-end and back-end projects, and have experience with technologies such as Node.js, Express, and MongoDB.
               </p>
-              <p className="py-2 text-md font-poppins  text-[#fff]">
-                I love learning new technolgies as that gives me more skills and
-                "muscles" to flex while building my next application{" "}
+              <p className="py-2 z-10 text-xs md:text-base font-poppins  text-[#fff]">
+                In my free time, I enjoy staying active and exploring the great outdoors. I love going on hikes and swims, and also enjoy hitting the gym to stay fit.
+                I also enjoy staying up to date with the latest developments in the tech industry and am always looking for opportunities to learn and grow
               </p>
-              <p className="py-2 text-md font-poppins text-[#fff] underline cursor-pointer"></p>
+              <p className="py-2 z-10 text-xs md:text-base font-poppins  text-[#fff]">
+                I am a reliable and detail-oriented developer who takes pride in delivering high-quality work on time.
+                I am always eager to take on new challenges and excited to see how I can contribute to your project.
+                Thank you for considering my skills and experience. I look forward to the opportunity to work with you and bring your vision to life.
+              </p>
+              <p className="py-2 text-xs md:text-base font-poppins text-[#fff] underline cursor-pointer"></p>
             </div>
           </div>
         </div>

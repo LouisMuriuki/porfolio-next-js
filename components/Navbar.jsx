@@ -61,21 +61,21 @@ const Navbar = () => {
         <div>
           <ul style={{color:`${linkColor}`}} className="hidden md:flex ">
             <Link href="/">
-              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">Home</li>
+              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">Home</li>
             </Link>
             <Link href="/#about">
-              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">About</li>
+              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">About</li>
             </Link>
             <Link href="/#skills">
-              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">Skills</li>
+              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">Skills</li>
             </Link>
             <Link href="/#projects">
-              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">
+              <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">
                 Projects
               </li>
             </Link>
             <Link href="/#contact">
-              <li className="ml-10 mr-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in duration-300">
+              <li className="ml-10 mr-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">
                 Contact
               </li>
             </Link>
