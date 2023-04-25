@@ -64,7 +64,7 @@ const Projects = () => {
         Projects
       </p>
       <h2 className="p-4 px-20 font-lato ">What i've build</h2>
-      <div className="grid md:grid-cols-2 gap-8 p2-4 px-10 md:px-20">
+      <div className="grid md:grid-cols-2 gap-8 p2-4 px-2 md:px-20">
         <ProjectItem
           title="MgeniKaribu App & Admin Dashboard"
           bgImage={MgeniKaribu}
