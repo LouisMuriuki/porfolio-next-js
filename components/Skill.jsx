@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 import Html from "../public/assests/skills/html.png"
 import Css from "../public/assests/skills/css.png"
 import Sass from "../public/assests/skills/sass.png"
@@ -12,10 +12,13 @@ import Node from "../public/assests/skills/node.png"
 import Mongo from "../public/assests/skills/mongo.png"
 import Firebase from "../public/assests/skills/firebase.png"
 import Github from "../public/assests/skills/github.png"
+import HideContext from "../context/HideContext";
 const Skill = () => {
+  const {hide,setHide}=useContext(HideContext)
+
   
   return (
-    <div id="skills" className="mt-96 md:mt-14 w-full h-fit  p-2 ">
+    <div id="skills" className={`${hide?"mt-0":"mt-76"} md:mt-14 w-full h-fit  p-2 `}>
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase font-lato text-[#fff]">
           Skills
