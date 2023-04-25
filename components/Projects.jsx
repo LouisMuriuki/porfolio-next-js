@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ProjectItem from "./ProjectItem";
-import Biashara from "../public/assests/projects/Biashara.png";
+import BizPlus from "../public/assests/projects/BizPlus.png";
+import MgeniKaribu from "../public/assests/projects/MgeniKaribu.png";
 import Recipe from "../public/assests/projects/recipe.png";
-import Notes from "../public/assests/projects/notes.png";
+import AIMAGEN from "../public/assests/projects/AIMAGEN.png";
 import Meme from "../public/assests/projects/memegenerator.png";
 
 const Projects = () => {
@@ -65,23 +66,33 @@ const Projects = () => {
       <h2 className="p-4 px-20 font-lato ">What i've build</h2>
       <div className="grid md:grid-cols-2 gap-8 p2-4 px-10 md:px-20">
         <ProjectItem
-          title="Biashara Erp"
-          bgImage={Biashara}
-          projectUrl="https://barpoint-app.vercel.app/"
+          title="MgeniKaribu App & Admin Dashboard"
+          bgImage={MgeniKaribu}
+          technologies={"MERN"}
+          projectUrl="https://mgeni-karibu.vercel.app/"
+        />
+        <ProjectItem
+          title="BizPlus POS & Back Office"
+          bgImage={BizPlus}
+          technologies={"MERN"}
+          projectUrl="https://app.bizpluspos.shop/"
+        />
+        <ProjectItem
+          title="AI Image Generator"
+          bgImage={AIMAGEN}
+          technologies={"MERN"}
+          projectUrl="https://aimagen.vercel.app/"
         />
         <ProjectItem
           title="Recipe App"
           bgImage={Recipe}
+          technologies={"REACT"}
           projectUrl="https://github.com/LouisMuriuki/bon-appetite"
-        />
-        <ProjectItem
-          title="Notes App"
-          bgImage={Notes}
-          projectUrl="https://github.com/LouisMuriuki/Notzy"
         />
         <ProjectItem
           title="Meme Generator"
           bgImage={Meme}
+          technologies={"REACT"}
           projectUrl="https://github.com/LouisMuriuki/MemeGenerator-React"
         />
       </div>

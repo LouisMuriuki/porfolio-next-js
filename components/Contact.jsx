@@ -70,8 +70,8 @@ const Contact = () => {
                 <p className="text-xl font-fuzzy-bubbles">
                   Full Stack Developer
                 </p>
-                <p className="py-4">
-                  I am available for Freelance or fulltime positons contact me
+                <p className="py-4 text-white">
+                  I am available for Freelance or fulltime positions 
                 </p>
               </div>
               <div>
@@ -99,7 +99,7 @@ const Contact = () => {
             <form>
               <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                 <div className="flex flex-col">
-                  <label className="uppercase text-sm py-2">Name</label>
+                  <label className="uppercase text-sm py-2 text-white">Name</label>
                   <input
                     className="border-2 outline-0 rounded-lg text-[#000] p-3 flex border-gray-300"
                     type="text"
@@ -108,7 +108,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label className="uppercase text-sm py-2">Phone Number</label>
+                  <label className="uppercase text-sm py-2 text-white">Phone Number</label>
                   <input
                     className="border-2 outline-0 text-[#000] rounded-lg p-3 flex border-gray-300"
                     type="text"
@@ -118,7 +118,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex flex-col py-2">
-                <label className="uppercase text-sm py-2">Email</label>
+                <label className="uppercase text-sm py-2 text-white">Email</label>
                 <input
                   className="border-2 outline-0 text-[#000] rounded-lg p-3 flex border-gray-300"
                   type="email"
@@ -127,7 +127,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col py-2">
-                <label className="uppercase text-sm py-2">Subject</label>
+                <label className="uppercase text-sm py-2 text-white">Subject</label>
                 <input
                   className="border-2 outline-0 text-[#000] rounded-lg p-3 flex border-gray-300"
                   type="type"
@@ -136,7 +136,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col py-2">
-                <label className="uppercase text-sm py-2">Message</label>
+                <label className="uppercase text-sm py-2 text-white">Message</label>
                 <textarea
                   className="border-2 text-[#000] outline-0 rounded-lg p-3 border-gray-300"
                   rows="10"
