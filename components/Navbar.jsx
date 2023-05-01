@@ -8,6 +8,8 @@ import { useRouter } from "next/router";
 import Lui from "../public/Louis.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { slideAnimation } from "../config/motion";
+
+const NavLinks = ["home", "about", "skills", "projects", "contact"];
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
@@ -62,32 +64,28 @@ const Navbar = () => {
             </Link>
           </motion.div>
           <motion.div {...slideAnimation("right")}>
-            <ul style={{ color: `${linkColor}` }} className="hidden md:flex ">
-              <Link href="/">
-                <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">
-                  Home
-                </li>
-              </Link>
-              <Link href="/#about">
-                <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">
-                  About
-                </li>
-              </Link>
-              <Link href="/#skills">
-                <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">
-                  Skills
-                </li>
-              </Link>
-              <Link href="/#projects">
-                <li className="ml-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">
-                  Projects
-                </li>
-              </Link>
-              <Link href="/#contact">
-                <li className="ml-10 mr-10 text-lg uppercase hover:border-b border-[#08d1d1] hover:transition-all ease-in-out duration-600">
-                  Contact
-                </li>
-              </Link>
+            <ul
+              style={{ color: `${linkColor}` }}
+              className="hidden md:flex "
+            >
+              {NavLinks.map((navs, i) => {
+                return (
+                  <div key={i} className="group flex flex-col">
+                    <Link href={`/#${navs}`}>
+                      <li
+                        onClick={() => {
+                          setNav(false);
+                        }}
+                        className="ml-10 text-lg uppercase "
+                      >
+                        {navs}
+                      </li>
+                    </Link>
+                    <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#08d1d1] ml-10"></span>
+                  </div>
+                );
+              })}
+              
             </ul>
             <div className="md:hidden" onClick={handlenav}>
               <AiOutlineMenu size={25} />
@@ -133,16 +131,6 @@ const Navbar = () => {
               </div>
               <div className="py-4 flex-col">
                 <ul className="uppercase font-kalam font-bold">
-                  <Link href="/">
-                    <li
-                      onClick={() => {
-                        setNav(false);
-                      }}
-                      className="py-4 text-sm"
-                    >
-                      Home
-                    </li>
-                  </Link>
                   <Link href="/#about">
                     <li
                       onClick={() => {
