@@ -81,7 +81,7 @@ const Navbar = () => {
                         {navs}
                       </li>
                     </Link>
-                    <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#08d1d1] ml-10"></span>
+                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#08d1d1] ml-10"></span>
                   </div>
                 );
               })}
