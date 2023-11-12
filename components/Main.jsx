@@ -5,13 +5,13 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import {
-  fadeAnimation,
-  headContainerAnimation,
   headTextAnimation,
   slideAnimation,
 } from "../config/motion";
 import { Particles } from "./Particles";
+import { useRouter } from "next/router";
 const Main = () => {
+  const router = useRouter();
   useEffect(() => {
     const home = document.getElementById("home");
     window.addEventListener("scroll", () => {
@@ -48,14 +48,17 @@ const Main = () => {
               className="flex items-center justify-between nax-w-[330px] m-auto py-4"
             >
               <Link href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/">
-                <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <FaLinkedinIn />
-                </div>
+                <a target="_blank">
+                  <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <FaLinkedinIn />
+                  </div>
+                </a>
               </Link>
               <Link href="https://github.com/LouisMuriuki">
+                   <a target="_blank">
                 <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <FaGithub />
-                </div>
+                </div></a>
               </Link>
               <a href="mailto:luihugo247@gmail.com">
                 <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">

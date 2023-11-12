@@ -3,6 +3,7 @@ import Image from "next/image";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import Lui from "../public/assests/lui.jpg";
 import { slideAnimation } from "../config/motion";
+import { AiOutlineMail } from "react-icons/ai";
 import HideContext from "../context/HideContext";
 const About = () => {
   const { hide, setHide } = useContext(HideContext);
@@ -45,10 +46,10 @@ const About = () => {
           className="w-full h-screen p-2 flex items-center py-16 "
         >
           <div className="max-w-[1240px] m-auto md:grid-cols-2 gap-8 ">
-            <p className="uppercase text-xl font-lato tracking-widest text-[#fff]">
+            <p className="uppercase text-xl md:text-2xl font-lato tracking-widest text-[#fff]">
               About
             </p>
-            <h2 className="py-4 font-lato">Who i Am</h2>
+            <h2 className="py-4 font-lato text-sm underline">Who i Am</h2>
             <div className="flex flex-col md:flex-row gap-x-8 ">
               <motion.div
                 style={isInView ? { ...slideAnimation("left") } : null}
@@ -64,18 +65,17 @@ const About = () => {
               </motion.div>
               <div
                 id="text"
-                className="col-span-1 flex flex-col z-10 rounded-xl h-max hover:shadow-md overflow-hidden shadow-teal-900"
+                className="mt-20 items-center justify-center col-span-1 flex flex-col z-10 rounded-xl h-max hover:shadow-md overflow-hidden shadow-teal-900"
               >
                 <p className="py-2 z-10 text-xs md:text-sm lg:text-base font-poppins text-[#fff]">
-                  Hi there👋, My name is{" "}
+                  Hi there👋, I'm{" "}
                   <span className="text-[#08d1d1] text-sm md:text-lg font-kalam">
                     Louis Muriuki Hugo
                   </span>{" "}
-                  and I am a FullStack developer with a focus on building
-                  intuitive, user-friendly web and mobile applications. I have a
-                  strong foundation in React js for the front-end and nodejs for
-                  the backend as well React Native to build cross-platform
-                  mobile apps.
+                  a FullStack developer specialized in crafting intuitive and
+                  user-friendly web and mobile applications. My expertise lies
+                  in React.js for the front-end, Node.js for the backend, and
+                  React Native for cross-platform mobile app development.
                   {isMobile && hide ? (
                     <span
                       onClick={hideRest}
@@ -91,19 +91,7 @@ const About = () => {
                   ""
                 ) : (
                   <>
-                    <p className="py-2 z-10 text-xs md:text-base font-poppins text-[#fff]">
-                      I have a passion for clean, efficient code and enjoy the
-                      process of turning complex problems into simple, elegant
-                      solutions. .
-                    </p>
-                    <p className="py-2 z-10 text-xs md:text-base font-poppins  text-[#fff]">
-                      In my free time, I enjoy staying active and exploring the
-                      great outdoors. I love going on hikes and swims, and also
-                      enjoy hitting the gym to stay fit. Also I stay up to date
-                      with the latest developments in the tech industry to learn
-                      and grow
-                    </p>
-                    <p className="py-2 z-10 text-xs md:text-base font-poppins  text-[#fff]">
+                    <p className=" py-2 z-10 text-xs md:text-base font-poppins  text-[#fff]">
                       I am a reliable and detail-oriented developer who takes
                       pride in delivering high-quality work on time. I am always
                       eager to take on new challenges and am excited to see how
@@ -119,6 +107,10 @@ const About = () => {
                     </p>
                   </>
                 )}
+                <button className="flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                  Ping me
+                  <AiOutlineMail size={14} className="ml-2 mt-[2px]" />
+                </button>
                 <p className="py-2 text-xs md:text-base font-poppins text-[#fff] underline cursor-pointer"></p>
               </div>
             </div>
