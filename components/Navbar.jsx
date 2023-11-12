@@ -71,7 +71,7 @@ const Navbar = () => {
               {NavLinks.map((navs, i) => {
                 return (
                   <div key={i} className="group flex flex-col">
-                    <Link href={`/#${navs}`}>
+                    <Link href={`/#${navs}`} scroll={false}>
                       <li
                         onClick={() => {
                           setNav(false);

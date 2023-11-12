@@ -1,21 +1,21 @@
 import Image from "next/image";
 import React, { useContext } from "react";
-import Typescript from "../public/assests/skills/typescript.png"
-import Reactnative from "../public/assests/skills/reactnative.png"
-import Antdesign from "../public/assests/skills/antdesign.png"
-import Storybook from "../public/assests/skills/storybook.png"
-import Tailwind from "../public/assests/skills/tailwind.png"
-import Javascript from "../public/assests/skills/javascript.png"
-import Reactjs from "../public/assests/skills/react.png"
-import Next from "../public/assests/skills/next.png"
-import Node from "../public/assests/skills/node.png"
-import Mongo from "../public/assests/skills/mongo.png"
-import Firebase from "../public/assests/skills/firebase.png"
-import Github from "../public/assests/skills/github.png"
+import Typescript from "../public/assests/skills/typescript.png";
+import Reactnative from "../public/assests/skills/reactnative.png";
+import Antdesign from "../public/assests/skills/antdesign.png";
+import Storybook from "../public/assests/skills/storybook.png";
+import Tailwind from "../public/assests/skills/tailwind.png";
+import Javascript from "../public/assests/skills/javascript.png";
+import Reactjs from "../public/assests/skills/react.png";
+import Next from "../public/assests/skills/next.png";
+import Node from "../public/assests/skills/node.png";
+import Mongo from "../public/assests/skills/mongo.png";
+import Firebase from "../public/assests/skills/firebase.png";
+import Github from "../public/assests/skills/github.png";
 import HideContext from "../context/HideContext";
+import { Particles } from "./Particles";
 const Skill = () => {
-  const {hide,setHide}=useContext(HideContext)
-
+  const { hide, setHide } = useContext(HideContext);
 
   return (
     <div
@@ -23,6 +23,7 @@ const Skill = () => {
       className={`${hide ? "mt-1" : "mt-20"} md:mt-14 w-full h-fit  p-2 `}
     >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+        <Particles className="absolute inset-0 -z-10 " />
         <p className="text-xl md:text-2xl  tracking-widest uppercase font-lato text-[#fff]">
           Skills
         </p>

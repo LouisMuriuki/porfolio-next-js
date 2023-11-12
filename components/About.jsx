@@ -65,7 +65,7 @@ const About = () => {
               </motion.div>
               <div
                 id="text"
-                className="mt-20 items-center justify-center col-span-1 flex flex-col z-10 rounded-xl h-max hover:shadow-md overflow-hidden shadow-teal-900"
+                className="md:mt-20 pt-2 items-center justify-center col-span-1 flex flex-col z-10 rounded-xl h-max hover:shadow-md overflow-hidden shadow-teal-900"
               >
                 <p className="py-2 z-10 text-xs md:text-sm lg:text-base font-poppins text-[#fff]">
                   Hi there👋, I'm{" "}
@@ -106,11 +106,13 @@ const About = () => {
                       )}
                     </p>
                   </>
-                )}
-                <button className="flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
-                  Ping me
-                  <AiOutlineMail size={14} className="ml-2 mt-[2px]" />
-                </button>
+                )}{" "}
+                <a href="mailto:luihugo247@.com">
+                  <button className="flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                    Ping me
+                    <AiOutlineMail size={14} className="ml-2 mt-[2px]" />{" "}
+                  </button>
+                </a>
                 <p className="py-2 text-xs md:text-base font-poppins text-[#fff] underline cursor-pointer"></p>
               </div>
             </div>
