@@ -92,7 +92,61 @@ export const workDetails = [
   },
 ];
 
-//
-//
-//
-// 
+export const projects=[
+  {
+    name:"Mgeni Karibu Smart Visitor System",
+    githubLink:"",
+    externalLink:"",
+    description:"A system to keep track and organize meetings for seemless experinces for all involved",
+    technologies:["Node Js","React Native","React","heroku"]
+  },
+  {
+    name:"Bizplus Pos",
+    githubLink:"",
+    externalLink:"",
+    description:"An all round point of sale system with a back-office and cashier's app",
+    technologies:["Node Js","React Native","React","Digital Ocean"]
+  },
+  {
+    name:"Quick Fast Invoices",
+    githubLink:"https://github.com/LouisMuriuki/QuickFast",
+    externalLink:"",
+    description:"An Invoice and Estimate generator to create professional invoices, accurate estimates, and effortlessly manage records for a streamlined financial experience",
+    technologies:["Node Js","React","Render"]
+  },
+  {
+    name:"Gobble Food Delivery",
+    githubLink:"https://github.com/LouisMuriuki/Gobble",
+    externalLink:"",
+    description:"Food Delivery App, Glovo clone ",
+    technologies:["React Native","Sanity CMS"]
+  },
+  {
+    name:"Ulimate Store Api",
+    githubLink:"https://github.com/LouisMuriuki/ultimate-store-api",
+    externalLink:"",
+    description:"A complete node API backend for an E-commerce site ",
+    technologies:["Node","Express"]
+  },
+  {
+    name:"AI Image Generator",
+    githubLink:"https://github.com/LouisMuriuki/shiny-garbanzo",
+    externalLink:"aimagen.vercel.app",
+    description:"An AI image generator powered by DALLE",
+    technologies:["Node","React"]
+  },
+  {
+    name:"Coinisfy",
+    githubLink:"https://github.com/LouisMuriuki/crypto",
+    externalLink:"https://cryptomarket-orcin1.vercel.app/",
+    description:"A web-3 dashboard to keep track of various coins",
+    technologies:["React"]
+  },
+  {
+    name:"AIOS",
+    githubLink:"https://github.com/LouisMuriuki/AIOS",
+    externalLink:"https://play.google.com/store/apps/details?id=com.muriuki.AIOS",
+    description:"a react native app to scan, create and keep record of Qr and Barcodes",
+    technologies:["React Native"]
+  },
+]

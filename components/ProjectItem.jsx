@@ -1,23 +1,50 @@
-import React from 'react'
-import Link from "next/link"; 
+import React from "react";
+import Link from "next/link";
 import Image from "next/image";
-const ProjectItem = ({title,bgImage,technologies,projectUrl}) => {
+import { CiFolderOn } from "react-icons/ci";
+import { VscGithubInverted } from "react-icons/vsc";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
+const ProjectItem = ({
+  title,
+  description,
+  technologies,
+  projectUrl,
+  githubLink,
+}) => {
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-md shadow-teal-900 rounded-xl p-2 md:p-4 group hover: hover:transition-all ease-in duration-700 hover:bg-gradient-to-r  from-[#527272] to-[#4e7272] hover:shadow-[#000d17]">
-          <Image className="rounded-xl group-hover:opacity-10 cursor-pointer" src={bgImage} alt="/" />
-          <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
-            <h3 className="text-md md:text-2xl text-white tracking-wider text-center">
-             {title}
-            </h3>
-            <p className="pb-4 pt-2 text-white text-center">{technologies}</p>
-            <a href={projectUrl} target="_blank" rel='noreferrer'>
-              <p className="text-center py-2 md:py-3 rounded-lg bg-white text-grey-700 font-bold text-md md:text-lg cursor-pointer">
-                More Info
-              </p>
-            </a>
-          </div>
+    <div className="relative bg-[#242c3a] px-6 py-6 h-60 md:h-80">
+      <div className="flex items-center justify-between">
+        <div>
+          <CiFolderOn />
         </div>
-  )
-}
+        <div className="flex items-center gap-5">
+          {githubLink ? null : (
+            <a href={githubLink} target="_blank">
+              <VscGithubInverted />
+            </a>
+          )}
+          {projectUrl ? null : (
+            <a href={projectUrl} target="_blank">
+              <FaExternalLinkSquareAlt />
+            </a>
+          )}
+        </div>
+      </div>
+      <div className="mx-1 flex flex-col">
+        <h2 className="mt-6 md:mt-8 text-center text-white ">{title}</h2>
+        <p className="mt-2 text-center text-slate-300">{description}</p>
+      </div>
+      <div className="flex mt-6 items-center justify-center absolute bottom-2 left-0 ">
+      {technologies.map((tech, i) => {
+        return (
+          <p className="ml-1 flex w-full flex-row text-center items-center justify-center font-mono text-sm">
+            {tech}
+          </p>
+        );
+      })}
+      </div>
+    </div>
+  );
+};
 
-export default ProjectItem
+export default ProjectItem;
