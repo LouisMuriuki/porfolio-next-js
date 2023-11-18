@@ -5,6 +5,7 @@ import MgeniKaribu from "../public/assests/projects/MgeniKaribu.png";
 import Recipe from "../public/assests/projects/recipe.png";
 import AIMAGEN from "../public/assests/projects/AIMAGEN.png";
 import Meme from "../public/assests/projects/memegenerator.png";
+import { projects } from "../config/db";
 
 const Projects = () => {
   const [days, setDays] = useState(365);
@@ -23,12 +24,14 @@ const Projects = () => {
     79, 80, 118, 119, 159, 160, 161, 162, 200, 201, 202, 203, 241, 242, 282,
     283, 284, 285, 323, 324, 325, 326,
   ];
-  const Box = ({index}) => {
-    return <div className={list.includes(index)?"box active":"box"}></div>;
+  const Box = ({ index }) => {
+    return <div className={list.includes(index) ? "box active" : "box"}></div>;
   };
 
   const Githuboxes = () => {
-    return Array.from({ length: days }, (element,index) => <Box key={index}  index={index}/>);
+    return Array.from({ length: days }, (element, index) => (
+      <Box key={index} index={index} />
+    ));
   };
 
   const dates = [
@@ -58,58 +61,55 @@ const Projects = () => {
     };
   }, [width, setWidth]);
   return (
-    <div id="projects" className="w-full">
+    <div id="projects" className="w-full" >
       <div className="max-w-[1240px] mx-auto px-w py-16"></div>
       <p className="py-4 px-20 uppercase text-xl tracking-widest font-lato text-[#fff]">
         Projects
       </p>
       <h2 className="p-4 px-20 font-lato ">What i've build</h2>
-      <div className="grid md:grid-cols-2 gap-8 p2-4 px-2 md:px-20">
-        <ProjectItem
-          title="MgeniKaribu App & Admin Dashboard"
-          bgImage={MgeniKaribu}
-          technologies={"MERN"}
-          projectUrl="https://mgeni-karibu.vercel.app/"
-        />
-        <ProjectItem
-          title="BizPlus POS & Back Office"
-          bgImage={BizPlus}
-          technologies={"MERN"}
-          projectUrl="https://app.bizpluspos.shop/"
-        />
-        <ProjectItem
-          title="AI Image Generator"
-          bgImage={AIMAGEN}
-          technologies={"MERN"}
-          projectUrl="https://aimagen.vercel.app/"
-        />
-        <ProjectItem
-          title="Recipe App"
-          bgImage={Recipe}
-          technologies={"REACT"}
-          projectUrl="https://github.com/LouisMuriuki/bon-appetite"
-        />
-        <ProjectItem
-          title="Meme Generator"
-          bgImage={Meme}
-          technologies={"REACT"}
-          projectUrl="https://github.com/LouisMuriuki/MemeGenerator-React"
-        />
+      <div className="grid md:grid-cols-4 gap-8 p2-4 px-2 md:px-20">
+        {projects.map((project) => {
+          return (
+            <ProjectItem
+              title={project.name}
+              description={project.description}
+              technologies={project.technologies}
+              projectUrl={project.externalLink}
+              githublink={project.githubLink}
+            />
+          );
+        })}
       </div>
       <div className="githubContainer">
-        <h2 className={width<728?"githubTitlesmall":"githubTitle"}>Want to see all my Projects?</h2>
-        {width>728 &&<div className="githubChart">
-          <div className="dates">
-            {dates.map((date,i) => {
-              return <span key={i}>{date}</span>;
-            })}
+        <h2 className={width < 728 ? "githubTitlesmall" : "githubTitle"}>
+          Want to see all my Projects?
+        </h2>
+        {width > 728 && (
+          <div className="githubChart">
+            <div className="dates">
+              {dates.map((date, i) => {
+                return <span key={i}>{date}</span>;
+              })}
+            </div>
+            <div className="boxContainer">
+              <Githuboxes />
+            </div>
           </div>
-          <div className="boxContainer">
-            <Githuboxes />
-          </div>
-        </div>}
-        <a href="https://github.com/LouisMuriuki" target="_blank" rel='noreferrer'>
-        <h2 className={width<728?"githubTitlesmall text-xl underline":"githubTitle text-xl underline"}>Find me on Github😎💻</h2>
+        )}
+        <a
+          href="https://github.com/LouisMuriuki"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h2
+            className={
+              width < 728
+                ? "githubTitlesmall text-xl underline"
+                : "githubTitle text-xl underline"
+            }
+          >
+            Find me on Github😎💻
+          </h2>
         </a>
       </div>
     </div>
