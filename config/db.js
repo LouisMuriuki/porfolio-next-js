@@ -55,7 +55,7 @@ export const workDetails = [
       "Used AWS Lambda, API Gateway, DynamoDB, and Security Token Service (STS).",
       "Used Lambda, DynamoDB, S3 bucket to reduce loading times.",
     ],
-    location: "Remote",
+    location: "Remote - Nairobi",
     title: "Software Developer",
     from: "May 2020 - current",
     id: 2,
