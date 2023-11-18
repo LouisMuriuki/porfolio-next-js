@@ -29,6 +29,6 @@
     "tailwindcss": "^3.3.5"
   },
   "engines": {
-    "node": "20.x"
+    "node": "18.x"
   }
 }
