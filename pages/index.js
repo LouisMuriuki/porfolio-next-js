@@ -5,8 +5,14 @@ import Main from "../components/Main";
 import Projects from "../components/Projects";
 import Skill from "../components/Skill";
 import { HideProvider } from "../context/HideContext";
-
+import Work from "../components/Work";
+import { isMobile } from "react-device-detect";
+import { useEffect, useState } from "react";
 export default function Home() {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <HideProvider>
       <div>
@@ -23,6 +29,7 @@ export default function Home() {
         </Head>
         <Main />
         <About />
+        {isClient && isMobile ? <div></div> : <Work />}
         <Skill />
         <Projects />
         <Contact />

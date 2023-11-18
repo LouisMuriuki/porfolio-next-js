@@ -108,7 +108,7 @@ const Navbar = () => {
           >
             <div>
               <div className="flex w-full items-center justify-between">
-                <Link href="/">
+                <Link href="/" scroll={false}>
                   <Image
                     src={Lui}
                     alt="lui"
@@ -131,7 +131,7 @@ const Navbar = () => {
               </div>
               <div className="py-4 flex-col">
                 <ul className="uppercase font-kalam font-bold">
-                  <Link href="/#about">
+                  <Link href="/#about" scroll={false}>
                     <li
                       onClick={() => {
                         setNav(false);
@@ -141,7 +141,7 @@ const Navbar = () => {
                       About
                     </li>
                   </Link>
-                  <Link href="/#skills">
+                  <Link href="/#skills" scroll={false}>
                     <li
                       onClick={() => {
                         setNav(false);
@@ -151,7 +151,7 @@ const Navbar = () => {
                       Skills
                     </li>
                   </Link>
-                  <Link href="/#projects">
+                  <Link href="/#projects" scroll={false} >
                     <li
                       onClick={() => {
                         setNav(false);
@@ -161,7 +161,7 @@ const Navbar = () => {
                       Projects
                     </li>
                   </Link>
-                  <Link href="/#contact">
+                  <Link href="/#contact" scroll={false}>
                     <li
                       onClick={() => {
                         setNav(false);
@@ -187,7 +187,7 @@ const Navbar = () => {
                         <FaGithub />
                       </div>
                     </Link>
-                    <a href="mailto:luihugo247@gmail.com">
+                    <a href="mailto:'luihugo247@gmail.com'">
                       <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <AiOutlineMail />
                       </div>
