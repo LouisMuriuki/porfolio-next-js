@@ -62,6 +62,7 @@ const Work = () => {
                 {workDetails.map((details, i) => {
                   return (
                     <div
+                    key={i}
                       style={{
                         height: "44px",
                         width: "2px",
@@ -77,7 +78,7 @@ const Work = () => {
               <div className="flex flex-col w-1/5">
                 {workDetails.map((details, i) => {
                   return (
-                    <div className="flex flex-col mb-8">
+                    <div key={i} className="flex flex-col mb-8">
                       <span
                         onClick={() => setSelectedId(i)}
                         className={`${getTextColor(
@@ -108,7 +109,7 @@ const Work = () => {
                       <div className="">
                         {details.responsibility.map((duty, i) => {
                           return (
-                            <ul>
+                            <ul key={i}>
                               <li className="mb-2 font-lato text-slate-200">{duty}</li>
                             </ul>
                           );
