@@ -60,7 +60,7 @@ const Main = () => {
                   <FaGithub />
                 </div></a>
               </Link>
-              <a href="mailto:luihugo247@gmail.com">
+              <a href="mailto:'luihugo247@gmail.com'">
                 <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <AiOutlineMail />
                 </div>

@@ -91,7 +91,7 @@ const Contact = () => {
                       </div>
                     </a>
                   </Link>
-                  <Link href="mailto:luihugo247@gmail.com">
+                  <Link href="mailto:'luihugo247@gmail.com'">
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <AiOutlineMail />
                     </div>
