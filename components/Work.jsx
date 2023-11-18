@@ -109,7 +109,7 @@ const Work = () => {
                         {details.responsibility.map((duty, i) => {
                           return (
                             <ul>
-                              <li className="mb-2 text-slate-200">{duty}</li>
+                              <li className="mb-2 font-lato text-slate-200">{duty}</li>
                             </ul>
                           );
                         })}
