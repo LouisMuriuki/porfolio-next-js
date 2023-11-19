@@ -68,9 +68,10 @@ const Projects = () => {
       </p>
       <h2 className="px-2 md:px-24 font-lato mb-2 md:mb-8 ">What i've build</h2>
       <div className="grid md:grid-cols-4 gap-8 p2-4 px-2 md:px-20 mb-6">
-        {projects.map((project) => {
+        {projects.map((project, i) => {
           return (
             <ProjectItem
+              key={i}
               title={project.name}
               description={project.description}
               technologies={project.technologies}
