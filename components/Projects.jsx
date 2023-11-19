@@ -63,10 +63,12 @@ const Projects = () => {
   return (
     <div id="projects" className="w-full">
       <div className="max-w-[1240px] mx-auto py-8 md:py-16"></div>
-      <p className="px-2 md:px-24 uppercase text-xl tracking-widest font-lato text-[#fff]">
+      <p className="px-2  md:px-24 uppercase text-xl tracking-widest font-lato text-[#fff]">
         Projects
       </p>
-      <h2 className="px-2 md:px-24 font-lato mb-2 md:mb-8 ">What i've build</h2>
+      <h2 className="px-2 md:px-24 pb-3 first-letter:first-line:marker:selection:file:placeholder:backdrop:md:px-24 font-lato mb-2 md:mb-8 ">
+        What i've build
+      </h2>
       <div className="grid md:grid-cols-4 gap-8 p2-4 px-2 md:px-20 mb-6">
         {projects.map((project, i) => {
           return (
