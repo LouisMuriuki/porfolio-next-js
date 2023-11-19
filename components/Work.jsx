@@ -70,7 +70,7 @@ const Work = () => {
               )}
 
               <div
-                className={`flex flex-col ${
+                className={`flex flex-col  ${
                   isClient && isMobile ? "mr-3" : "mr-10"
                 }`}
               >
@@ -79,7 +79,7 @@ const Work = () => {
                     <div
                       key={i}
                       style={{
-                        height: "44px",
+                        height: "50px",
                         width: "2px",
                         paddingLeft: selectedId === i && "1px",
                         paddingRight: selectedId === i && "1px",
