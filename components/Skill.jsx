@@ -85,7 +85,7 @@ const Skill = () => {
                 <Image src={Next} alt="" width="64px" height="64px" />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
-                <h3>Next</h3>
+                <h3>Next JS</h3>
               </div>
             </div>
           </div>
