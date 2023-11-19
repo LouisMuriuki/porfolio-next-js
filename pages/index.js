@@ -29,7 +29,7 @@ export default function Home() {
         <Skill />
         <Projects />
         <Contact />
-      </div>{" "}
+      </div>
     </HideProvider>
   );
 }

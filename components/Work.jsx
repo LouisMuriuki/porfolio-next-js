@@ -5,6 +5,7 @@ import { workDetails } from "../config/db";
 import Lottie from "lottie-react";
 import animationData from "../public/assests/lottie/dev.json";
 import { isMobile } from "react-device-detect";
+import { HiDocumentDownload } from "react-icons/hi";
 const Work = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -28,7 +29,7 @@ const Work = () => {
   return (
     <AnimatePresence>
       <div ref={ref}>
-        <div id="work" className="w-full h-screen p-2 flex py-16 ">
+        <div id="work" className="w-full h-screen p-2 flex pb-8 md:pb-16 ">
           <div className="max-w-[1240px] m-1 md:m-24">
             <div className="flex flex-col items-start justify-start">
               <p className="uppercase text-xl md:text-2xl font-lato tracking-widest text-[#fff]">
@@ -89,7 +90,11 @@ const Work = () => {
                 })}
               </div>
 
-              <div className={`flex flex-col ${isClient && isMobile ? "w-1/8 mr-8" : " w-1/5"}`}>
+              <div
+                className={`flex flex-col ${
+                  isClient && isMobile ? "w-1/8 mr-8" : " w-1/5"
+                }`}
+              >
                 {workDetails.map((details, i) => {
                   return (
                     <div
@@ -109,7 +114,11 @@ const Work = () => {
                   );
                 })}
               </div>
-              <div className={`flex flex-col ${isClient && isMobile ? "w-fit" : "w-1/3"} mt-[-5px]`}>
+              <div
+                className={`flex flex-col ${
+                  isClient && isMobile ? "w-fit" : "w-1/3"
+                } mt-[-5px]`}
+              >
                 {workDetails.map((details, i) => {
                   return selectedId === details.id ? (
                     <div
@@ -151,6 +160,23 @@ const Work = () => {
                   ) : null;
                 })}
               </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <a href="/api/download" download={"Lui's CV"}>
+              <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                <HiDocumentDownload
+                  size={isClient && isMobile ? 14 : 20}
+                  className="ml-2 mt-[2px]"
+                />
+                <p
+                  className={`${
+                    isClient && isMobile ? "text-sm" : "text-base"
+                  }`}
+                >
+                  Download my CV
+                </p>
+              </button>
+              </a>
             </div>
           </div>
         </div>

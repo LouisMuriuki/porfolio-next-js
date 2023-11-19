@@ -43,7 +43,7 @@ const About = () => {
       <div ref={ref}>
         <div
           id="about"
-          className="w-full h-screen p-2 flex items-center py-16 "
+          className="w-full h-screen p-2 flex items-center py-8 md:py-16 "
         >
           <div className="max-w-[1240px] m-auto md:grid-cols-2 gap-8 ">
             <p className="uppercase text-xl md:text-2xl font-lato tracking-widest text-[#fff]">
@@ -54,7 +54,7 @@ const About = () => {
               <motion.div
                 style={isInView ? { ...slideAnimation("left") } : null}
                 id="image"
-                className="col-span-1 pt-6 w-full md:w-auto h-auto md:h-full  rounded-xl"
+                className="col-span-1 pt-6 w-full md:w-auto h-auto md:h-full  hover:rounded-xl"
               >
                 <Image
                   id="luiimage"
@@ -108,7 +108,7 @@ const About = () => {
                   </>
                 )}{" "}
                 <a href="mailto:luihugo247@.com">
-                  <button className="flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                  <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
                     Ping me
                     <AiOutlineMail size={14} className="ml-2 mt-[2px]" />{" "}
                   </button>

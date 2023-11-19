@@ -20,7 +20,7 @@ const Skill = () => {
   return (
     <div
       id="skills"
-      className={`${hide ? "mt-1" : "mt-20"} md:mt-14 w-full h-fit  p-2 `}
+      className={`md:mt-14 w-full h-fit  p-2 `}
     >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <Particles className="absolute inset-0 -z-10 " />
@@ -62,7 +62,7 @@ const Skill = () => {
           <div className="p-1 md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <Image src={Reactnative} alt="" width="64px" height="64px" />
+                <Image src={Reactjs} alt="" width="64px" height="64px" />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
                 <h3>React Native</h3>
