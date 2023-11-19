@@ -61,13 +61,13 @@ const Projects = () => {
     };
   }, [width, setWidth]);
   return (
-    <div id="projects" className="w-full" >
-      <div className="max-w-[1240px] mx-auto px-w py-16"></div>
-      <p className="py-4 px-20 uppercase text-xl tracking-widest font-lato text-[#fff]">
+    <div id="projects" className="w-full">
+      <div className="max-w-[1240px] mx-auto py-8 md:py-16"></div>
+      <p className="px-2 md:px-24 uppercase text-xl tracking-widest font-lato text-[#fff]">
         Projects
       </p>
-      <h2 className="p-4 px-20 font-lato ">What i've build</h2>
-      <div className="grid md:grid-cols-4 gap-8 p2-4 px-2 md:px-20">
+      <h2 className="px-2 md:px-24 font-lato mb-2 md:mb-8 ">What i've build</h2>
+      <div className="grid md:grid-cols-4 gap-8 p2-4 px-2 md:px-20 mb-6">
         {projects.map((project) => {
           return (
             <ProjectItem
@@ -76,15 +76,15 @@ const Projects = () => {
               technologies={project.technologies}
               projectUrl={project.externalLink}
               githublink={project.githubLink}
+              publicrepo={project.public}
+              playstorelink={project.playstorelink}
+              appstorelink={project.appstorelink}
             />
           );
         })}
       </div>
-      <div className="githubContainer">
-        <h2 className={width < 728 ? "githubTitlesmall" : "githubTitle"}>
-          Want to see all my Projects?
-        </h2>
-        {width > 728 && (
+      <div className="githubContainer mt-10 md:mt-20">
+        {width > 728 ? (
           <div className="githubChart">
             <div className="dates">
               {dates.map((date, i) => {
@@ -95,7 +95,7 @@ const Projects = () => {
               <Githuboxes />
             </div>
           </div>
-        )}
+        ) : null}
         <a
           href="https://github.com/LouisMuriuki"
           target="_blank"
@@ -104,11 +104,11 @@ const Projects = () => {
           <h2
             className={
               width < 728
-                ? "githubTitlesmall text-xl underline"
-                : "githubTitle text-xl underline"
+                ? "githubTitlesmall text-xl font-fuzzy-bubbles mt-5 md:mt-8"
+                : "githubTitle text-x font-fuzzy-bubbles  mt-5 md:mt-8"
             }
           >
-            Find me on Github😎💻
+            GITHUB LINK
           </h2>
         </a>
       </div>
