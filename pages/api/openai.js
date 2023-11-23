@@ -32,7 +32,7 @@ export default async function(req, res) {
         const role = msg.role;
         const content = msg.content[0]?.text.value;
         console.log(msg)
-        res.status(200).json({data:msg});
+        res.status(200).json({role:role,message:content});
       });
     } else {
       console.log("run is not completed");
