@@ -6,6 +6,7 @@ import Projects from "../components/Projects";
 import Skill from "../components/Skill";
 import { HideProvider } from "../context/HideContext";
 import Work from "../components/Work";
+import Floatingwindow from "../components/FLoatingWindow/Floatingwindow";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <Skill />
         <Projects />
         <Contact />
+        <Floatingwindow/>
       </div>
     </HideProvider>
   );
