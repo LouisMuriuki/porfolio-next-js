@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ProjectItem from "./ProjectItem";
-import BizPlus from "../public/assests/projects/BizPlus.png";
-import MgeniKaribu from "../public/assests/projects/MgeniKaribu.png";
-import Recipe from "../public/assests/projects/recipe.png";
-import AIMAGEN from "../public/assests/projects/AIMAGEN.png";
-import Meme from "../public/assests/projects/memegenerator.png";
 import { projects } from "../config/db";
 
 const Projects = () => {
@@ -72,17 +67,19 @@ const Projects = () => {
       <div className="grid md:grid-cols-4 gap-8 p2-4 px-2 md:px-20 mb-6">
         {projects.map((project, i) => {
           return (
-            <ProjectItem
-              key={i}
-              title={project.name}
-              description={project.description}
-              technologies={project.technologies}
-              projectUrl={project.externalLink}
-              githublink={project.githubLink}
-              publicrepo={project.public}
-              playstorelink={project.playstorelink}
-              appstorelink={project.appstorelink}
-            />
+            <div className="hover:shadow-md shadow-teal-900 ">
+              <ProjectItem
+                key={i}
+                title={project.name}
+                description={project.description}
+                technologies={project.technologies}
+                projectUrl={project.externalLink}
+                githublink={project.githubLink}
+                publicrepo={project.public}
+                playstorelink={project.playstorelink}
+                appstorelink={project.appstorelink}
+              />
+            </div>
           );
         })}
       </div>

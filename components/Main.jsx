@@ -35,7 +35,7 @@ const Main = () => {
               </p>
               <h1 className="py-4 text-[#fff]">
                 Hello, I'm{" "}
-                <span className="text-[#08d1d1] font-kalam">LOUIS MURIUKI</span>
+                <span className="text-[#08d1d1] font-fuzzy-bubbles">LOUIS MURIUKI</span>
               </h1>
               <h1 className="py-4 text-[#fff]">
                 A Full Stack Web and Mobile Developer

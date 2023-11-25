@@ -69,7 +69,7 @@ const About = () => {
               >
                 <p className="py-2 z-10 text-xs md:text-sm lg:text-base font-poppins text-[#fff]">
                   Hi there👋, I'm{" "}
-                  <span className="text-[#08d1d1] text-sm md:text-lg font-kalam">
+                  <span className="text-[#08d1d1] text-sm md:text-lg font-fuzzy-bubbles">
                     Louis Muriuki Hugo
                   </span>{" "}
                   a FullStack developer specialized in crafting intuitive and
