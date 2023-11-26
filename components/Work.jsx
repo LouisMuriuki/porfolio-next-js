@@ -122,6 +122,7 @@ const Work = () => {
                 {workDetails.map((details, i) => {
                   return selectedId === details.id ? (
                     <div
+                    key={i}
                       className={`flex flex-col w-auto  ${getTextColor(
                         details.id
                       )}`}

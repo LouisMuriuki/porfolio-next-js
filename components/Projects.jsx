@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ProjectItem from "./ProjectItem";
-import BizPlus from "../public/assests/projects/BizPlus.png";
-import MgeniKaribu from "../public/assests/projects/MgeniKaribu.png";
-import Recipe from "../public/assests/projects/recipe.png";
-import AIMAGEN from "../public/assests/projects/AIMAGEN.png";
-import Meme from "../public/assests/projects/memegenerator.png";
 import { projects } from "../config/db";
 
 const Projects = () => {
