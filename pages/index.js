@@ -8,8 +8,7 @@ import { HideProvider } from "../context/HideContext";
 import Work from "../components/Work";
 import Floatingwindow from "../components/FLoatingWindow/Floatingwindow";
 import { ModalProvider } from "../context/modalContext";
-import { useId } from "react";
-import { ChatProvider } from "../context/chatContext";
+import { ChatProvider } from "../context/ChatContext";
 
 export default function Home() {
   

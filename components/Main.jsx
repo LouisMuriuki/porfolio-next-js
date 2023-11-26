@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { headTextAnimation, slideAnimation } from "../config/motion";
 import { Particles } from "./Particles";
 import { useRouter } from "next/router";
-import ChatContext from "../context/chatContext";
+import ChatContext from "../context/ChatContext";
 
 const Main = () => {
   var sessionid =
