@@ -5,7 +5,7 @@ import Lottie, { useLottie } from "lottie-react";
 import floatingrobot from "../../public/assests/lottie/floatingrobot.json";
 import robot2 from "../../public/assests/lottie/robot2.json";
 import { AnimatePresence, motion } from "framer-motion";
-import ChatContext from "../../context/chatContext";
+import ChatContext from "../../context/ChatContext";
 import { slideAnimation } from "../../config/motion";
 import { IoMdSend } from "react-icons/io";
 const style = {
