@@ -5,6 +5,9 @@ import Lottie, { useLottie } from "lottie-react";
 import floatingrobot from "../../public/assests/lottie/floatingrobot.json";
 import robot2 from "../../public/assests/lottie/robot2.json";
 import { AnimatePresence, motion } from "framer-motion";
+import ChatContext from "../../context/chatContext";
+import { slideAnimation } from "../../config/motion";
+import { IoMdSend } from "react-icons/io";
 const style = {
   height: 260,
   width: 260,
@@ -19,9 +22,10 @@ const mediumLottie = {
 };
 export const Floatingwindow = () => {
   const { modalOpen, setModalOpen } = useContext(ModalContext);
+  const { chatlog, setChatlog } = useContext(ChatContext);
   const [inputvalue, setInputValue] = useState("");
   const [loading, setLoading] = useState(false);
-  const [chatlog, setChatlog] = useState([]);
+
   const [width, setWidth] = useState();
   const handleWidth = () => {
     setWidth(window.innerWidth);
@@ -34,7 +38,6 @@ export const Floatingwindow = () => {
       window.removeEventListener("resize", handleWidth);
     };
   }, [width, setWidth]);
- 
 
   useEffect(() => {
     const robot = document.getElementById("robot");
@@ -63,36 +66,39 @@ export const Floatingwindow = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setChatlog((chatlog) => [
-      ...chatlog,
-      { role: "user", message: inputvalue },
-    ]);
-    setInputValue("");
-    setLoading(true);
-    fetch("/api/openai", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(inputvalue),
-    }).then((res) => {
-      res
-        .json()
-        .then((data) => {
-          console.log(data);
-          setChatlog((chatlog) => [
-            ...chatlog,
-            { role: data.role, message: data?.message },
-          ]);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    });
+    if (loading||inputvalue.length <= 1) {
+      return
+    } else {
+      e.preventDefault();
+      setChatlog((chatlog) => [
+        ...chatlog,
+        { role: "user", message: inputvalue },
+      ]);
+      setLoading(true);
+      fetch("/api/openai", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(inputvalue),
+      }).then((res) => {
+        res
+          .json()
+          .then((data) => {
+            console.log(data);
+            setChatlog((chatlog) => [
+              ...chatlog,
+              { role: data.role, message: data?.message },
+            ]);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      });
+      setInputValue("");
+    }
   };
-
   const closeModal = () => {
     setModalOpen(false);
   };
@@ -103,7 +109,10 @@ export const Floatingwindow = () => {
   return (
     <>
       {modalOpen ? (
-        <div className="flex items-center rounded-lg  bg-[#242c3a] justify-end max-h-screen ease-in duration-300">
+        <motion.div
+          {...slideAnimation("left")}
+          className="flex items-center shadow-md shadow-teal-900 rounded-lg  bg-transparent bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 justify-end max-h-screen ease-in duration-300"
+        >
           <div className="h-[600px] md:h-[700px] pt-4 pr-2  w-80 max-w-md ">
             <div className="flex w-full mt-[-40px] items-center justify-between ">
               <Lottie
@@ -162,29 +171,27 @@ export const Floatingwindow = () => {
                   );
                 })}
               </div>
-              <form className="mt-auto " onSubmit={handleSubmit}>
+              <form className="mt-auto ">
                 <div className="w-full">
                   <div className="flex items-center gap-2 justify-between px-1">
                     <input
-                      className="rounded-lg py-2 px-1 w-[82%] text-sm font-fuzzy-bubbles outline-none text-slate-900"
+                      className="flex relative rounded-lg py-2 px-1 mx-1 w-full text-sm font-fuzzy-bubbles outline-none text-slate-900"
                       placeholder="Type your message..."
                       value={inputvalue}
                       onChange={(e) => setInputValue(e.target.value)}
                       type="text"
                     />
-                    <button
-                      disabled={loading}
-                      className="px-1 py-2"
-                      type="submit"
-                    >
-                      Send
-                    </button>
+                    <IoMdSend
+                      size={22}
+                      onClick={handleSubmit}
+                      className="absolute right-6 cursor-pointer"
+                    />
                   </div>
                 </div>
               </form>
             </div>
           </div>
-        </div>
+        </motion.div>
       ) : (
         <AnimatePresence>
           <motion.div className="cursor-pointer" id="robot" onClick={openModal}>
@@ -193,7 +200,7 @@ export const Floatingwindow = () => {
               loop={true}
               animationData={floatingrobot}
               draggable={true}
-              style={width<768?mediumLottie:style}
+              style={width < 768 ? mediumLottie : style}
             />
           </motion.div>
         </AnimatePresence>

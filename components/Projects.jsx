@@ -67,19 +67,17 @@ const Projects = () => {
       <div className="grid md:grid-cols-4 gap-8 p2-4 px-2 md:px-20 mb-6">
         {projects.map((project, i) => {
           return (
-            <div className="hover:shadow-md shadow-teal-900 ">
-              <ProjectItem
-                key={i}
-                title={project.name}
-                description={project.description}
-                technologies={project.technologies}
-                projectUrl={project.externalLink}
-                githublink={project.githubLink}
-                publicrepo={project.public}
-                playstorelink={project.playstorelink}
-                appstorelink={project.appstorelink}
-              />
-            </div>
+            <ProjectItem
+              key={i}
+              title={project.name}
+              description={project.description}
+              technologies={project.technologies}
+              projectUrl={project.externalLink}
+              githublink={project.githubLink}
+              publicrepo={project.public}
+              playstorelink={project.playstorelink}
+              appstorelink={project.appstorelink}
+            />
           );
         })}
       </div>

@@ -38,18 +38,13 @@ export default async function (req, res) {
           return res.status(200).json({ role: role, message: content });
         });
       }
-    } else if (runStatus.status === pendingStatus) {
-      checkforStausUpdate();
     } else if (runStatus.status === failedStatus) {
       return res.status(200).json({
         role: "assistant",
         message: "Please try again i did not get that correctly",
       });
     } else {
-      return res.status(200).json({
-        role: "assistant",
-        message: "failed",
-      });
+      return 
     }
   };
 
