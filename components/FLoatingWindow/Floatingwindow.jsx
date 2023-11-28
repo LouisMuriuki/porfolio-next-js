@@ -134,7 +134,7 @@ export const Floatingwindow = () => {
               />
             </div>
             <div className="flex flex-col">
-              <div className="flex mt-2 h-[460px] md:h-[570px] mb-0 overflow-y-scroll flex-col">
+              <div className="flex mt-2 h-[460px] md:h-[570px] mb-0 no-scrollbar overflow-y-scroll flex-col">
                 {chatlog.map((chat, i) => {
                   console.log(chatlog.length, i);
                   return (
