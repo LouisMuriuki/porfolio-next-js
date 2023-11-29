@@ -123,7 +123,7 @@ export const Floatingwindow = () => {
                 style={smallLottie}
               />
               <div className="flex gap-0 items-center justify-center">
-                <p className="flex items-center justify-center mr-10">Dave</p>
+                <p className="flex items-center justify-center mr-10 font-fuzzy-bubbles">Vinci</p>
               </div>
 
               <IoClose
