@@ -1,12 +1,12 @@
-export default async function (req, res) {
-  let failedStatus = "expired" || "failed" || "cancelled" || "cancelling";
+let OpenAI = require("openai");
+export default async function handler(req, res) {
+  const openai = OpenAI();
   let pendingStatus = "in_progress" || "queued";
   let assistantName = "Lui's portfolio Assistant";
   let assistantInstructions =
     "You are a helpful assistant, intergrated into my personal web portfolio, you are to answer people with respect, professional and with a touch of humour";
   let usermessage = req.body;
-  let OpenAI = require("openai");
-  const openai = new OpenAI();
+
   // const myassistant = await openai.beta.assistants.create({
   //   name: assistantName,
   //   instructions: assistantInstructions,
@@ -38,13 +38,17 @@ export default async function (req, res) {
           return res.status(200).json({ role: role, message: content });
         });
       }
-    } else if (runStatus.status === failedStatus) {
+    } else if (
+      runStatus.status === "expired" ||
+      runStatus.status === "failed" ||
+      runStatus.status === "cancelled"
+    ) {
       return res.status(200).json({
         role: "assistant",
         message: "Please try again i did not get that correctly",
       });
     } else {
-      return 
+      return;
     }
   };
 
