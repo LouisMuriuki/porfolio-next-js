@@ -9,7 +9,7 @@ import Lui from "../public/logo-qv.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { slideAnimation } from "../config/motion";
 
-const NavLinks = ["home", "about", "skills", "projects", "contact"];
+const NavLinks = ["home", "about",/** "skills", "projects", */ "contact"];
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);

@@ -5,8 +5,11 @@ import Lui from "../public/assests/about1.jpg";
 import { slideAnimation } from "../config/motion";
 import { AiOutlineMail } from "react-icons/ai";
 import HideContext from "../context/HideContext";
+import { HiDocumentDownload } from "react-icons/hi";
+
 const About = () => {
   const { hide, setHide } = useContext(HideContext);
+  
   useEffect(() => {
     const image = document.getElementById("image");
     const text = document.getElementById("text");
@@ -106,12 +109,21 @@ const About = () => {
                     </p>
                   </>
                 )}{" "}
-                <a href="mailto:work.quangviet.1701@.com">
-                  <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
-                    Ping me
-                    <AiOutlineMail size={14} className="ml-2 mt-[2px]" />{" "}
-                  </button>
-                </a>
+                <a href="https://github.com/phamquangviet891/quangviet-cv/blob/main/CV-Quangviet.pdf" target="_blank" >
+              <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                <HiDocumentDownload
+                  size={ isMobile ? 14 : 20}
+                  className="ml-2 mt-[2px]"
+                />
+                <p
+                  className={`${
+                     isMobile ? "text-sm" : "text-base"
+                  }`}
+                >
+                  View my CV
+                </p>
+              </button>
+              </a>
                 <p className="py-2 text-xs md:text-base font-poppins text-[#fff] underline cursor-pointer"></p>
               </div>
             </div>

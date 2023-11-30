@@ -1,6 +1,6 @@
 let OpenAI = require("openai");
 export default async function handler(req, res) {
-  const openai = new OpenAI();
+  const openai = new OpenAI({apiKey:'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'});
   // let pendingStatus = "in_progress" || "queued";
   // let assistantName = "Lui's portfolio Assistant";
   // let assistantInstructions =
@@ -27,6 +27,7 @@ export default async function handler(req, res) {
   });
 
   const checkStatusandPrintMessage = async (threadId, runId) => {
+    console.log("CHECKING STATUS");
     let runStatus = await openai.beta.threads.runs.retrieve(threadId, runId);
     if (runStatus.status === "completed") {
       let messages = await openai.beta.threads.messages.list(threadId);
@@ -66,3 +67,33 @@ export default async function handler(req, res) {
 
   checkforStatusUpdate();
 }
+/**const OpenAI = require('openai');
+const fs = require('fs');
+
+// Load your API key from an environment variable or secret management service
+const openai = new OpenAI(process.env.OPENAI_API_KEY);
+
+// Load the prompt from the data.json file
+const data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+const prompt = data['Phạm Quang Việt'];
+
+export default async function handler(req, res) {
+  const userMessage = req.body;
+
+  // Concatenate the prompt and the user's message
+  const message = `${prompt}\n${userMessage}`;
+
+  try {
+    const gptResponse = await openai.complete({
+      engine: 'davinci',
+      prompt: message,
+      maxTokens: 60
+    });
+
+    const aiMessage = gptResponse.data.choices[0].text.trim();
+    res.status(200).json({ message: aiMessage });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Error processing request' });
+  }
+} */

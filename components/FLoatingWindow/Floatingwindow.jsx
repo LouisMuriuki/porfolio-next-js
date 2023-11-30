@@ -77,7 +77,7 @@ export const Floatingwindow = () => {
       setLoading(true);
       fetch("/api/openai", {
         method: "POST",
-        headers: {
+        headers: { 
           Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
