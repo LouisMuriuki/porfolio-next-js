@@ -81,7 +81,7 @@ const Projects = () => {
           );
         })}
       </div>
-      <div className="githubContainer mt-10 md:mt-20">
+      {/* <div className="githubContainer mt-10 md:mt-20">
         {width > 728 ? (
           <div className="githubChart">
             <div className="dates">
@@ -109,7 +109,7 @@ const Projects = () => {
             GITHUB LINK
           </h2>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
