@@ -61,16 +61,16 @@ const Main = () => {
           <div>
             <motion.div {...headTextAnimation}>
               <p className="uppercase text-xl tracking-widest text-[#fff]  font-fuzzy-bubbles">
-                MERN FULLSTACK DEVELOPER
+                BACKEND DEVELOPER
               </p>
               <h1 className="py-4 text-[#fff]">
                 Hello, I'm{" "}
                 <span className="text-[#08d1d1] font-fuzzy-bubbles">
-                  LOUIS MURIUKI
+                  Quang Viet
                 </span>
               </h1>
               <h1 className="py-4 text-[#fff]">
-                A Full Stack Web and Mobile Developer
+                A Backend Developer
               </h1>
             </motion.div>
 
@@ -79,21 +79,21 @@ const Main = () => {
               {...slideAnimation("up")}
               className="flex items-center justify-between nax-w-[330px] m-auto py-4"
             >
-              <Link href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/">
+              <Link href="https://www.linkedin.com/in/phamquangviet891/">
                 <a target="_blank">
                   <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                     <FaLinkedinIn />
                   </div>
                 </a>
               </Link>
-              <Link href="https://github.com/LouisMuriuki">
+              <Link href="https://github.com/phamquangviet891">
                 <a target="_blank">
                   <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                     <FaGithub />
                   </div>
                 </a>
               </Link>
-              <a href="mailto:'luihugo247@gmail.com'">
+              <a href="mailto:'work.quangviet.1701@gmail.com'">
                 <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <AiOutlineMail />
                 </div>

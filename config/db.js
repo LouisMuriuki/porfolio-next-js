@@ -119,7 +119,7 @@ export const projects = [
   },
   {
     name: "Quick Fast Invoices",
-    githubLink: "https://github.com/LouisMuriuki/QuickFast",
+    githubLink: "https://github.com/phamquangviet891/QuickFast",
     externalLink: "",
     description:
       "An Invoice and Estimate generator to create professional invoices, accurate estimates, and effortlessly manage records for a streamlined financial experience",
@@ -130,7 +130,7 @@ export const projects = [
   },
   {
     name: "Gobble Food Delivery",
-    githubLink: "https://github.com/LouisMuriuki/Gobble",
+    githubLink: "https://github.com/phamquangviet891/Gobble",
     externalLink: "",
     description: "Food Delivery App, Glovo clone ",
     technologies: ["React Native", "Sanity CMS"],
@@ -140,7 +140,7 @@ export const projects = [
   },
   {
     name: "Ulimate Store Api",
-    githubLink: "https://github.com/LouisMuriuki/ultimate-store-api",
+    githubLink: "https://github.com/phamquangviet891/ultimate-store-api",
     externalLink: "",
     description: "A complete node API back-end for an E-commerce site to serve admin as well as client requests",
     technologies: ["Node", "Express"],
@@ -150,7 +150,7 @@ export const projects = [
   },
   {
     name: "AI Image Generator",
-    githubLink: "https://github.com/LouisMuriuki/shiny-garbanzo",
+    githubLink: "https://github.com/phamquangviet891/shiny-garbanzo",
     externalLink: "aimagen.vercel.app",
     description: "An AI image generator powered by DALLE and OpenAI",
     technologies: ["Node", "React"],
@@ -160,7 +160,7 @@ export const projects = [
   },
   {
     name: "Coinisfy",
-    githubLink: "https://github.com/LouisMuriuki/crypto",
+    githubLink: "https://github.com/phamquangviet891/crypto",
     externalLink: "https://cryptomarket-orcin1.vercel.app/",
     description: "A web-3 dashboard to keep track of various coins",
     technologies: ["React"],
@@ -170,7 +170,7 @@ export const projects = [
   },
   {
     name: "AIOS",
-    githubLink: "https://github.com/LouisMuriuki/AIOS",
+    githubLink: "https://github.com/phamquangviet891/AIOS",
     externalLink:
       "https://play.google.com/store/apps/details?id=com.muriuki.AIOS",
     description:

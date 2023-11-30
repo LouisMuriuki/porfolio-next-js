@@ -95,7 +95,7 @@ const Projects = () => {
           </div>
         ) : null}
         <a
-          href="https://github.com/LouisMuriuki"
+          href="https://github.com/phamquangviet891"
           target="_blank"
           rel="noreferrer"
         >

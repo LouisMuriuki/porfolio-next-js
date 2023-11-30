@@ -4,7 +4,7 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
-import lui from "../public/assests/lui.jpg";
+import lui from "../public/assests/about.jpg";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -53,8 +53,8 @@ const Contact = () => {
       <div className="max-w-[1240px] m-auto px-2 py-8 md:py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#fff]">Contact</p>
         <h2 className="py-4">Get in Touch</h2>
-        <div className="grid lg:grid-cols-5 gap-8">
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-teal-900 rounded-xl p-4 ">
+        <div className="grid lg:grid-cols-5 gap-8 ">
+          <div className=" col-span-3   lg:col-span-2 w-full h-full shadow-md shadow-teal-900 rounded-xl p-4 ">
             <div className="lg:p-4 h-full">
               <div>
                 <Image
@@ -65,10 +65,10 @@ const Contact = () => {
               </div>
               <div>
                 <h2 className="text-2xl text-[#fff] font-poppins mb-5">
-                  Louis Muriuki Hugo
+                  Quang Viet Pham
                 </h2>
                 <p className="text-xl font-fuzzy-bubbles">
-                  Full Stack Developer
+                 Backend Developer
                 </p>
                 <p className="py-4 text-slate-300">
                   I am available for Freelance or fulltime positions
@@ -77,21 +77,21 @@ const Contact = () => {
               <div>
                 <p className="uppercase pt-8">Connect with me</p>
                 <div className="mt-10 flex items-center justify-between">
-                  <Link href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/">
+                  <Link href="https://www.linkedin.com/in/phamquangviet891/">
                     <a target="_blank">
                       <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                         <FaLinkedinIn />
                       </div>
                     </a>
                   </Link>
-                  <Link href="https://github.com/LouisMuriuki">
+                  <Link href="https://github.com/phamquangviet891">
                     <a target="_blank">
                       <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                         <FaGithub />
                       </div>
                     </a>
                   </Link>
-                  <Link href="mailto:'luihugo247@gmail.com'">
+                  <Link href="mailto:'work.quangviet.1701@gmail.com'">
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <AiOutlineMail />
                     </div>

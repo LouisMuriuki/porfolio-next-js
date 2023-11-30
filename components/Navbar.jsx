@@ -5,7 +5,7 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
-import Lui from "../public/Louis.png";
+import Lui from "../public/logo-qv.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { slideAnimation } from "../config/motion";
 
@@ -177,17 +177,17 @@ const Navbar = () => {
                     lets Connect
                   </p>
                   <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                    <Link href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/">
+                    <Link href="https://www.linkedin.com/in/phamquangviet891/">
                       <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <FaLinkedinIn />
                       </div>
                     </Link>
-                    <Link href="https://github.com/LouisMuriuki">
+                    <Link href="https://github.com/phamquangviet891">
                       <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <FaGithub />
                       </div>
                     </Link>
-                    <a href="mailto:'luihugo247@gmail.com'">
+                    <a href="mailto:'work.quangviet.1701@gmail.com'">
                       <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <AiOutlineMail />
                       </div>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import Lui from "../public/assests/lui.jpg";
+import Lui from "../public/assests/about1.jpg";
 import { slideAnimation } from "../config/motion";
 import { AiOutlineMail } from "react-icons/ai";
 import HideContext from "../context/HideContext";
@@ -70,12 +70,11 @@ const About = () => {
                 <p className="py-2 z-10 text-xs md:text-sm lg:text-base font-poppins text-[#fff]">
                   Hi there👋, I'm{" "}
                   <span className="text-[#08d1d1] text-sm md:text-lg font-fuzzy-bubbles">
-                    Louis Muriuki Hugo
+                    Quang Viet
                   </span>{" "}
-                  a FullStack developer specialized in crafting intuitive and
-                  user-friendly web and mobile applications. My expertise lies
-                  in React.js for the front-end, Node.js for the backend, and
-                  React Native for cross-platform mobile app development.
+                  a Backend Developer specializing in building robust and efficient web and mobile applications. 
+                  My expertise lies in .NET for backend development, creating scalable services and implementing business logic 
+                  to drive the functionality of applications.
                   {isMobile && hide ? (
                     <span
                       onClick={hideRest}
@@ -107,7 +106,7 @@ const About = () => {
                     </p>
                   </>
                 )}{" "}
-                <a href="mailto:luihugo247@.com">
+                <a href="mailto:work.quangviet.1701@.com">
                   <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
                     Ping me
                     <AiOutlineMail size={14} className="ml-2 mt-[2px]" />{" "}
