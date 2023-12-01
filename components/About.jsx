@@ -109,7 +109,7 @@ const About = () => {
                     </p>
                   </>
                 )}{" "}
-                <a href="https://github.com/phamquangviet891/quangviet-cv/blob/main/CV-Quangviet.pdf" target="_blank" >
+                <a href="https://github.com/phamquangviet891/quangviet-cv/blob/main/CV-Quangviet.pdf" target="_blank" rel="noreferrer">
               <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
                 <HiDocumentDownload
                   size={ isMobile ? 14 : 20}
