@@ -61,9 +61,11 @@ const About = () => {
               >
                 <Image
                   id="luiimage"
-                  className="pt-0 md:pt-20 xl:pt-40 object-contain rounded-xl hover:scale-110 ease-in duration-300 hover:rounded-xl cursor-pointer "
+                  //thêm width với height để tăng tốc độ load ảnh
+                  className=" pt-0 md:pt-20 xl:pt-40 object-contain rounded-xl hover:scale-110 ease-in duration-300 hover:rounded-xl cursor-pointer "
                   src={Lui}
                   alt="Lui"
+                  height={isMobile ? 2000 : 2400}
                 />
               </motion.div>
               <div
