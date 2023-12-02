@@ -1,11 +1,10 @@
 export default async function (req, res) {
-  const baseurl = "https://webassistant.onrender.com";
 
   const usermessage = req.body;
 
   try {
     let incomingmessages = [];
-    fetch(`${baseurl}/api/v1/assistant/conversation/chat`, {
+    fetch(`${process.env.BASEURL}/api/v1/assistant/conversation/chat`, {
       body: JSON.stringify({ message: usermessage }),
       method: "POST",
       headers: { "Content-Type": "application/json" },

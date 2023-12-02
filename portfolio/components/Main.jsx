@@ -31,25 +31,37 @@ const Main = () => {
     FirstCall();
   }, []);
 
-  const FirstCall = () => {
-    fetch("/api/openai", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify("A new visitor is here, welcome them"),
-    }).then((res) => {
-      res.json().then((data) => {
-        console.log(data);
-        setChatlog((chatlog,i) => [
-          ...chatlog,
-          { role: data.role, message: data?.message },
-        ]);
-      });
-    });
-    sessionStorage.setItem("SessionID", session_ID);
-  };
+ const FirstCall = () => {
+   fetch("/api/openai", {
+     method: "POST",
+     headers: {
+       Accept: "application/json, text/plain, */*",
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify("A new visitor is here, welcome them"),
+   })
+     .then((res) => {
+       if (res.status === 200) {
+         return res.json();
+       } else {
+         throw new Error(`Server responded with status: ${res.status}`);
+       }
+     })
+     .then((data) => {
+       console.log(data);
+       setChatlog((chatlog) => [
+         ...chatlog,
+         { role: data.role, message: data?.message },
+       ]);
+     })
+     .catch((error) => {
+       console.error(error);
+       // Handle the error, e.g., show an error message to the user
+     });
+
+   sessionStorage.setItem("SessionID", session_ID);
+ };
+
   return (
     <AnimatePresence>
       <motion.div
