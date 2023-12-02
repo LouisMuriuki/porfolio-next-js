@@ -42,7 +42,7 @@ const Main = () => {
     }).then((res) => {
       res.json().then((data) => {
         console.log(data);
-        setChatlog((chatlog) => [
+        setChatlog((chatlog,i) => [
           ...chatlog,
           { role: data.role, message: data?.message },
         ]);

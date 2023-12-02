@@ -40,7 +40,7 @@ export default function Home() {
             <Skill />
             <Projects />
             <Contact />
-            <div className="fixed z-50 bottom-1 left-0">
+            <div className="fixed z-50 bottom-1 right-0">
               <Floatingwindow />
             </div>
           </div>
