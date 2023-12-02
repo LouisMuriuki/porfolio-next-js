@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
+        "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
