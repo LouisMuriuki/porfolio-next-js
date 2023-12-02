@@ -1,5 +1,5 @@
 export default async function (req, res) {
-  const baseurl = "http://localhost:5000";
+  const baseurl = "https://webassistant.onrender.com";
 
   const usermessage = req.body;
 
