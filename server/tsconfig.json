@@ -13,7 +13,7 @@
     "declaration": true /* Generates corresponding '.d.ts' file */,
     "sourceMap": true /* Generates corresponding '.map' file */
   },
-  "include": ["src/**/*.ts" /* Specify the files to include in compilation */],
+  "include": ["src/**/*.ts", "src/index.js" /* Specify the files to include in compilation */],
   "exclude": [
     "node_modules" /* Specify the files to exclude from compilation */
   ]
