@@ -58,7 +58,7 @@ const startConversation = async (req: any, res: any) => {
         runStatus.status === "cancelled"
       ) {
         console.log(runStatus.status);
-        return res.status(200).json({
+        return res.status(400).json({
           role: "assistant",
           message: "Please try again i did not get that correctly",
         });

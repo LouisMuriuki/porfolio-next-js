@@ -21,7 +21,7 @@ export default async function (req, res) {
           });
           return res.status(200).json(...incomingmessages);
         } else {
-          res.status(200).json({
+          res.status(400).json({
             role: "assistant",
             message: "Please try again i did not get that correctly",
           });
