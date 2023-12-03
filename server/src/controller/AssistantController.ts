@@ -1,7 +1,6 @@
 import OpenAI from "openai";
 import * as dotenv from "dotenv";
 import { Request, Response } from "express";
-import { Assistants } from "openai/resources/beta/assistants/assistants";
 dotenv.config();
 
 const startConversation = async (req: any, res: any) => {
