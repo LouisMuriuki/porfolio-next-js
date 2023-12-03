@@ -8,7 +8,7 @@
     "esModuleInterop": true /* Enable/disable emitting 'import * as ns from "mod"' for namespace imports */,
     "skipLibCheck": true /* Skip type checking of declaration files */,
     "forceConsistentCasingInFileNames": true /* Ensure that casing is consistent in file names */,
-    "outDir": "./dist" /* Redirect output structure to the directory */,
+    "outDir": "./" /* Redirect output structure to the directory */,
     "rootDir": "./src" /* Specify the root directory of input files */,
     "declaration": true /* Generates corresponding '.d.ts' file */,
     "sourceMap": true /* Generates corresponding '.map' file */
