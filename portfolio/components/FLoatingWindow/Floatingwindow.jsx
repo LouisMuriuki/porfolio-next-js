@@ -87,7 +87,7 @@ export const Floatingwindow = () => {
       })
         .then((res) => {
           if (res.status === 200) {
-            return res.json();
+           return res.json();
           } else {
             setLoading(false);
             throw new Error(`Server responded with status: ${res.status}`);

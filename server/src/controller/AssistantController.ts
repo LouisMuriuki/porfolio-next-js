@@ -40,7 +40,6 @@ const startConversation = async (req: any, res: any) => {
       console.log(runStatus.status);
       let incomingmessages: { role: string; message: any }[] = [];
       if (runStatus.status === "completed") {
-        status = true;
         let messages = await openai.beta.threads.messages.list(threadId);
         if (messages) {
           console.log("firstmessage", messages);
@@ -50,13 +49,10 @@ const startConversation = async (req: any, res: any) => {
             console.log(msg);
             incomingmessages.push({ role: role, message: content });
           });
+          status = true;
         }
         return res.status(200).json(incomingmessages);
-      } else if (
-        runStatus.status === "expired" ||
-        runStatus.status === "failed" ||
-        runStatus.status === "cancelled"
-      ) {
+      } else if (runStatus.status === "failed") {
         console.log(runStatus.status);
         return res.status(400).json({
           role: "assistant",
