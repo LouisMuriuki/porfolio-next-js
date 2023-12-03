@@ -9,6 +9,9 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.use("/", ()=>{
+  console.log("We are up!")
+});
 app.use("/api/v1/assistant/conversation", AssistantRoute);
 
 const startServer = async () => {
