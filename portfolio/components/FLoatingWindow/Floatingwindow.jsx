@@ -67,6 +67,7 @@ export const Floatingwindow = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (loading || inputvalue.length <= 1) {
       return;
     } else {
@@ -75,6 +76,7 @@ export const Floatingwindow = () => {
         { role: "user", message: inputvalue },
       ]);
       setLoading(true);
+
       fetch("/api/openai", {
         method: "POST",
         headers: {
@@ -82,23 +84,34 @@ export const Floatingwindow = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(inputvalue),
-      }).then((res) => {
-        res
-          .json()
-          .then((data) => {
-            console.log(data);
-            setChatlog((chatlog) => [
-              ...chatlog,
-              { role: data.role, message: data?.message },
-            ]);
-          })
-          .finally(() => {
+      })
+        .then((res) => {
+          if (res.status === 200) {
+            return res.json();
+          } else {
             setLoading(false);
-          });
-      });
+            throw new Error(`Server responded with status: ${res.status}`);
+          }
+        })
+        .then((data) => {
+          console.log(data);
+          setChatlog((chatlog) => [
+            ...chatlog,
+            { role: data.role, message: data?.message },
+          ]);
+        })
+        .catch((error) => {
+          console.error(error);
+          // Handle the error, e.g., show an error message to the user
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+
       setInputValue("");
     }
   };
+
   const closeModal = () => {
     setModalOpen(false);
   };

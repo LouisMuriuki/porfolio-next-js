@@ -108,7 +108,7 @@ const About = () => {
                   </>
                 )}{" "}
                 <a href="mailto:luihugo247@.com">
-                  <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                  <button className="hover:scale-105 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
                     Ping me
                     <AiOutlineMail size={14} className="ml-2 mt-[2px]" />{" "}
                   </button>

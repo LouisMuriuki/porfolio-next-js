@@ -39,37 +39,46 @@ const Main = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify("A new visitor is here, welcome them"),
-    }).then((res) => {
-      res.json().then((data) => {
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          return res.json();
+        } else {
+          throw new Error(`Server responded with status: ${res.status}`);
+        }
+      })
+      .then((data) => {
         console.log(data);
-        setChatlog((chatlog,i) => [
+        setChatlog((chatlog) => [
           ...chatlog,
           { role: data.role, message: data?.message },
         ]);
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle the error, e.g., show an error message to the user
       });
-    });
+
     sessionStorage.setItem("SessionID", session_ID);
   };
+
   return (
     <AnimatePresence>
-      <motion.div
-        id="home"
-        className="w-full h-screen text-center"
-      >
+      <motion.div id="home" className="w-full h-screen text-center">
         <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
           <Particles className="absolute inset-0 -z-10 " />
           <div>
             <motion.div {...headTextAnimation}>
-              <p className="uppercase text-xl tracking-widest text-[#fff]  font-fuzzy-bubbles">
+              <p className="pt-6 md:pt-0 uppercase text-base md:text-xl tracking-widest text-[#fff]  font-fuzzy-bubbles">
                 MERN FULLSTACK DEVELOPER
               </p>
-              <h1 className="py-4 text-[#fff]">
+              <h1 className="py-6 text-base md:text-3xl  text-[#fff]">
                 Hello, I'm{" "}
                 <span className="text-[#08d1d1] font-fuzzy-bubbles">
                   LOUIS MURIUKI
                 </span>
               </h1>
-              <h1 className="py-4 text-[#fff]">
+              <h1 className="py-6 text-xl md:text-3xl  text-[#fff]">
                 A Full Stack Web and Mobile Developer
               </h1>
             </motion.div>
@@ -81,25 +90,25 @@ const Main = () => {
             >
               <Link href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/">
                 <a target="_blank">
-                  <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                     <FaLinkedinIn />
                   </div>
                 </a>
               </Link>
               <Link href="https://github.com/LouisMuriuki">
                 <a target="_blank">
-                  <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                     <FaGithub />
                   </div>
                 </a>
               </Link>
               <a href="mailto:'luihugo247@gmail.com'">
-                <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <AiOutlineMail />
                 </div>
               </a>
               <a href="tel:+254759266327">
-                <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <BsFillPersonLinesFill />
                 </div>
               </a>

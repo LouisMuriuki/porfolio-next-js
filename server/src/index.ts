@@ -10,7 +10,7 @@ app.use("/api/v1/assistant/conversation", AssistantRoute);
 
 const startServer = async () => {
   try {
-    app.listen(8080, () => {
+    app.listen(3000, () => {
       console.log("runnig");
     });
   } catch (error) {

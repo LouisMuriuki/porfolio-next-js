@@ -50,7 +50,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="w-full h-screen">
-      <div className="max-w-[1240px] m-auto px-2 py-8 md:py-16 w-full">
+      <div className="max-w-[1240px] m-auto px-1 py-8 md:py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#fff]">Contact</p>
         <h2 className="py-4">Get in Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">
@@ -110,7 +110,7 @@ const Contact = () => {
             <div className="p-4"></div>
             <form>
               <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                <div className="flex flex-col">
+                <div className="flex flex-col mx-1">
                   <label className="uppercase text-sm py-2 text-slate-200">
                     Name
                   </label>
@@ -121,7 +121,7 @@ const Contact = () => {
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col mx-1">
                   <label className="uppercase text-sm py-2 text-slate-200">
                     Phone Number
                   </label>
@@ -133,7 +133,7 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col py-2">
+              <div className="flex flex-col mx-1 py-2">
                 <label className="uppercase text-sm py-2 text-slate-200">
                   Email
                 </label>
@@ -144,7 +144,7 @@ const Contact = () => {
                   value={email}
                 />
               </div>
-              <div className="flex flex-col py-2">
+              <div className="flex flex-col mx-1 py-2">
                 <label className="uppercase text-sm py-2 text-slate-200">
                   Subject
                 </label>
@@ -155,7 +155,7 @@ const Contact = () => {
                   onChange={(e) => setSubject(e.target.value)}
                 />
               </div>
-              <div className="flex flex-col py-2">
+              <div className="flex flex-col mx-1 py-2">
                 <label className="uppercase text-sm py-2 text-slate-200">
                   Message
                 </label>

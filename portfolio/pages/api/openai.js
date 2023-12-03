@@ -1,16 +1,19 @@
 export default async function (req, res) {
-  const baseurl = "https://webassistant.onrender.com";
-
   const usermessage = req.body;
 
   try {
     let incomingmessages = [];
-    fetch(`${baseurl}/api/v1/assistant/conversation/chat`, {
+    fetch(`${process.env.BASEURL}/api/v1/assistant/conversation/chat`, {
       body: JSON.stringify({ message: usermessage }),
       method: "POST",
       headers: { "Content-Type": "application/json" },
     })
-      .then((data) => data.json())
+      .then((data) => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        data.json();
+      })
       .then((messages) => {
         console.log(messages);
         if (messages) {
@@ -22,7 +25,7 @@ export default async function (req, res) {
           });
           return res.status(200).json(...incomingmessages);
         } else {
-          res.status(200).json({
+          res.status(400).json({
             role: "assistant",
             message: "Please try again i did not get that correctly",
           });
