@@ -29,8 +29,11 @@ const Work = () => {
   return (
     <AnimatePresence>
       <div ref={ref}>
-        <div id="work" className="w-full h-screen p-2 flex pb-8 md:pb-16 ">
-          <div className="max-w-[1240px] m-1 md:m-24">
+        <div
+          id="work"
+          className="w-full mx-auto h-screen p-2 flex pb-8 md:pb-16 "
+        >
+          <div className="max-w-[1240px] mx-auto flex flex-col">
             <div className="flex flex-col items-start justify-start">
               <p className="uppercase text-xl md:text-2xl font-lato tracking-widest text-[#fff]">
                 Work
@@ -122,7 +125,7 @@ const Work = () => {
                 {workDetails.map((details, i) => {
                   return selectedId === details.id ? (
                     <div
-                    key={i}
+                      key={i}
                       className={`flex flex-col w-auto  ${getTextColor(
                         details.id
                       )}`}
@@ -163,20 +166,20 @@ const Work = () => {
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <a href="/api/download" download={"Lui's CV"}>
-              <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
-                <HiDocumentDownload
-                  size={isClient && isMobile ? 14 : 20}
-                  className="ml-2 mt-[2px]"
-                />
-                <p
-                  className={`${
-                    isClient && isMobile ? "text-sm" : "text-base"
-                  }`}
-                >
-                  Download my CV
-                </p>
-              </button>
+              <a href="/api/downloadcv" download={"Lui's CV.docx"}>
+                <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                  <HiDocumentDownload
+                    size={isClient && isMobile ? 14 : 18}
+                    className="ml-2 mt-[2px]"
+                  />
+                  <p
+                    className={`${
+                      isClient && isMobile ? "text-sm" : "text-base"
+                    }`}
+                  >
+                    Download my CV
+                  </p>
+                </button>
               </a>
             </div>
           </div>

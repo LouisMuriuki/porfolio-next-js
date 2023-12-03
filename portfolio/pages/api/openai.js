@@ -1,5 +1,4 @@
 export default async function (req, res) {
-
   const usermessage = req.body;
 
   try {
@@ -9,7 +8,12 @@ export default async function (req, res) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     })
-      .then((data) => data.json())
+      .then((data) => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        data.json();
+      })
       .then((messages) => {
         console.log(messages);
         if (messages) {

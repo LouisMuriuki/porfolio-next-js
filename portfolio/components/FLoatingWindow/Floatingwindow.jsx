@@ -65,51 +65,52 @@ export const Floatingwindow = () => {
     ],
   };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  if (loading || inputvalue.length <= 1) {
-    return;
-  } else {
-    setChatlog((chatlog) => [
-      ...chatlog,
-      { role: "user", message: inputvalue },
-    ]);
-    setLoading(true);
+    if (loading || inputvalue.length <= 1) {
+      return;
+    } else {
+      setChatlog((chatlog) => [
+        ...chatlog,
+        { role: "user", message: inputvalue },
+      ]);
+      setLoading(true);
 
-    fetch("/api/openai", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(inputvalue),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          return res.json();
-        } else {
-          throw new Error(`Server responded with status: ${res.status}`);
-        }
+      fetch("/api/openai", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(inputvalue),
       })
-      .then((data) => {
-        console.log(data);
-        setChatlog((chatlog) => [
-          ...chatlog,
-          { role: data.role, message: data?.message },
-        ]);
-      })
-      .catch((error) => {
-        console.error(error);
-        // Handle the error, e.g., show an error message to the user
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+        .then((res) => {
+          if (res.status === 200) {
+            return res.json();
+          } else {
+            setLoading(false);
+            throw new Error(`Server responded with status: ${res.status}`);
+          }
+        })
+        .then((data) => {
+          console.log(data);
+          setChatlog((chatlog) => [
+            ...chatlog,
+            { role: data.role, message: data?.message },
+          ]);
+        })
+        .catch((error) => {
+          console.error(error);
+          // Handle the error, e.g., show an error message to the user
+        })
+        .finally(() => {
+          setLoading(false);
+        });
 
-    setInputValue("");
-  }
-};
+      setInputValue("");
+    }
+  };
 
   const closeModal = () => {
     setModalOpen(false);
