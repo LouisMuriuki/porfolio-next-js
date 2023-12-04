@@ -1,4 +1,5 @@
 export default async function (req, res) {
+  require("dotenv").config();
   const usermessage = req.body;
 
   try {
@@ -8,16 +9,17 @@ export default async function (req, res) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     })
-      .then((data) => {
-        if (!response.ok) {
-          throw new Error(response.statusText);
+      .then((res) => {
+        if (res.status === 200) {
+          return res.json();
+        } else {
+          console.log(`Server responded with status: ${res.status}`);
         }
-        data.json();
       })
-      .then((messages) => {
-        console.log(messages);
-        if (messages) {
-          messages.forEach((msg) => {
+      .then((data) => {
+        console.log(data);
+        if (data) {
+          data.forEach((msg) => {
             const role = msg.role;
             const content = msg.message;
             console.log(msg);
@@ -25,10 +27,10 @@ export default async function (req, res) {
           });
           return res.status(200).json(...incomingmessages);
         } else {
-          res.status(400).json({
-            role: "assistant",
-            message: "Please try again i did not get that correctly",
-          });
+          // res.status(400).json({
+          //   role: "assistant",
+          //   message: "Please try again i did not get that correctly",
+          // });
         }
       });
   } catch (error) {
