@@ -124,7 +124,7 @@ export const Floatingwindow = () => {
       refElement.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [inputvalue, chatlog]);
-
+console.log(chatlog)
   return (
     <>
       {modalOpen ? (
@@ -162,7 +162,7 @@ export const Floatingwindow = () => {
                     <div
                       key={i}
                       className={`relative flex items-center   px-1 ${
-                        chat.role === "user" ? "justify-end" : "justify-start"
+                        chat?.role === "user" ? "justify-end" : "justify-start"
                       }`}
                     >
                       {loading && i === chatlog.length - 1 && (
@@ -191,12 +191,12 @@ export const Floatingwindow = () => {
                       <div
                         ref={refElement}
                         className={`py-1 px-2 mb-7 rounded-lg font-fuzzy-bubbles ease-in duration-700 ${
-                          chat.role === "user"
+                          chat?.role === "user"
                             ? "bg-green-500 bg-opacity-60"
                             : "bg-teal-500 bg-opacity-60"
                         }`}
                       >
-                        {chat.message.length > 1 ? (
+                        {chat?.message?.length > 1 ? (
                           <p className="text-white text-sm">{chat.message}</p>
                         ) : null}
                       </div>
