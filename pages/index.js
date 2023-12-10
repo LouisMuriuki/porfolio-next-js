@@ -39,7 +39,7 @@ export default function Home() {
             <Skill />
             <Projects />
             <Contact />
-            <Draggable>
+            <Draggable >
               <div className="fixed z-50 bottom-1 right-0">
                 <Floatingwindow />
               </div>
