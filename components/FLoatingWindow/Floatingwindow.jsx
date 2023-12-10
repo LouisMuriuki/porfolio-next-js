@@ -172,7 +172,7 @@ export const Floatingwindow = () => {
                       {loading && i === chatlog.length - 1 && (
                         <div
                           key={chatlog.length}
-                          className="flex items-center justify-start absolute left-4 top-6 h-5"
+                          className="flex items-center justify-start absolute left-4 top-12 h-5"
                         >
                           <Loader />
                         </div>
