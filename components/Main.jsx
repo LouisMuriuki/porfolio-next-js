@@ -28,7 +28,7 @@ const Main = () => {
     };
   }, []);
   useEffect(() => {
-    // FirstCall();
+    FirstCall();
   }, []);
 
   const FirstCall = () => {

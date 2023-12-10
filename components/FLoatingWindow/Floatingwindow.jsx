@@ -135,7 +135,7 @@ export const Floatingwindow = () => {
           className="flex items-center shadow-md shadow-teal-900 rounded-lg  bg-transparent bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 justify-end max-h-screen ease-in duration-300"
         >
           <div
-            className={"h-[500px] md:h-[540px] pt-4 pr-1 sm:w-full md:max-w-2xl"}
+            className={"h-[400px] md:h-[540px] pt-4 pr-1 sm:w-full md:max-w-2xl"}
           >
             <div className="flex w-full mt-[-40px] items-center justify-between ">
               <Lottie
@@ -159,7 +159,7 @@ export const Floatingwindow = () => {
               />
             </div>
             <div className="flex flex-col w-full">
-              <div className="flex mt-2 h-[370px] md:h-[400px] w-full mb-0 no-scrollbar overflow-y-scroll flex-col">
+              <div className="flex mt-2 h-[260px] md:h-[400px] w-full mb-0 no-scrollbar overflow-y-scroll flex-col">
                 {chatlog.map((chat, i) => {
                   console.log(chatlog.length, i);
                   return (
