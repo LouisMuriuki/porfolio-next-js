@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useContext, useEffect, useState } from "react";
 import Typescript from "../public/assests/skills/typescript.png";
-import Reactnative from "../public/assests/skills/reactnative.png";
 import Antdesign from "../public/assests/skills/antdesign.png";
 import Storybook from "../public/assests/skills/storybook.png";
 import Tailwind from "../public/assests/skills/tailwind.png";
@@ -13,21 +12,10 @@ import Mongo from "../public/assests/skills/mongo.png";
 import Firebase from "../public/assests/skills/firebase.png";
 import Github from "../public/assests/skills/github.png";
 import HideContext from "../context/HideContext";
-import { Particles } from "./Particles";
+import { isMobile } from "react-device-detect";
+import { Particles } from "./Reusables/Particles";
 const Skill = () => {
-  const { hide, setHide } = useContext(HideContext);
-  const [width, setWidth] = useState();
-  const handleWidth = () => {
-    setWidth(window.innerWidth);
-  };
 
-  useEffect(() => {
-    handleWidth();
-    window.addEventListener("resize", handleWidth);
-    return () => {
-      window.removeEventListener("resize", handleWidth);
-    };
-  }, [width, setWidth]);
   return (
     <div id="skills" className={`md:mt-14 w-full h-fit  p-2 `}>
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
@@ -43,8 +31,8 @@ const Skill = () => {
                 <Image
                   src={Javascript}
                   alt="Javascript"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -58,8 +46,8 @@ const Skill = () => {
                 <Image
                   src={Typescript}
                   alt="Typescript"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -73,8 +61,8 @@ const Skill = () => {
                 <Image
                   src={Tailwind}
                   alt="Tailwind CSS"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -88,8 +76,8 @@ const Skill = () => {
                 <Image
                   src={Reactjs}
                   alt="REact Native"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -103,8 +91,8 @@ const Skill = () => {
                 <Image
                   src={Reactjs}
                   alt="React JS"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -118,8 +106,8 @@ const Skill = () => {
                 <Image
                   src={Next}
                   alt="Next JS"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -133,8 +121,8 @@ const Skill = () => {
                 <Image
                   src={Node}
                   alt="Node JS"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -148,8 +136,8 @@ const Skill = () => {
                 <Image
                   src={Mongo}
                   alt="MongoDB"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -163,8 +151,8 @@ const Skill = () => {
                 <Image
                   src={Firebase}
                   alt="Firebase"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -178,8 +166,8 @@ const Skill = () => {
                 <Image
                   src={Github}
                   alt="Github"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -193,8 +181,8 @@ const Skill = () => {
                 <Image
                   src={Antdesign}
                   alt="AntDesign"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -208,8 +196,8 @@ const Skill = () => {
                 <Image
                   src={Storybook}
                   alt="Storybook"
-                  width={width < 768 ? "48px" : "64px"}
-                  height={width < 768 ? "48px" : "64px"}
+                  width={isMobile? "48px" : "64px"}
+                  height={isMobile? "48px" : "64px"}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import MousePosition from "../utils/useMousePosition";
+import MousePosition from "../../utils/useMousePosition";
 
 function hexToRgb(hex) {
   // Remove the "#" character from the beginning of the hex color code
