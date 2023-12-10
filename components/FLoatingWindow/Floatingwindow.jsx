@@ -223,7 +223,7 @@ export const Floatingwindow = () => {
         </motion.div>
       ) : (
         <AnimatePresence>
-          <motion.div className="cursor-pointer" id="robot" onTouchStart={openModal} onClick={openModal}>
+          <motion.div className="cursor-pointer" id="robot" onClick={openModal}>
             <Lottie
               className="hover:scale-105 ease-in duration-300 "
               loop={true}
