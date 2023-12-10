@@ -8,7 +8,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import ChatContext from "../../context/ChatContext";
 import { slideAnimation } from "../../config/motion";
 import { IoMdSend } from "react-icons/io";
-const style = {
+import Loader from "../Reusables/Loader";
+const bigLottie = {
   height: 260,
   width: 260,
 };
@@ -27,8 +28,10 @@ export const Floatingwindow = () => {
   const [loading, setLoading] = useState(false);
   let refElement = useRef();
   const [width, setWidth] = useState();
+  const [height, setHeight] = useState();
   const handleWidth = () => {
     setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
   };
 
   useEffect(() => {
@@ -37,14 +40,14 @@ export const Floatingwindow = () => {
     return () => {
       window.removeEventListener("resize", handleWidth);
     };
-  }, [width, setWidth]);
+  }, [width, setWidth, height, setHeight]);
 
   useEffect(() => {
     const robot = document.getElementById("robot");
     if (robot) {
       window.addEventListener("scroll", () => {
         let offsetY = window.scrollY;
-        robot.style.transform = `translateY(${-offsetY * 0.1}px)`;
+        robot.style.transform = `translateY(${-offsetY * 0.09}px)`;
       });
 
       return () => {
@@ -87,7 +90,7 @@ export const Floatingwindow = () => {
       })
         .then((res) => {
           if (res.status === 200) {
-           return res.json();
+            return res.json();
           } else {
             setLoading(false);
             throw new Error(`Server responded with status: ${res.status}`);
@@ -102,7 +105,6 @@ export const Floatingwindow = () => {
         })
         .catch((error) => {
           console.error(error);
-          // Handle the error, e.g., show an error message to the user
         })
         .finally(() => {
           setLoading(false);
@@ -124,7 +126,7 @@ export const Floatingwindow = () => {
       refElement.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [inputvalue, chatlog]);
-console.log(chatlog)
+  console.log(chatlog);
   return (
     <>
       {modalOpen ? (
@@ -132,7 +134,9 @@ console.log(chatlog)
           {...slideAnimation("left")}
           className="flex items-center shadow-md shadow-teal-900 rounded-lg  bg-transparent bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 justify-end max-h-screen ease-in duration-300"
         >
-          <div className="h-[600px] md:h-[540px] pt-4 pr-1 sm:w-full md:max-w-3xl ">
+          <div
+            className={"h-[500px] md:h-[540px] pt-4 pr-1 sm:w-full md:max-w-2xl"}
+          >
             <div className="flex w-full mt-[-40px] items-center justify-between ">
               <Lottie
                 loop={true}
@@ -155,7 +159,7 @@ console.log(chatlog)
               />
             </div>
             <div className="flex flex-col w-full">
-              <div className="flex mt-2 h-[460px] md:h-[400px] w-full mb-0 no-scrollbar overflow-y-scroll flex-col">
+              <div className="flex mt-2 h-[370px] md:h-[400px] w-full mb-0 no-scrollbar overflow-y-scroll flex-col">
                 {chatlog.map((chat, i) => {
                   console.log(chatlog.length, i);
                   return (
@@ -168,24 +172,9 @@ console.log(chatlog)
                       {loading && i === chatlog.length - 1 && (
                         <div
                           key={chatlog.length}
-                          className=" flex items-center justify-start absolute left-4 top-1"
+                          className="flex items-center justify-start absolute left-4 top-6 h-5"
                         >
-                          <div
-                            class="inline-block h-4 w-4 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-                            role="status"
-                          >
-                            <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-                              Loading...
-                            </span>
-                          </div>
-                          <div
-                            class="inline-block h-4 w-4 animate-[spinner-grow_0.75s_linear_infinite] rounded-full bg-current align-[-0.125em] opacity-0 motion-reduce:animate-[spinner-grow_1.5s_linear_infinite]"
-                            role="status"
-                          >
-                            <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-                              Loading...
-                            </span>
-                          </div>
+                          <Loader />
                         </div>
                       )}
                       <div
@@ -233,7 +222,7 @@ console.log(chatlog)
               loop={true}
               animationData={floatingrobot}
               draggable={true}
-              style={width < 768 ? mediumLottie : style}
+              style={width<728 ? mediumLottie : bigLottie}
             />
           </motion.div>
         </AnimatePresence>

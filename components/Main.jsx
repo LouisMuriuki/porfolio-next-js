@@ -6,7 +6,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { headTextAnimation, slideAnimation } from "../config/motion";
-import { Particles } from "./Particles";
+import { Particles } from "./Reusables/Particles";
 import { useRouter } from "next/router";
 import ChatContext from "../context/ChatContext";
 
@@ -28,7 +28,7 @@ const Main = () => {
     };
   }, []);
   useEffect(() => {
-    FirstCall();
+    // FirstCall();
   }, []);
 
   const FirstCall = () => {
@@ -41,7 +41,7 @@ const Main = () => {
       body: JSON.stringify("A new visitor is here, welcome them"),
     })
       .then((res) => {
-        console.log(res)
+        console.log(res);
         if (res.status === 200) {
           return res.json();
         } else {
@@ -103,11 +103,9 @@ const Main = () => {
                   </div>
                 </a>
               </Link>
-              <a href="mailto:'luihugo247@gmail.com'">
-                <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <AiOutlineMail />
-                </div>
-              </a>
+              <div onClick={()=>router.push('mailto:luihugo247@gmail.com')} className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <AiOutlineMail />
+              </div>
               <a href="tel:+254759266327">
                 <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <BsFillPersonLinesFill />
