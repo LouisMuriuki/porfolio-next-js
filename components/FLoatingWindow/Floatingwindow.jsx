@@ -227,6 +227,7 @@ export const Floatingwindow = () => {
             <Lottie
               className="hover:scale-105 ease-in duration-300 "
               loop={true}
+              onClick={openModal}
               animationData={floatingrobot}
               draggable={false}
               style={width<728 ? mediumLottie : bigLottie}
