@@ -8,8 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import ChatContext from "../../context/ChatContext";
 import { slideAnimation } from "../../config/motion";
 import { IoMdSend } from "react-icons/io";
-import { isMobile } from "react-device-detect";
-import Loader from "../Reusables/loader";
+import Loader from "../Reusables/Loader";
 const bigLottie = {
   height: 260,
   width: 260,
