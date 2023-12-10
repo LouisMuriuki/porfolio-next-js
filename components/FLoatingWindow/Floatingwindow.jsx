@@ -29,6 +29,7 @@ export const Floatingwindow = () => {
   let refElement = useRef();
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
+ 
   const handleWidth = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
@@ -67,13 +68,19 @@ export const Floatingwindow = () => {
       },
     ],
   };
-
+ 
+   
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     if (loading || inputvalue.length <= 1) {
       return;
     } else {
+      // const formattedTime = new Date().toLocaleTimeString('en-US', {
+      //   hour: 'numeric',
+      //   minute: 'numeric',
+      //   hour12: true
+      // });
       setChatlog((chatlog) => [
         ...chatlog,
         { role: "user", message: inputvalue },
@@ -216,12 +223,12 @@ export const Floatingwindow = () => {
         </motion.div>
       ) : (
         <AnimatePresence>
-          <motion.div className="cursor-pointer" id="robot" onClick={openModal}>
+          <motion.div className="cursor-pointer" id="robot"  onClick={openModal}>
             <Lottie
               className="hover:scale-105 ease-in duration-300 "
               loop={true}
               animationData={floatingrobot}
-              draggable={true}
+              draggable={false}
               style={width<728 ? mediumLottie : bigLottie}
             />
           </motion.div>
