@@ -10,7 +10,7 @@ import Floatingwindow from "../components/FLoatingWindow/Floatingwindow";
 import { ModalProvider } from "../context/modalContext";
 import { ChatProvider } from "../context/ChatContext";
 import Draggable from "react-draggable";
-
+import { isMobile } from "react-device-detect";
 export default function Home() {
   return (
     <ChatProvider>
@@ -39,11 +39,17 @@ export default function Home() {
             <Skill />
             <Projects />
             <Contact />
-            <Draggable>
+            {isMobile ? (
               <div className="fixed z-50 bottom-1 right-0">
                 <Floatingwindow />
               </div>
-            </Draggable>
+            ) : (
+              <Draggable>
+                <div className="fixed z-50 bottom-1 right-0">
+                  <Floatingwindow />
+                </div>
+              </Draggable>
+            )}
           </div>
         </ModalProvider>
       </HideProvider>
