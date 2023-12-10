@@ -5,7 +5,9 @@ import Lui from "../public/assests/lui.jpg";
 import { slideAnimation } from "../config/motion";
 import { AiOutlineMail } from "react-icons/ai";
 import HideContext from "../context/HideContext";
+import { useRouter } from "next/router";
 const About = () => {
+  const router=useRouter()
   const { hide, setHide } = useContext(HideContext);
   useEffect(() => {
     const image = document.getElementById("image");
@@ -107,12 +109,10 @@ const About = () => {
                     </p>
                   </>
                 )}{" "}
-                <a href="mailto:luihugo247@.com">
-                  <button className="hover:scale-105 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
-                    Ping me
-                    <AiOutlineMail size={14} className="ml-2 mt-[2px]" />{" "}
-                  </button>
-                </a>
+                <button onClick={()=>router.push('mailto:luihugo247@gmail.com')} className="hover:scale-105 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                  Ping me
+                  <AiOutlineMail size={14} className="ml-2 mt-[2px]" />{" "}
+                </button>
                 <p className="py-2 text-xs md:text-base font-poppins text-[#fff] underline cursor-pointer"></p>
               </div>
             </div>

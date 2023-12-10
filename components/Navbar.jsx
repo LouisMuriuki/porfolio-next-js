@@ -64,10 +64,7 @@ const Navbar = () => {
             </Link>
           </motion.div>
           <motion.div {...slideAnimation("right")}>
-            <ul
-              style={{ color: `${linkColor}` }}
-              className="hidden md:flex "
-            >
+            <ul style={{ color: `${linkColor}` }} className="hidden md:flex ">
               {NavLinks.map((navs, i) => {
                 return (
                   <div key={i} className="group flex flex-col">
@@ -85,7 +82,6 @@ const Navbar = () => {
                   </div>
                 );
               })}
-              
             </ul>
             <div className="md:hidden" onClick={handlenav}>
               <AiOutlineMenu size={25} />
@@ -151,7 +147,7 @@ const Navbar = () => {
                       Skills
                     </li>
                   </Link>
-                  <Link href="/#projects" scroll={false} >
+                  <Link href="/#projects" scroll={false}>
                     <li
                       onClick={() => {
                         setNav(false);
@@ -187,11 +183,9 @@ const Navbar = () => {
                         <FaGithub />
                       </div>
                     </Link>
-                    <a href="mailto:'luihugo247@gmail.com'">
-                      <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
-                        <AiOutlineMail />
-                      </div>
-                    </a>
+                    <div onClick={()=>router.push('mailto:luihugo247@gmail.com')} className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <AiOutlineMail />
+                    </div>
                     <a href="tel:+254759266327">
                       <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <BsFillPersonLinesFill />
