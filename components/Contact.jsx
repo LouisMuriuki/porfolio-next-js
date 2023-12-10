@@ -8,8 +8,10 @@ import lui from "../public/assests/lui.jpg";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 const Contact = () => {
+  const router=useRouter()
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
@@ -90,12 +92,10 @@ const Contact = () => {
                         <FaGithub />
                       </div>
                     </a>
-                  </Link>
-                  <Link href="mailto:'luihugo247@gmail.com'">
-                    <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  </Link> 
+                    <div onClick={()=>router.push('mailto:luihugo247@gmail.com')} className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <AiOutlineMail />
                     </div>
-                  </Link>
                   <Link href="tel:+254759266327">
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <BsFillPersonLinesFill />
