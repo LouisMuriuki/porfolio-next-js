@@ -17,15 +17,15 @@ const Navbar = () => {
   const [linkColor, setLinkColor] = useState("#FFF");
   const router = useRouter();
 
-  useEffect(() => {
-    if (router.asPath === "/recipe") {
-      setNavbg("transparent");
-      setLinkColor("#ecf0f3");
-    } else {
-      setNavbg("#000d17");
-      setLinkColor("#fff");
-    }
-  }, [router]);
+  // useEffect(() => {
+  //   if (router.asPath === "/another route") {
+  //     setNavbg("transparent");
+  //     setLinkColor("#ecf0f3");
+  //   } else {
+  //     setNavbg("#000d17");
+  //     setLinkColor("#fff");
+  //   }
+  // }, [router]);
   const handlenav = () => {
     setNav((prev) => !prev);
   };
