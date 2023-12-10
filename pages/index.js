@@ -9,10 +9,9 @@ import Work from "../components/Work";
 import Floatingwindow from "../components/FLoatingWindow/Floatingwindow";
 import { ModalProvider } from "../context/modalContext";
 import { ChatProvider } from "../context/ChatContext";
+import Draggable from "react-draggable";
 
 export default function Home() {
-  
-
   return (
     <ChatProvider>
       <HideProvider>
@@ -40,9 +39,11 @@ export default function Home() {
             <Skill />
             <Projects />
             <Contact />
-            <div className="fixed z-50 bottom-1 right-0">
-              <Floatingwindow />
-            </div>
+            <Draggable>
+              <div className="fixed z-50 bottom-1 right-0">
+                <Floatingwindow />
+              </div>
+            </Draggable>
           </div>
         </ModalProvider>
       </HideProvider>
