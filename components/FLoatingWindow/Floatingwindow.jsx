@@ -29,7 +29,7 @@ export const Floatingwindow = () => {
   let refElement = useRef();
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
- 
+
   const handleWidth = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
@@ -68,11 +68,10 @@ export const Floatingwindow = () => {
       },
     ],
   };
- 
-   
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (loading || inputvalue.length <= 1) {
       return;
     } else {
@@ -142,9 +141,11 @@ export const Floatingwindow = () => {
           className="flex items-center shadow-md shadow-teal-900 rounded-lg  bg-transparent bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 justify-end max-h-screen ease-in duration-300"
         >
           <div
-            className={"h-[440px] md:h-[540px] pt-4 pr-1 sm:w-full md:max-w-2xl"}
+            className={
+              "h-[440px] md:h-[540px] pt-4 pr-1 sm:w-full md:max-w-2xl"
+            }
           >
-            <div className="flex w-full mt-[-40px] items-center justify-between ">
+            <div className="cursor-pointer flex w-full mt-[-40px] items-center justify-between ">
               <Lottie
                 loop={true}
                 animationData={robot2}
@@ -230,7 +231,7 @@ export const Floatingwindow = () => {
               onClick={openModal}
               animationData={floatingrobot}
               draggable={false}
-              style={width<728 ? mediumLottie : bigLottie}
+              style={width < 728 ? mediumLottie : bigLottie}
             />
           </motion.div>
         </AnimatePresence>
