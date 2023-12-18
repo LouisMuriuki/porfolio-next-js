@@ -71,7 +71,7 @@ const Main = () => {
           <div>
             <motion.div {...headTextAnimation}>
               <p className="pt-6 md:pt-0 uppercase text-base md:text-xl tracking-widest text-[#fff]  font-fuzzy-bubbles">
-                MERN FULLSTACK DEVELOPER
+               FULLSTACK DEVELOPER
               </p>
               <h1 className="py-6 text-base md:text-3xl  text-[#fff]">
                 Hello, I'm{" "}

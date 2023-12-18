@@ -68,7 +68,7 @@ export const workDetails = [
     ],
   },
   {
-    company: "Switch Tv",
+    company: "Switch Media",
     responsibility: [
       "Redesigned sections of the Switch TV website to create a user-friendly, visually appealing experience, increasing daily traffic by 20%.",
       "In 2+ projects, applied optimization techniques to reduce page size and load times by 15% to enhance user experience.",
