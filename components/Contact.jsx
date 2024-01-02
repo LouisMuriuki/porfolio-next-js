@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 
 const Contact = () => {
-  const router=useRouter()
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
@@ -21,14 +21,14 @@ const Contact = () => {
 
   const notify = () => toast("Message received!");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email && !message) {
       toast("Please enter your message first");
       return;
     }
     let data = { name, phone, email, subject, message };
-    fetch("/api/email", {
+    await fetch("/api/email", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -92,10 +92,13 @@ const Contact = () => {
                         <FaGithub />
                       </div>
                     </a>
-                  </Link> 
-                    <div onClick={()=>router.push('mailto:luihugo247@gmail.com')} className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <AiOutlineMail />
-                    </div>
+                  </Link>
+                  <div
+                    onClick={() => router.push("mailto:luihugo247@gmail.com")}
+                    className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+                  >
+                    <AiOutlineMail />
+                  </div>
                   <Link href="tel:+254759266327">
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <BsFillPersonLinesFill />
