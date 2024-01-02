@@ -32,7 +32,7 @@ export default async function (req, res) {
         reject(err);
       } else {
         console.log(info.response);
-        resolve(success);
+        resolve(info);
       }
     });
     res.status(200).end();
