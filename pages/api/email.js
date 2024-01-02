@@ -1,4 +1,4 @@
-export default function (req, res) {
+export default async function (req, res) {
   let nodemailer = require("nodemailer");
   require("dotenv").config();
   const PASSWORD = process.env.password;
@@ -9,7 +9,7 @@ export default function (req, res) {
       user: "luihugo7@gmail.com",
       pass: PASSWORD,
     },
-    secure:true,
+    secure: true,
     tls: {
       rejectUnauthorized: false,
     },
@@ -25,11 +25,12 @@ export default function (req, res) {
     <p>${req.body.message}</p>
     </div>`,
   };
-   transporter.sendMail (mailData, function (err, info) {
-    if (err) {
-      console.log(err.message);
-      
-    } else console.log(info.response);
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailData, function (err, info) {
+      if (err) {
+        console.log(err.message);
+      } else console.log(info.response);
+    });
+    res.status(200).end();
   });
-  res.status(200).end();
 }
