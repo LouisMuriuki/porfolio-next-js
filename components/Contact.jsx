@@ -22,7 +22,7 @@ const Contact = () => {
 
   const notify = () => toast("Message received!");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async(e) => {
     setLoading(true);
     e.preventDefault();
     if (!email && !message) {
@@ -33,24 +33,26 @@ const Contact = () => {
     await fetch("/api/email", {
       method: "POST",
       headers: {
-        Accept: "application/json, text/plain, */*",
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then((res) => {
-      console.log(JSON.parse(res));
-      if (res.status === 200) {
-        setLoading(false);
-        console.log("Response succeeded!");
-        setSubmitted(true);
-        notify();
-        setName("");
-        setEmail("");
-        setPhone("");
-        setSubject("");
-        setMessage("");
-      }
-    });
+    })
+      .then((res) => res.json())
+      .then((datta) => {
+        console.log(JSON.parse(datta));
+        if (datta.status === 200) {
+          setLoading(false);
+          console.log("Response succeeded!");
+          setSubmitted(true);
+          notify();
+          setName("");
+          setEmail("");
+          setPhone("");
+          setSubject("");
+          setMessage("");
+        }
+      });
   };
 
   return (
