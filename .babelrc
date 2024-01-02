@@ -1,11 +1,11 @@
-// {
-//   "presets": ["next/babel"],
-//   "plugins": [
-//     [
-//       "babel-plugin-transform-remove-console",
-//       {
-//         "exclude": ["error", "warn"] // Optional: Exclude specific log levels
-//       }
-//     ]
-//   ]
-// }
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    // [
+    //   "babel-plugin-transform-remove-console",
+    //   {
+    //     "exclude": ["error", "warn"] // Optional: Exclude specific log levels
+    //   }
+    // ]
+  ]
+}
