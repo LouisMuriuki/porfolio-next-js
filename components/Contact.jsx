@@ -22,7 +22,7 @@ const Contact = () => {
 
   const notify = () => toast("Message received!");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     setLoading(true);
     e.preventDefault();
     if (!email && !message) {
@@ -30,7 +30,7 @@ const Contact = () => {
       return;
     }
     let data = { name, phone, email, subject, message };
-    await fetch("/api/email", {
+    fetch("/api/email", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
