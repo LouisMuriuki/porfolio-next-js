@@ -29,8 +29,13 @@ export default async function (req, res) {
     transporter.sendMail(mailData, function (err, info) {
       if (err) {
         console.log(err.message);
-      } else console.log(info.response);
+        reject(err);
+      } else {
+        console.log(info.response);
+        resolve(info);
+      }
     });
     res.status(200).end();
   });
+  
 }
