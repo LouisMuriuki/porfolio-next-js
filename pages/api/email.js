@@ -10,9 +10,9 @@ export default async function (req, res) {
       pass: PASSWORD,
     },
     secure: true,
-    tls: {
-      rejectUnauthorized: false,
-    },
+    // tls: {
+    //   rejectUnauthorized: false,
+    // },
   });
   const mailData = {
     from: "luihugo7@gmail.com",
