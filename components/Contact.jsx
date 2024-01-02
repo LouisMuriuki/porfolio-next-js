@@ -18,10 +18,12 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const notify = () => toast("Message received!");
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     if (!email && !message) {
       toast("Please enter your message first");
@@ -38,6 +40,7 @@ const Contact = () => {
     }).then((res) => {
       console.log("Response received");
       if (res.status === 200) {
+        setLoading(false);
         console.log("Response succeeded!");
         setSubmitted(true);
         notify();
@@ -171,7 +174,8 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                onClick={(e) => handleSubmit(e)}
+                disabled={loading}
+                onClick={loading ? () => {} : (e) => handleSubmit(e)}
                 className="w-full p-4 text-gray-100 mt-4"
               >
                 Send Message

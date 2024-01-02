@@ -1,4 +1,4 @@
-export default async function (req, res) {
+export default async (req, res) => {
   let nodemailer = require("nodemailer");
   require("dotenv").config();
   const PASSWORD = process.env.password;
@@ -10,9 +10,18 @@ export default async function (req, res) {
       pass: PASSWORD,
     },
     secure: true,
-    // tls: {
-    //   rejectUnauthorized: false,
-    // },
+  });
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log("Server is ready to take our messages");
+        resolve(success);
+      }
+    });
   });
   const mailData = {
     from: "luihugo7@gmail.com",
@@ -35,7 +44,6 @@ export default async function (req, res) {
         resolve(info);
       }
     });
-    res.status(200).end();
   });
-  
-}
+  res.status(200).end();
+};
