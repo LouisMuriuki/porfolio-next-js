@@ -37,22 +37,20 @@ const Contact = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((datta) => {
-        console.log(JSON.parse(datta));
-        if (datta.status === 200) {
-          setLoading(false);
-          console.log("Response succeeded!");
-          setSubmitted(true);
-          notify();
-          setName("");
-          setEmail("");
-          setPhone("");
-          setSubject("");
-          setMessage("");
-        }
-      });
+    }).then((res) => {
+      console.log(JSON.parse(res));
+      if (res.status === 200) {
+        setLoading(false);
+        console.log("Response succeeded!");
+        setSubmitted(true);
+        notify();
+        setName("");
+        setEmail("");
+        setPhone("");
+        setSubject("");
+        setMessage("");
+      }
+    });
   };
 
   return (
