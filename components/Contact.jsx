@@ -38,7 +38,7 @@ const Contact = () => {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log(res);
+      console.log(JSON.parse(res));
       if (res.status === 200) {
         setLoading(false);
         console.log("Response succeeded!");
