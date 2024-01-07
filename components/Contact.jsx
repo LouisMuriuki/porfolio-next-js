@@ -22,7 +22,7 @@ const Contact = () => {
 
   const notify = () => toast("Message received!");
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
     if (!email && !message) {
@@ -38,7 +38,7 @@ const Contact = () => {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log(JSON.parse(res));
+      console.log(res);
       if (res.status === 200) {
         setLoading(false);
         console.log("Response succeeded!");
