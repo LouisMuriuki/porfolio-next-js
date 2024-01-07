@@ -21,7 +21,10 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const notify = () => toast("Message received!");
-
+  const errormsg = () =>
+    toast(
+      "something is wrong, Please send me a direct email by clicking the message icon anywhere on this website"
+    );
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
@@ -55,8 +58,9 @@ const Contact = () => {
         setMessage("");
       } else {
         // Read the response as text or JSON here
-        const errorData = await response.json(); // or await response.text() if the server sends plain text
+        const errorData = await response.text(); // or await response.text() if the server sends plain text
         console.error("Error response:", errorData);
+        errormsg();
         // Handle the error based on errorData
       }
     } catch (error) {
@@ -110,12 +114,13 @@ const Contact = () => {
                       </div>
                     </a>
                   </Link>
-                  <div
-                    onClick={() => router.push("mailto:luihugo247@gmail.com")}
-                    className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
-                  >
-                    <AiOutlineMail />
-                  </div>
+                  <Link href="mailto:luihugo247@gmail.com">
+                    <a target="_blank">
+                      <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                        <AiOutlineMail />
+                      </div>
+                    </a>
+                  </Link>
                   <Link href="tel:+254759266327">
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <BsFillPersonLinesFill />
