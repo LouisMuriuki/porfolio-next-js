@@ -71,7 +71,7 @@ const Main = () => {
           <div>
             <motion.div {...headTextAnimation}>
               <p className="pt-6 md:pt-0 uppercase text-base md:text-xl tracking-widest text-[#fff]  font-fuzzy-bubbles">
-               FULLSTACK DEVELOPER
+                FULLSTACK DEVELOPER
               </p>
               <h1 className="py-6 text-base md:text-3xl  text-[#fff]">
                 Hello, I'm{" "}
@@ -103,9 +103,12 @@ const Main = () => {
                   </div>
                 </a>
               </Link>
-              <div onClick={()=>router.push('mailto:luihugo247@gmail.com')} className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                <AiOutlineMail />
-              </div>
+              <a target="_blank" href="mailto:luihugo247@gmail.com">
+                <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <AiOutlineMail />
+                </div>
+              </a>
+
               <a href="tel:+254759266327">
                 <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <BsFillPersonLinesFill />
