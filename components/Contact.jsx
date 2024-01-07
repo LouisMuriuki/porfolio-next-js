@@ -30,16 +30,20 @@ const Contact = () => {
       return;
     }
     let data = { name, phone, email, subject, message };
-    await fetch("/api/email", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      console.log(res);
-      if (res.status === 200) {
+
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      console.log(response);
+
+      if (response.ok) {
         setLoading(false);
         console.log("Response succeeded!");
         setSubmitted(true);
@@ -49,8 +53,18 @@ const Contact = () => {
         setPhone("");
         setSubject("");
         setMessage("");
+      } else {
+        // Read the response as text or JSON here
+        const errorData = await response.json(); // or await response.text() if the server sends plain text
+        console.error("Error response:", errorData);
+        // Handle the error based on errorData
       }
-    });
+    } catch (error) {
+      console.error("Fetch error:", error);
+      // Handle network or other fetch errors
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
