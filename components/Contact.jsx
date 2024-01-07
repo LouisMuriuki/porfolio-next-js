@@ -58,7 +58,7 @@ const Contact = () => {
         setMessage("");
       } else {
         // Read the response as text or JSON here
-        const errorData = await response.json(); // or await response.text() if the server sends plain text
+        const errorData = await response.text(); // or await response.text() if the server sends plain text
         console.error("Error response:", errorData);
         errormsg()
         // Handle the error based on errorData
