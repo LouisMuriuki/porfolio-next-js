@@ -103,11 +103,14 @@ const Main = () => {
                   </div>
                 </a>
               </Link>
-              <a target="_blank" href="mailto:luihugo247@gmail.com">
-                <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <AiOutlineMail />
-                </div>
-              </a>
+              
+              <Link href="mailto:luihugo247@gmail.com">
+                <a target="_blank">
+                  <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <AiOutlineMail />
+                  </div>
+                </a>
+              </Link>
 
               <a href="tel:+254759266327">
                 <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">

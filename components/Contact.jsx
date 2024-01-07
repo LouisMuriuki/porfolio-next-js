@@ -60,7 +60,7 @@ const Contact = () => {
         // Read the response as text or JSON here
         const errorData = await response.text(); // or await response.text() if the server sends plain text
         console.error("Error response:", errorData);
-        errormsg()
+        errormsg();
         // Handle the error based on errorData
       }
     } catch (error) {
@@ -114,11 +114,13 @@ const Contact = () => {
                       </div>
                     </a>
                   </Link>
-                  <a target="_blank" href="mailto:luihugo247@gmail.com">
-                    <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <AiOutlineMail />
-                    </div>
-                  </a>
+                  <Link href="mailto:luihugo247@gmail.com">
+                    <a target="_blank">
+                      <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                        <AiOutlineMail />
+                      </div>
+                    </a>
+                  </Link>
                   <Link href="tel:+254759266327">
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <BsFillPersonLinesFill />
