@@ -53,7 +53,7 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center w-full px-2 2xl:px-20 ">
           <motion.div {...slideAnimation("left")}>
-            <Link href="/#home">
+            <Link href="/#home" legacyBehavior>
               <Image
                 src={Lui}
                 alt="Lui"
@@ -68,7 +68,7 @@ const Navbar = () => {
               {NavLinks.map((navs, i) => {
                 return (
                   <div key={i} className="group flex flex-col">
-                    <Link href={`/#${navs}`} scroll={false}>
+                    <Link href={`/#${navs}`} scroll={false} legacyBehavior>
                       <li
                         onClick={() => {
                           setNav(false);
@@ -104,7 +104,7 @@ const Navbar = () => {
           >
             <div>
               <div className="flex w-full items-center justify-between">
-                <Link href="/" scroll={false}>
+                <Link href="/" scroll={false} legacyBehavior>
                   <Image
                     src={Lui}
                     alt="lui"
@@ -127,7 +127,7 @@ const Navbar = () => {
               </div>
               <div className="py-4 flex-col">
                 <ul className="uppercase font-kalam font-bold">
-                  <Link href="/#about" scroll={false}>
+                  <Link href="/#about" scroll={false} legacyBehavior>
                     <li
                       onClick={() => {
                         setNav(false);
@@ -137,7 +137,7 @@ const Navbar = () => {
                       About
                     </li>
                   </Link>
-                  <Link href="/#skills" scroll={false}>
+                  <Link href="/#skills" scroll={false} legacyBehavior>
                     <li
                       onClick={() => {
                         setNav(false);
@@ -147,7 +147,7 @@ const Navbar = () => {
                       Skills
                     </li>
                   </Link>
-                  <Link href="/#projects" scroll={false}>
+                  <Link href="/#projects" scroll={false} legacyBehavior>
                     <li
                       onClick={() => {
                         setNav(false);
@@ -157,7 +157,7 @@ const Navbar = () => {
                       Projects
                     </li>
                   </Link>
-                  <Link href="/#contact" scroll={false}>
+                  <Link href="/#contact" scroll={false} legacyBehavior>
                     <li
                       onClick={() => {
                         setNav(false);
@@ -173,12 +173,14 @@ const Navbar = () => {
                     lets Connect
                   </p>
                   <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                    <Link href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/">
+                    <Link
+                      href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/"
+                      legacyBehavior>
                       <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <FaLinkedinIn />
                       </div>
                     </Link>
-                    <Link href="https://github.com/LouisMuriuki">
+                    <Link href="https://github.com/LouisMuriuki" legacyBehavior>
                       <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <FaGithub />
                       </div>

@@ -89,27 +89,29 @@ const Main = () => {
               {...slideAnimation("up")}
               className="flex items-center justify-between nax-w-[330px] m-auto py-4"
             >
-              <Link href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/">
-                <a target="_blank">
-                  <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <FaLinkedinIn />
-                  </div>
-                </a>
+              <Link
+                href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/"
+                target="_blank">
+
+                <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <FaLinkedinIn />
+                </div>
+
               </Link>
-              <Link href="https://github.com/LouisMuriuki">
-                <a target="_blank">
-                  <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <FaGithub />
-                  </div>
-                </a>
+              <Link href="https://github.com/LouisMuriuki" target="_blank">
+
+                <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <FaGithub />
+                </div>
+
               </Link>
               
-              <Link href="mailto:luihugo247@gmail.com">
-                <a target="_blank">
-                  <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <AiOutlineMail />
-                  </div>
-                </a>
+              <Link href="mailto:luihugo247@gmail.com" target="_blank">
+
+                <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <AiOutlineMail />
+                </div>
+
               </Link>
 
               <a href="tel:+254759266327">

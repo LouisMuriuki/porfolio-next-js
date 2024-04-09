@@ -26,32 +26,32 @@ const ProjectItem = ({
         </div>
         <div className="flex items-center gap-5 cursor-pointer">
           {appstorelink ? (
-            <Link href={appstorelink}>
-              <a target="_blank">
-                <IoLogoAppleAppstore className="hover:scale-125 ease-in duration-300" />
-              </a>
-            </Link>
+            (<Link href={appstorelink} target="_blank">
+
+              <IoLogoAppleAppstore className="hover:scale-125 ease-in duration-300" />
+
+            </Link>)
           ) : null}
           {playstorelink ? (
-            <Link href={playstorelink}>
-              <a target="_blank">
-                <IoLogoGooglePlaystore className="hover:scale-125 ease-in duration-300" />
-              </a>
-            </Link>
+            (<Link href={playstorelink} target="_blank">
+
+              <IoLogoGooglePlaystore className="hover:scale-125 ease-in duration-300" />
+
+            </Link>)
           ) : null}
           {githublink ? (
-            <Link href={githublink}>
-              <a target="_blank">
-                <VscGithubInverted className="hover:scale-125 ease-in duration-300" />
-              </a>
-            </Link>
+            (<Link href={githublink} target="_blank">
+
+              <VscGithubInverted className="hover:scale-125 ease-in duration-300" />
+
+            </Link>)
           ) : null}
           {projectUrl ? (
-            <Link href={projectUrl}>
-              <a target="_blank">
-                <FaExternalLinkSquareAlt className="hover:scale-125 ease-in duration-300" />
-              </a>
-            </Link>
+            (<Link href={projectUrl} target="_blank">
+
+              <FaExternalLinkSquareAlt className="hover:scale-125 ease-in duration-300" />
+
+            </Link>)
           ) : null}
         </div>
       </div>

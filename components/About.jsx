@@ -60,7 +60,7 @@ const About = () => {
               >
                 <Image
                   id="luiimage"
-                  className="pt-0 md:pt-20 xl:pt-40 object-contain rounded-xl hover:scale-110 ease-in duration-300 hover:rounded-xl cursor-pointer "
+                  className="w-full pt-0 md:pt-20 xl:pt-0 object-contain rounded-xl hover:scale-105 ease-in duration-300 hover:rounded-xl cursor-pointer "
                   src={Lui}
                   alt="Lui"
                 />
@@ -109,7 +109,10 @@ const About = () => {
                     </p>
                   </>
                 )}{" "}
-                <button onClick={()=>router.push('mailto:luihugo247@gmail.com')} className="hover:scale-105 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                <button
+                  onClick={() => router.push("mailto:luihugo247@gmail.com")}
+                  className="hover:scale-105 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100"
+                >
                   Ping me
                   <AiOutlineMail size={14} className="ml-2 mt-[2px]" />{" "}
                 </button>
