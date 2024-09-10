@@ -19,39 +19,31 @@ const ProjectItem = ({
 }) => {
   const processedTechonoligies = technologies.join();
   return (
-    <div className="relative bg-[#242c3a] px-6 py-6 h-64 md:h-80 mx-6 my-2 md:mx-1 rounded-lg md:rounded-md cursor-pointer">
+    <div className="relative bg-[#17153B] px-6 py-6 h-64 md:h-80 mx-6 my-2 md:mx-1 rounded-lg md:rounded-md cursor-pointer">
       <div className="flex items-center justify-between">
         <div className="cursor-default">
           {publicrepo ? <FaFolderOpen /> : <FaFolder />}
         </div>
         <div className="flex items-center gap-5 cursor-pointer">
           {appstorelink ? (
-            (<Link href={appstorelink} target="_blank">
-
+            <Link href={appstorelink} target="_blank">
               <IoLogoAppleAppstore className="hover:scale-125 ease-in duration-300" />
-
-            </Link>)
+            </Link>
           ) : null}
           {playstorelink ? (
-            (<Link href={playstorelink} target="_blank">
-
+            <Link href={playstorelink} target="_blank">
               <IoLogoGooglePlaystore className="hover:scale-125 ease-in duration-300" />
-
-            </Link>)
+            </Link>
           ) : null}
           {githublink ? (
-            (<Link href={githublink} target="_blank">
-
+            <Link href={githublink} target="_blank">
               <VscGithubInverted className="hover:scale-125 ease-in duration-300" />
-
-            </Link>)
+            </Link>
           ) : null}
           {projectUrl ? (
-            (<Link href={projectUrl} target="_blank">
-
+            <Link href={projectUrl} target="_blank">
               <FaExternalLinkSquareAlt className="hover:scale-125 ease-in duration-300" />
-
-            </Link>)
+            </Link>
           ) : null}
         </div>
       </div>

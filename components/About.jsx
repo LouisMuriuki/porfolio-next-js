@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useRef } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import Lui from "../public/assests/lui.jpg";
+import Lui from "../public/assests/about.jpeg";
 import { slideAnimation } from "../config/motion";
 import { AiOutlineMail } from "react-icons/ai";
 import HideContext from "../context/HideContext";
 import { useRouter } from "next/router";
 const About = () => {
-  const router=useRouter()
+  const router = useRouter();
   const { hide, setHide } = useContext(HideContext);
   useEffect(() => {
     const image = document.getElementById("image");
@@ -42,10 +42,10 @@ const About = () => {
   };
   return (
     <AnimatePresence>
-      <div ref={ref}>
+      <div ref={ref} className="mb-28 md:mb-0">
         <div
           id="about"
-          className="w-full h-screen p-2 flex items-center py-8 md:py-16 "
+          className="w-full h-screen p-2 flex items-center pb-10 md:pb-0 py-8 md:py-20 "
         >
           <div className="max-w-[1240px] m-auto md:grid-cols-2 gap-8 ">
             <p className="uppercase text-xl md:text-2xl font-lato tracking-widest text-[#fff]">
@@ -60,14 +60,14 @@ const About = () => {
               >
                 <Image
                   id="luiimage"
-                  className="w-full pt-0 md:pt-20 xl:pt-0 object-contain rounded-xl hover:scale-105 ease-in duration-300 hover:rounded-xl cursor-pointer "
+                  className="pt-0 md:pt-20 xl:pt-0 object-contain rounded-xl hover:scale-105 ease-in duration-300 hover:rounded-xl cursor-pointer "
                   src={Lui}
                   alt="Lui"
                 />
               </motion.div>
               <div
                 id="text"
-                className="md:mt-20 pt-2 items-center justify-center col-span-1 flex flex-col z-10 rounded-xl h-max hover:shadow-md overflow-hidden shadow-teal-900"
+                className="md:mt-20 pt-2 items-center justify-center col-span-1 flex flex-col z-10 rounded-xl h-max overflow-hidden shadow-teal-900"
               >
                 <p className="py-2 z-10 text-xs md:text-sm lg:text-base font-poppins text-[#fff]">
                   Hi there👋, I'm{" "}
@@ -108,13 +108,13 @@ const About = () => {
                       )}
                     </p>
                   </>
-                )}{" "}
+                )}
                 <button
                   onClick={() => router.push("mailto:luihugo247@gmail.com")}
                   className="hover:scale-105 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100"
                 >
                   Ping me
-                  <AiOutlineMail size={14} className="ml-2 mt-[2px]" />{" "}
+                  <AiOutlineMail size={14} className="ml-2 mt-[2px]" />
                 </button>
                 <p className="py-2 text-xs md:text-base font-poppins text-[#fff] underline cursor-pointer"></p>
               </div>

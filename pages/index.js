@@ -31,7 +31,7 @@ export default function Home() {
               rel="stylesheet"
             ></link>
           </Head>
-          <div className="flex flex-col">
+          <div className="flex flex-col ">
             <Main />
             <About />
             <Work />

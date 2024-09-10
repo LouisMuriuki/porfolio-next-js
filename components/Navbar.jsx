@@ -13,7 +13,7 @@ const NavLinks = ["home", "about", "skills", "projects", "contact"];
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navbg, setNavbg] = useState("#000d17");
+  const [activenav, setActiveNav] = useState("");
   const [linkColor, setLinkColor] = useState("#FFF");
   const router = useRouter();
 
@@ -44,23 +44,30 @@ const Navbar = () => {
   return (
     <AnimatePresence>
       <div
-        style={{ backgroundColor: `${navbg}` }}
         className={
           shadow
-            ? "fixed w-full h-20 shadow-sm shadow-teal-900 z-[100] flex justify-center font-fuzzy-bubbles font-bold"
+            ? "fixed w-full h-20 shadow-sm shadow-teal-900 z-[100] flex justify-center font-fuzzy-bubbles font-bold bg-opacity-70 backdrop-filter backdrop-blur-lg"
             : "fixed w-full h-20 z-[100] flex justify-center font-fuzzy-bubbles font-bold"
         }
       >
         <div className="flex justify-between items-center w-full px-2 2xl:px-20 ">
           <motion.div {...slideAnimation("left")}>
             <Link href="/#home" legacyBehavior>
-              <Image
-                src={Lui}
-                alt="Lui"
-                className="object-cover hover:cursor-pointer"
-                width="205"
-                height="80"
-              />
+              <div
+                style={{
+                  position: "relative",
+                  width: `${200}px`,
+                  height: `${80}px`,
+                }}
+              >
+                <Image
+                  src={Lui}
+                  alt="Lui"
+                  className="aspect-auto p-3 hover:cursor-pointer "
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
             </Link>
           </motion.div>
           <motion.div {...slideAnimation("right")}>
@@ -72,13 +79,18 @@ const Navbar = () => {
                       <li
                         onClick={() => {
                           setNav(false);
+                          setActiveNav(navs);
                         }}
-                        className="ml-10 text-lg uppercase "
+                        className={`ml-10 text-md uppercase ${
+                          activenav === navs ? 'border-b-1 border-[#08d1d1]' : ''
+                        }`}
                       >
                         {navs}
                       </li>
                     </Link>
-                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#08d1d1] ml-10"></span>
+                    <span className={`block h-0.5 bg-[#08d1d1] ml-10 transition-all duration-500 ${
+                      activenav === navs ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'
+                    }`}></span>
                   </div>
                 );
               })}
@@ -105,13 +117,20 @@ const Navbar = () => {
             <div>
               <div className="flex w-full items-center justify-between">
                 <Link href="/" scroll={false} legacyBehavior>
-                  <Image
-                    src={Lui}
-                    alt="lui"
-                    className="object-cover"
-                    width="117"
-                    height="97"
-                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      width: "117px",
+                      height: "97px",
+                    }}
+                  >
+                    <Image
+                      src={Lui}
+                      alt="lui"
+                      className="object-cover hover:cursor-pointer"
+                      fill
+                    />
+                  </div>
                 </Link>
                 <div
                   onClick={handlenav}
@@ -121,9 +140,7 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="border-b border-white-300 my-4">
-                <p className="w-[95%] md:w-[90%] py-4">
-                 FULLSTACK DEVELOPER
-                </p>
+                <p className="w-[95%] md:w-[90%] py-4">FULLSTACK DEVELOPER</p>
               </div>
               <div className="py-4 flex-col">
                 <ul className="uppercase font-kalam font-bold">
@@ -175,7 +192,8 @@ const Navbar = () => {
                   <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                     <Link
                       href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/"
-                      legacyBehavior>
+                      legacyBehavior
+                    >
                       <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <FaLinkedinIn />
                       </div>
@@ -185,7 +203,10 @@ const Navbar = () => {
                         <FaGithub />
                       </div>
                     </Link>
-                    <div onClick={()=>router.push('mailto:luihugo247@gmail.com')} className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div
+                      onClick={() => router.push("mailto:luihugo247@gmail.com")}
+                      className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300"
+                    >
                       <AiOutlineMail />
                     </div>
                     <a href="tel:+254759266327">

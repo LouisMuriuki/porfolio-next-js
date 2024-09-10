@@ -27,6 +27,7 @@ html{
 body{
   scroll-behavior: smooth;
   scrollbar-width: none;
+  overflow-x: hidden; /* Add this line */
 }
 body::-webkit-scrollbar {
   display: none;
@@ -87,7 +88,7 @@ body::-webkit-scrollbar {
 
 @layer base{
   body{
-    @apply bg-[#000d17] text-[#05a1a1] tracking-wide
+    @apply bg-[#0c082a] text-[#05a1a1]  tracking-wide
 
   }
   h1,h2,h3,h4,h5,h6{
@@ -105,4 +106,10 @@ body::-webkit-scrollbar {
   button{
     @apply shadow-sm shadow-teal-400 rounded-xl uppercase bg-gradient-to-r from-[teal] to-[teal] text-white
   }
+}
+
+/* Add these new rules */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }

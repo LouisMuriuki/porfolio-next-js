@@ -1,5 +1,4 @@
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { slideAnimation } from "../config/motion";
 import React, { useEffect, useRef, useState } from "react";
 import { workDetails } from "../config/db";
 import Lottie from "lottie-react";
@@ -7,6 +6,7 @@ import animationData from "../public/assests/lottie/dev.json";
 import { isMobile } from "react-device-detect";
 import { HiDocumentDownload } from "react-icons/hi";
 const Work = () => {
+  
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [selectedId, setSelectedId] = useState(0);
