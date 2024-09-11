@@ -104,7 +104,7 @@ const Main = () => {
               </Link>
 
               <Link href="mailto:luihugo247@gmail.com" target="_blank">
-                <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <AiOutlineMail />
                 </div>
               </Link>
@@ -114,7 +114,6 @@ const Main = () => {
                   <BsFillPersonLinesFill />
                 </div>
               </a>
-          
             </motion.div>
           </div>
         </div>

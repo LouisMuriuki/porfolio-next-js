@@ -82,15 +82,21 @@ const Navbar = () => {
                           setActiveNav(navs);
                         }}
                         className={`ml-10 text-md uppercase ${
-                          activenav === navs ? 'border-b-1 border-[#08d1d1]' : ''
+                          activenav === navs
+                            ? "border-b-1 border-[#08d1d1]"
+                            : ""
                         }`}
                       >
                         {navs}
                       </li>
                     </Link>
-                    <span className={`block h-0.5 bg-[#08d1d1] ml-10 transition-all duration-500 ${
-                      activenav === navs ? 'max-w-full' : 'max-w-0 group-hover:max-w-full'
-                    }`}></span>
+                    <span
+                      className={`block h-0.5 bg-[#08d1d1] ml-10 transition-all duration-500 ${
+                        activenav === navs
+                          ? "max-w-full"
+                          : "max-w-0 group-hover:max-w-full"
+                      }`}
+                    ></span>
                   </div>
                 );
               })}
@@ -134,7 +140,7 @@ const Navbar = () => {
                 </Link>
                 <div
                   onClick={handlenav}
-                  className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer"
+                  className="rounded-full shadow-sm shadow-teal-500 p-3 cursor-pointer"
                 >
                   <AiOutlineClose />
                 </div>
@@ -194,23 +200,23 @@ const Navbar = () => {
                       href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/"
                       legacyBehavior
                     >
-                      <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <div className="rounded-full shadow-sm shadow-teal-500 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <FaLinkedinIn />
                       </div>
                     </Link>
                     <Link href="https://github.com/LouisMuriuki" legacyBehavior>
-                      <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <div className="rounded-full shadow-sm shadow-teal-500 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <FaGithub />
                       </div>
                     </Link>
                     <div
                       onClick={() => router.push("mailto:luihugo247@gmail.com")}
-                      className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300"
+                      className="rounded-full shadow-sm shadow-teal-500 p-3 cursor-pointer hover:scale-110 ease-in duration-300"
                     >
                       <AiOutlineMail />
                     </div>
                     <a href="tel:+254759266327">
-                      <div className="rounded-full shadow-sm shadow-teal-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <div className="rounded-full shadow-sm shadow-teal-500 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
                         <BsFillPersonLinesFill />
                       </div>
                     </a>

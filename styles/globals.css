@@ -88,7 +88,7 @@ body::-webkit-scrollbar {
 
 @layer base{
   body{
-    @apply bg-[#0c082a] text-[#05a1a1]  tracking-wide
+    @apply bg-[#0c082a] text-teal-500  tracking-wide
 
   }
   h1,h2,h3,h4,h5,h6{
@@ -104,7 +104,7 @@ body::-webkit-scrollbar {
     @apply cursor-pointer
   }
   button{
-    @apply shadow-sm shadow-teal-400 rounded-xl uppercase bg-gradient-to-r from-[teal] to-[teal] text-white
+    @apply shadow-sm shadow-teal-500 rounded-xl uppercase bg-gradient-to-r from-[teal] to-[teal] text-white
   }
 }
 
