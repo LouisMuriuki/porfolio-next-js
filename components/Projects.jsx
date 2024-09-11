@@ -56,59 +56,60 @@ const Projects = () => {
     };
   }, [width, setWidth]);
   return (
-    <div id="projects" className="w-full">
-      <div className="max-w-[1240px] mx-auto py-8 md:py-16"></div>
-      <p className="px-2  md:px-24 uppercase text-xl tracking-widest font-lato text-[#fff]">
-        Projects
-      </p>
-      <h2 className="px-2 md:px-24 pb-3 first-letter:first-line:marker:selection:file:placeholder:backdrop:md:px-24 font-lato mb-2 md:mb-8 ">
-        What i've build
-      </h2>
-      <div className="grid md:grid-cols-4 gap-8 p2-4 px-2 md:px-20 mb-6">
-        {projects.map((project, i) => {
-          return (
-            <ProjectItem
-              key={i}
-              title={project.name}
-              description={project.description}
-              technologies={project.technologies}
-              projectUrl={project.externalLink}
-              githublink={project.githubLink}
-              publicrepo={project.public}
-              playstorelink={project.playstorelink}
-              appstorelink={project.appstorelink}
-            />
-          );
-        })}
-      </div>
-      <div className="githubContainer mt-10 md:mt-20">
-        {width > 728 ? (
-          <div className="githubChart">
-            <div className="dates">
-              {dates.map((date, i) => {
-                return <span key={i}>{date}</span>;
-              })}
+    <div className="w-full" id="projects">
+      <div className="max-w-[1240px] mx-auto py-8 md:py-16">
+        <p className="px-2  md:px-24 uppercase text-xl tracking-widest font-lato text-[#fff]">
+          Projects
+        </p>
+        <h2 className="px-2 md:px-24 pb-3 first-letter:first-line:marker:selection:file:placeholder:backdrop:md:px-24 font-lato mb-2 md:mb-8 ">
+          What i've build
+        </h2>
+        <div className="grid md:grid-cols-4 gap-8 mb-6">
+          {projects.map((project, i) => {
+            return (
+              <ProjectItem
+                key={i}
+                title={project.name}
+                description={project.description}
+                technologies={project.technologies}
+                projectUrl={project.externalLink}
+                githublink={project.githubLink}
+                publicrepo={project.public}
+                playstorelink={project.playstorelink}
+                appstorelink={project.appstorelink}
+              />
+            );
+          })}
+        </div>
+        <div className="githubContainer mt-10 md:mt-20">
+          {width > 728 ? (
+            <div className="githubChart">
+              <div className="dates">
+                {dates.map((date, i) => {
+                  return <span key={i}>{date}</span>;
+                })}
+              </div>
+              <div className="boxContainer">
+                <Githuboxes />
+              </div>
             </div>
-            <div className="boxContainer">
-              <Githuboxes />
-            </div>
-          </div>
-        ) : null}
-        <a
-          href="https://github.com/LouisMuriuki"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <h2
-            className={
-              width < 728
-                ? "githubTitlesmall text-xl font-fuzzy-bubbles mt-5 md:mt-8"
-                : "githubTitle text-x font-fuzzy-bubbles  mt-5 md:mt-8"
-            }
+          ) : null}
+          <a
+            href="https://github.com/LouisMuriuki"
+            target="_blank"
+            rel="noreferrer"
           >
-            GITHUB LINK
-          </h2>
-        </a>
+            <h2
+              className={
+                width < 728
+                  ? "githubTitlesmall text-xl font-fuzzy-bubbles mt-5 md:mt-8"
+                  : "githubTitle text-x font-fuzzy-bubbles  mt-5 md:mt-8"
+              }
+            >
+              ON GITHUB
+            </h2>
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Contact from "../components/Contact";
 import About from "../components/About";
 import Main from "../components/Main";
 import Projects from "../components/Projects";
@@ -38,7 +37,7 @@ export default function Home() {
             {/* {isClient && isMobile ? <div></div> : <Work />} */}
             <Skill />
             <Projects />
-            <Contact />
+            {/* <Contact /> */}
             {isMobile ? (
               <div className="fixed z-50 bottom-1 right-0">
                 <Floatingwindow />

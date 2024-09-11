@@ -8,10 +8,8 @@ import lui from "../public/assests/lui.jpg";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useRouter } from "next/router";
 
 const Contact = () => {
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
@@ -91,7 +89,7 @@ const Contact = () => {
                   Louis Muriuki Hugo
                 </h2>
                 <p className="text-xl font-fuzzy-bubbles">
-                  Full Stack Developer
+                  Soft Developer
                 </p>
                 <p className="py-4 text-slate-300">
                   I am available for Freelance or fulltime positions
@@ -137,7 +135,7 @@ const Contact = () => {
                     Name
                   </label>
                   <input
-                    className="border-2 outline-0 rounded-lg  text-slate-600 p-3 flex bg-[#dfdddd] border-[#242c3a]"
+                    className="border-2 outline-0 rounded-xl  text-slate-600 p-3 flex bg-[#dfdddd] border-[#242c3a]"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -148,7 +146,7 @@ const Contact = () => {
                     Phone Number
                   </label>
                   <input
-                    className="border-2 outline-0 text-slate-600 rounded-lg p-3 flex bg-[#dfdddd] border-[#242c3a]"
+                    className="border-2 outline-0 text-slate-600 rounded-xl p-3 flex bg-[#dfdddd] border-[#242c3a]"
                     type="text"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -160,7 +158,7 @@ const Contact = () => {
                   Email
                 </label>
                 <input
-                  className="border-2 outline-0 text-slate-600 rounded-lg p-3 flex bg-[#dfdddd] border-[#242c3a]"
+                  className="border-2 outline-0 text-slate-600 rounded-xl p-3 flex bg-[#dfdddd] border-[#242c3a]"
                   type="email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
@@ -171,7 +169,7 @@ const Contact = () => {
                   Subject
                 </label>
                 <input
-                  className="border-2 outline-0 text-slate-600 rounded-lg p-3 flex bg-[#dfdddd] border-[#242c3a]"
+                  className="border-2 outline-0 text-slate-600 rounded-xl p-3 flex bg-[#dfdddd] border-[#242c3a]"
                   type="type"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
@@ -182,7 +180,7 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
-                  className="border-2 text-slate-600 outline-0 rounded-lg p-3 bg-[#dfdddd] border-[#242c3a]"
+                  className="border-2 text-slate-600 outline-0 rounded-xl p-3 bg-[#dfdddd] border-[#242c3a]"
                   rows="10"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
