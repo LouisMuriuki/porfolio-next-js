@@ -43,6 +43,29 @@ export const workDetails = [
     ],
   },
   {
+    company: "Switch Media",
+    responsibility: [
+      "Redesigned sections of the Switch TV website to create a user-friendly, visually appealing experience, increasing daily traffic by 20%.",
+      "In 2+ projects, applied optimization techniques to reduce page size and load times by 15% to enhance user experience.",
+      "Tested and optimized 50+ React components for the best performance across every device and browser.",
+      "Designed, developed, tested, and worked on the E-plus Kenya mobile web application.",
+      "Utilized CSS frameworks such as Tailwind CSS to create a consistent look and feel across all websites.",
+      "Worked on the Kenya Red Cross Training Institute Website.",
+      "Performed maintenance and updates on the Boma Inn Website.",
+    ],
+    location: "Onsite - Nairobi",
+    title: "Software Developer Intern",
+    from: "Oct 2021 - Jan 2022",
+    id: 3,
+    companyDetails: [
+      {
+        logo: require("../public/assests/work/switch.png"),
+        location: "Nairobi",
+        building: "",
+      },
+    ],
+  },
+  {
     company: "Freelancer",
     responsibility: [
       "Developed a chat bot using Node.JS and Socket.IO, React, and Open AI.",
@@ -63,29 +86,6 @@ export const workDetails = [
       {
         logo: "",
         location: "Remote",
-        building: "",
-      },
-    ],
-  },
-  {
-    company: "Switch Media",
-    responsibility: [
-      "Redesigned sections of the Switch TV website to create a user-friendly, visually appealing experience, increasing daily traffic by 20%.",
-      "In 2+ projects, applied optimization techniques to reduce page size and load times by 15% to enhance user experience.",
-      "Tested and optimized 50+ React components for the best performance across every device and browser.",
-      "Designed, developed, tested, and worked on the E-plus Kenya mobile web application.",
-      "Utilized CSS frameworks such as Tailwind CSS to create a consistent look and feel across all websites.",
-      "Worked on the Kenya Red Cross Training Institute Website.",
-      "Performed maintenance and updates on the Boma Inn Website.",
-    ],
-    location: "Onsite - Nairobi",
-    title: "Software Developer Intern",
-    from: "Oct 2021 - Jan 2022",
-    id: 3,
-    companyDetails: [
-      {
-        logo: require("../public/assests/work/switch.png"),
-        location: "Nairobi",
         building: "",
       },
     ],
@@ -140,7 +140,7 @@ export const projects = [
     public: true,
     appstorelink: "",
     playstorelink: "",
-  }
+  },
   // {
   //   name: "Gobble Food Delivery",
   //   githubLink: "https://github.com/LouisMuriuki/Gobble",
@@ -195,5 +195,3 @@ export const projects = [
   //   playstorelink: "",
   // },
 ];
-
-

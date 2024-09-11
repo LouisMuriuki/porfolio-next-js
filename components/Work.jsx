@@ -133,7 +133,7 @@ const Work = () => {
                         <h3
                           className={`${
                             isClient && isMobile ? "text-sm" : "text-base"
-                          } text-teal-500 md:text-lg font-semibold underline mb-2`}
+                          }  md:text-lg font-semibold underline mb-2`}
                         >
                           {details.title}
                         </h3>
