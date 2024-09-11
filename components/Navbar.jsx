@@ -59,6 +59,7 @@ const Navbar = () => {
                   width: `${200}px`,
                   height: `${80}px`,
                 }}
+                cla
               >
                 <Image
                   src={Lui}
@@ -109,14 +110,14 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
+              ? "md:hidden fixed left-0 top-0 w-full min-h-full md:h-0 bg-opacity-70 backdrop-filter backdrop-blur-lg"
               : ""
           }
         >
           <div
             className={
               nav
-                ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#000d17] p-10 ease-in duration-500"
+                ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#17153B] p-10 ease-in duration-500"
                 : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
             }
           >
@@ -133,7 +134,7 @@ const Navbar = () => {
                     <Image
                       src={Lui}
                       alt="lui"
-                      className="object-cover hover:cursor-pointer"
+                      className="object-cover hover:cursor-pointer "
                       fill
                     />
                   </div>
