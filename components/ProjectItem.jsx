@@ -19,7 +19,7 @@ const ProjectItem = ({
 }) => {
   const processedTechonoligies = technologies.join();
   return (
-    <div className="relative bg-[#17153B] px-6 py-6 h-64 md:h-80 mx-6 my-2 md:mx-1 rounded-lg md:rounded-md cursor-pointer">
+    <div className="relative  bg-[#17153B] px-6 py-6 h-64 md:h-80 mx-6 my-2 md:mx-1 rounded-xl cursor-pointer hover:scale-105 hover:shadow-2xl shadow-sm ease-in duration-300">
       <div className="flex items-center justify-between">
         <div className="cursor-default">
           {publicrepo ? <FaFolderOpen /> : <FaFolder />}

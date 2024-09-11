@@ -9,7 +9,7 @@ import Lui from "../public/Louis.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { slideAnimation } from "../config/motion";
 
-const NavLinks = ["home", "about", "skills", "projects", "contact"];
+const NavLinks = ["home", "about", "skills", "projects"];
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
@@ -181,7 +181,7 @@ const Navbar = () => {
                       Projects
                     </li>
                   </Link>
-                  <Link href="/#contact" scroll={false} legacyBehavior>
+                  {/* <Link href="/#contact" scroll={false} legacyBehavior>
                     <li
                       onClick={() => {
                         setNav(false);
@@ -190,7 +190,7 @@ const Navbar = () => {
                     >
                       Contact
                     </li>
-                  </Link>
+                  </Link> */}
                 </ul>
                 <div className="pt-38">
                   <p className="uppercase tracking-widest text-[#FFF]">

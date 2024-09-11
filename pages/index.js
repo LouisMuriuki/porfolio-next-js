@@ -38,7 +38,7 @@ export default function Home() {
             {/* {isClient && isMobile ? <div></div> : <Work />} */}
             <Skill />
             <Projects />
-            <Contact />
+            {/* <Contact /> */}
             {isMobile ? (
               <div className="fixed z-50 bottom-1 right-0">
                 <Floatingwindow />

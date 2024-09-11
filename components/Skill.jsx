@@ -24,10 +24,10 @@ const Skill = () => {
           Skills
         </p>
         <h2 className="py-4 font-lato text-sm underline ">
-          What is my stack / tools
+          What is my stack 
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -42,7 +42,7 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -57,7 +57,7 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -73,7 +73,7 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -88,7 +88,7 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -104,7 +104,7 @@ const Skill = () => {
             </div>
           </div>
 
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -120,7 +120,7 @@ const Skill = () => {
             </div>
           </div>
 
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -135,7 +135,7 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -150,7 +150,7 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -165,7 +165,7 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -180,7 +180,7 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -195,7 +195,7 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 shadow-xl rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image

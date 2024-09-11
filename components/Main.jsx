@@ -68,7 +68,7 @@ const Main = () => {
       <motion.div id="home" className="w-full h-screen text-center">
         <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
           <Particles className="absolute inset-0 -z-10 " />
-          <div>
+          <div className="mt-28">
             <motion.div {...headTextAnimation}>
               <p className="pt-6 md:pt-0 uppercase text-base md:text-xl tracking-widest text-[#fff]  font-fuzzy-bubbles">
                 SOFTWARE DEVELOPER

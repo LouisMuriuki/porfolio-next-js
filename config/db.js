@@ -94,16 +94,16 @@ export const workDetails = [
 
 export const projects = [
   {
-    name: "Mgeni Karibu Smart Visitor System",
+    name: "Cashlet",
     githubLink: "",
-    externalLink: "",
+    externalLink: "https://www.cashlet.co.ke/",
     description:
-      "A smart system to keep track and organize visitor, meetings for seemless experiences within corporate world",
-    technologies: ["Node Js", "React Native", "React", "heroku"],
+      "Cashlet is a Kenya-based personal finance mobile app that helps you put your finances in order by helping you to save and invest your money through a tech-driven solution",
+    technologies: ["React Native"],
     public: false,
+    appstorelink: "",
     playstorelink:
-      "https://play.google.com/store/apps/details?id=com.muriuki.mgenikaribu&hl=en&gl=US",
-    appstorelink: "https://apps.apple.com/ke/app/mgeni-karibu/id6447914133",
+      "https://play.google.com/store/search?q=cashlet+app&c=apps&hl=en_US",
   },
   {
     name: "Bizplus Pos",
@@ -118,6 +118,19 @@ export const projects = [
       "https://play.google.com/store/apps/details?id=com.muriuki.BarPointApp&hl=en&gl=US",
   },
   {
+    name: "Mgeni Karibu Smart Visitor System",
+    githubLink: "",
+    externalLink: "",
+    description:
+      "A smart system to keep track and organize visitor, meetings for seemless experiences within corporate world",
+    technologies: ["Node Js", "React Native", "React", "heroku"],
+    public: false,
+    playstorelink:
+      "https://play.google.com/store/apps/details?id=com.muriuki.mgenikaribu&hl=en&gl=US",
+    appstorelink: "https://apps.apple.com/ke/app/mgeni-karibu/id6447914133",
+  },
+
+  {
     name: "Quick Fast Invoices",
     githubLink: "https://github.com/LouisMuriuki/QuickFast",
     externalLink: "",
@@ -127,59 +140,60 @@ export const projects = [
     public: true,
     appstorelink: "",
     playstorelink: "",
-  },
-  {
-    name: "Gobble Food Delivery",
-    githubLink: "https://github.com/LouisMuriuki/Gobble",
-    externalLink: "",
-    description: "Food Delivery App, Glovo clone ",
-    technologies: ["React Native", "Sanity CMS"],
-    public: true,
-    appstorelink: "",
-    playstorelink: "",
-  },
-  {
-    name: "Ulimate Store Api",
-    githubLink: "https://github.com/LouisMuriuki/ultimate-store-api",
-    externalLink: "",
-    description: "A complete node API back-end for an E-commerce site to serve admin as well as client requests",
-    technologies: ["Node", "Express"],
-    public: true,
-    appstorelink: "",
-    playstorelink: "",
-  },
-  {
-    name: "AI Image Generator",
-    githubLink: "https://github.com/LouisMuriuki/shiny-garbanzo",
-    externalLink: "aimagen.vercel.app",
-    description: "An AI image generator powered by DALLE and OpenAI",
-    technologies: ["Node", "React"],
-    public: true,
-    appstorelink: "",
-    playstorelink: "",
-  },
-  {
-    name: "Coinisfy",
-    githubLink: "https://github.com/LouisMuriuki/crypto",
-    externalLink: "https://cryptomarket-orcin1.vercel.app/",
-    description: "A web-3 dashboard to keep track of various coins",
-    technologies: ["React"],
-    public: true,
-    appstorelink: "",
-    playstorelink: "",
-  },
-  {
-    name: "AIOS",
-    githubLink: "https://github.com/LouisMuriuki/AIOS",
-    externalLink:
-      "https://play.google.com/store/apps/details?id=com.muriuki.AIOS",
-    description:
-      "a react native app to scan, create and keep record of Qr and Barcodes",
-    technologies: ["React Native"],
-    public: true,
-    appstorelink: "",
-    playstorelink: "",
-  },
+  }
+  // {
+  //   name: "Gobble Food Delivery",
+  //   githubLink: "https://github.com/LouisMuriuki/Gobble",
+  //   externalLink: "",
+  //   description: "Food Delivery App, Glovo clone ",
+  //   technologies: ["React Native", "Sanity CMS"],
+  //   public: true,
+  //   appstorelink: "",
+  //   playstorelink: "",
+  // },
+  // {
+  //   name: "Ulimate Store Api",
+  //   githubLink: "https://github.com/LouisMuriuki/ultimate-store-api",
+  //   externalLink: "",
+  //   description:
+  //     "A complete node API back-end for an E-commerce site to serve admin as well as client requests",
+  //   technologies: ["Node", "Express"],
+  //   public: true,
+  //   appstorelink: "",
+  //   playstorelink: "",
+  // },
+  // {
+  //   name: "AI Image Generator",
+  //   githubLink: "https://github.com/LouisMuriuki/shiny-garbanzo",
+  //   externalLink: "aimagen.vercel.app",
+  //   description: "An AI image generator powered by DALLE and OpenAI",
+  //   technologies: ["Node", "React"],
+  //   public: true,
+  //   appstorelink: "",
+  //   playstorelink: "",
+  // },
+  // {
+  //   name: "Coinisfy",
+  //   githubLink: "https://github.com/LouisMuriuki/crypto",
+  //   externalLink: "https://cryptomarket-orcin1.vercel.app/",
+  //   description: "A web-3 dashboard to keep track of various coins",
+  //   technologies: ["React"],
+  //   public: true,
+  //   appstorelink: "",
+  //   playstorelink: "",
+  // },
+  // {
+  //   name: "AIOS",
+  //   githubLink: "https://github.com/LouisMuriuki/AIOS",
+  //   externalLink:
+  //     "https://play.google.com/store/apps/details?id=com.muriuki.AIOS",
+  //   description:
+  //     "a react native app to scan, create and keep record of Qr and Barcodes",
+  //   technologies: ["React Native"],
+  //   public: true,
+  //   appstorelink: "",
+  //   playstorelink: "",
+  // },
 ];
 
 

@@ -6,7 +6,6 @@ import animationData from "../public/assests/lottie/dev.json";
 import { isMobile } from "react-device-detect";
 import { HiDocumentDownload } from "react-icons/hi";
 const Work = () => {
-  
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [selectedId, setSelectedId] = useState(0);
@@ -167,7 +166,7 @@ const Work = () => {
             </div>
             <div className="flex items-center justify-center">
               <a href="/api/downloadcv" download={"Lui's CV.docx"}>
-                <button className="hover:scale-110 ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                <button className="hover:scale-105 hover:shadow-xl ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
                   <HiDocumentDownload
                     size={isClient && isMobile ? 14 : 18}
                     className="ml-2 mt-[2px]"
