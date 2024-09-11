@@ -1,10 +1,9 @@
 import Image from "next/image";
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import Typescript from "../public/assests/skills/typescript.png";
 import Antdesign from "../public/assests/skills/antdesign.png";
 import Storybook from "../public/assests/skills/storybook.png";
 import Tailwind from "../public/assests/skills/tailwind.png";
-import Javascript from "../public/assests/skills/javascript.png";
 import Reactjs from "../public/assests/skills/react.png";
 import Next from "../public/assests/skills/next.png";
 import Node from "../public/assests/skills/node.png";
@@ -12,7 +11,6 @@ import Mongo from "../public/assests/skills/mongo.png";
 import Firebase from "../public/assests/skills/firebase.png";
 import Github from "../public/assests/skills/github.png";
 import Rust from "../public/assests/skills/rust.png";
-import HideContext from "../context/HideContext";
 import { isMobile } from "react-device-detect";
 import { Particles } from "./Reusables/Particles";
 const Skill = () => {

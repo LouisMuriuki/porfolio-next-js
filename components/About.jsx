@@ -9,17 +9,7 @@ import { useRouter } from "next/router";
 const About = () => {
   const router = useRouter();
   const { hide, setHide } = useContext(HideContext);
-  useEffect(() => {
-    const image = document.getElementById("image");
-    const text = document.getElementById("text");
-    window.addEventListener("scroll", () => {
-      let offsetY = window.scrollY;
-    });
 
-    return () => {
-      window.removeEventListener("scroll", () => {});
-    };
-  }, []);
   const ref = useRef(null);
   const isInView = useInView(ref);
 

@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence} from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { workDetails } from "../config/db";
 import Lottie from "lottie-react";
@@ -7,7 +7,6 @@ import { isMobile } from "react-device-detect";
 import { HiDocumentDownload } from "react-icons/hi";
 const Work = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
   const [selectedId, setSelectedId] = useState(0);
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
