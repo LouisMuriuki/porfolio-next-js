@@ -10,7 +10,7 @@ export const workDetails = [
       "Set up and maintain CI/CD pipelines to automate the build, testing, and deployment of the app to their respective app stores.",
     ],
     location: "Hybrid - Nairobi",
-    title: "Software Engineer",
+    title: "Lead Mobile Developer",
     from: "June 2023 - present",
     id: 0,
     companyDetails: [

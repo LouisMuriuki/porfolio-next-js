@@ -77,7 +77,7 @@ const Contact = () => {
         <p className="text-xl tracking-widest uppercase text-[#fff]">Contact</p>
         <h2 className="py-4">Get in Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-teal-900 rounded-xl p-4 ">
+          <div className="col-span-3 lg:col-span-2 w-full bg-[#17153B] h-full shadow-md  rounded-xl p-4 ">
             <div className="lg:p-4 h-full">
               <div>
                 <Image
@@ -102,26 +102,21 @@ const Contact = () => {
                 <div className="mt-10 flex items-center justify-between">
                   <Link
                     href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/"
-                    target="_blank">
-
+                    target="_blank"
+                  >
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaLinkedinIn />
                     </div>
-
                   </Link>
                   <Link href="https://github.com/LouisMuriuki" target="_blank">
-
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaGithub />
                     </div>
-
                   </Link>
                   <Link href="mailto:luihugo247@gmail.com" target="_blank">
-
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <AiOutlineMail />
                     </div>
-
                   </Link>
                   <Link href="tel:+254759266327" legacyBehavior>
                     <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
@@ -133,7 +128,7 @@ const Contact = () => {
             </div>
           </div>
           {/* right */}
-          <div className="col-span-3 w-full h-auto shadow-md shadow-teal-900 rounded-xl lg:p-4">
+          <div className="col-span-3 w-full bg-[#17153B] h-auto shadow-md  rounded-xl lg:p-4">
             <div className="p-4"></div>
             <form>
               <div className="grid md:grid-cols-2 gap-4 w-full py-2">
@@ -142,7 +137,7 @@ const Contact = () => {
                     Name
                   </label>
                   <input
-                    className="border-2 outline-0 rounded-lg  text-slate-300 p-3 flex bg-[#242c3a] border-[#242c3a]"
+                    className="border-2 outline-0 rounded-lg  text-slate-600 p-3 flex bg-[#dfdddd] border-[#242c3a]"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -153,7 +148,7 @@ const Contact = () => {
                     Phone Number
                   </label>
                   <input
-                    className="border-2 outline-0 text-slate-300 rounded-lg p-3 flex bg-[#242c3a] border-[#242c3a]"
+                    className="border-2 outline-0 text-slate-600 rounded-lg p-3 flex bg-[#dfdddd] border-[#242c3a]"
                     type="text"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -165,7 +160,7 @@ const Contact = () => {
                   Email
                 </label>
                 <input
-                  className="border-2 outline-0 text-slate-300 rounded-lg p-3 flex bg-[#242c3a] border-[#242c3a]"
+                  className="border-2 outline-0 text-slate-600 rounded-lg p-3 flex bg-[#dfdddd] border-[#242c3a]"
                   type="email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
@@ -176,7 +171,7 @@ const Contact = () => {
                   Subject
                 </label>
                 <input
-                  className="border-2 outline-0 text-slate-300 rounded-lg p-3 flex bg-[#242c3a] border-[#242c3a]"
+                  className="border-2 outline-0 text-slate-600 rounded-lg p-3 flex bg-[#dfdddd] border-[#242c3a]"
                   type="type"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
@@ -187,7 +182,7 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
-                  className="border-2 text-slate-300 outline-0 rounded-lg p-3 bg-[#242c3a] border-[#242c3a]"
+                  className="border-2 text-slate-600 outline-0 rounded-lg p-3 bg-[#dfdddd] border-[#242c3a]"
                   rows="10"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
@@ -206,7 +201,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-center py-12">
           <Link href="/" legacyBehavior>
-            <div className="rounded-full shadow-md shadow-teal-900 p-4 cursor-pointer hover:scale-115 ease-in duration-400">
+            <div className="rounded-full bg-[#17153B] shadow-md shadow-teal-900 p-4 cursor-pointer hover:scale-115 ease-in duration-400">
               <HiOutlineChevronDoubleUp className="text-[#5651e5 ]" size={30} />
             </div>
           </Link>

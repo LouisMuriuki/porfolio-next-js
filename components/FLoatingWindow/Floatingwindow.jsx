@@ -205,7 +205,7 @@ export const Floatingwindow = () => {
                 <div className="w-full">
                   <div className="flex items-center gap-2 justify-between px-1">
                     <input
-                      className="flex relative rounded-lg py-2 px-1 mx-1 w-full text-sm font-fuzzy-bubbles outline-none text-slate-900"
+                      className="flex pl-2 pr-10 relative rounded-lg py-2 px-1 mx-1 w-full text-sm font-fuzzy-bubbles outline-none text-slate-900"
                       placeholder="Type your message..."
                       value={inputvalue}
                       onChange={(e) => setInputValue(e.target.value)}

@@ -71,7 +71,7 @@ const Main = () => {
           <div>
             <motion.div {...headTextAnimation}>
               <p className="pt-6 md:pt-0 uppercase text-base md:text-xl tracking-widest text-[#fff]  font-fuzzy-bubbles">
-                FULLSTACK DEVELOPER
+                SOFTWARE DEVELOPER
               </p>
               <h1 className="py-6 text-base md:text-3xl  text-[#fff]">
                 Hello, I'm{" "}
@@ -80,7 +80,7 @@ const Main = () => {
                 </span>
               </h1>
               <h1 className="py-6 text-xl md:text-3xl  text-[#fff]">
-                A Full Stack Web and Mobile Developer
+                TypeScript and Rust Developer
               </h1>
             </motion.div>
 
@@ -91,27 +91,22 @@ const Main = () => {
             >
               <Link
                 href="https://www.linkedin.com/in/louis-muriuki-3b13b51b1/"
-                target="_blank">
-
+                target="_blank"
+              >
                 <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <FaLinkedinIn />
                 </div>
-
               </Link>
               <Link href="https://github.com/LouisMuriuki" target="_blank">
-
                 <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <FaGithub />
                 </div>
-
               </Link>
-              
-              <Link href="mailto:luihugo247@gmail.com" target="_blank">
 
-                <div className="rounded-full shadow-md shadow-teal-500 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <Link href="mailto:luihugo247@gmail.com" target="_blank">
+                <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <AiOutlineMail />
                 </div>
-
               </Link>
 
               <a href="tel:+254759266327">
