@@ -6,6 +6,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 import Lui from "../public/Louis.png";
+import Lui_mobile from "../public/Louis_mobile.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { slideAnimation } from "../config/motion";
 
@@ -132,7 +133,7 @@ const Navbar = () => {
                     }}
                   >
                     <Image
-                      src={Lui}
+                      src={Lui_mobile}
                       alt="lui"
                       className="object-cover hover:cursor-pointer "
                       fill
