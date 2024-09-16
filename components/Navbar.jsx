@@ -9,13 +9,14 @@ import Lui from "../public/Louis.png";
 import Lui_mobile from "../public/Louis_mobile.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { slideAnimation } from "../config/motion";
+import Git from "../public/git-coloured.png";
 
 const NavLinks = ["home", "about", "skills", "projects"];
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [activenav, setActiveNav] = useState("");
-  const [linkColor, setLinkColor] = useState("#FFF");
+  const [linkColor] = useState("#FFF");
   const router = useRouter();
 
   // useEffect(() => {
@@ -74,6 +75,14 @@ const Navbar = () => {
           </motion.div>
           <motion.div {...slideAnimation("right")}>
             <ul style={{ color: `${linkColor}` }} className="hidden md:flex ">
+              <a
+                href="https://github.com/LouisMuriuki"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image src={Git} alt="Typescript" width={20} height={20} />
+              </a>
+
               {NavLinks.map((navs, i) => {
                 return (
                   <div key={i} className="group flex flex-col">
@@ -152,6 +161,15 @@ const Navbar = () => {
               </div>
               <div className="py-4 flex-col">
                 <ul className="uppercase font-kalam font-bold">
+                  <a
+                  className="gap-5"
+                    href="https://github.com/LouisMuriuki"
+                    target="_blank"
+                    rel="noreferrer"
+                    
+                  >
+                    <Image src={Git} alt="Typescript" width={20} height={20} />
+                  </a>
                   <Link href="/#about" scroll={false} legacyBehavior>
                     <li
                       onClick={() => {

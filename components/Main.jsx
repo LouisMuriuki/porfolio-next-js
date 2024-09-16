@@ -7,15 +7,11 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { headTextAnimation, slideAnimation } from "../config/motion";
 import { Particles } from "./Reusables/Particles";
-import { useRouter } from "next/router";
 import ChatContext from "../context/ChatContext";
 
 const Main = () => {
-  var sessionid =
-    typeof window !== "undefined" && sessionStorage.getItem("SessionID");
   const { setChatlog } = useContext(ChatContext);
   const session_ID = useId();
-  const router = useRouter();
   useEffect(() => {
     const home = document.getElementById("home");
     window.addEventListener("scroll", () => {
