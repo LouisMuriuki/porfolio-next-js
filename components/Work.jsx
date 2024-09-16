@@ -16,10 +16,12 @@ const Work = () => {
     const color = selectedId === id ? "text-white" : "text-slate-400";
     return color;
   };
-  const getTextBackgroundColor = (id) => {
-    const color = selectedId === id ? "bg-white" : "bg-slate-400";
-    return color;
-  };
+
+  // const getTextBackgroundColor = (id) => {
+  //   const color = selectedId === id ? "bg-white" : "bg-slate-400";
+  //   return color;
+  // };
+  
   const getIndicatorBackgroundColor = (id) => {
     const color = selectedId === id ? "bg-[#05a1a1]" : "bg-slate-400";
     return color;

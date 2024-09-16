@@ -3,7 +3,7 @@ import ProjectItem from "./ProjectItem";
 import { projects } from "../config/db";
 
 const Projects = () => {
-  const [days, setDays] = useState(365);
+  const [days] = useState(365);
   const list = [
     0, 1, 2, 3, 41, 42, 43, 44, 82, 83, 123, 124, 125, 126, 164, 165, 166, 167,
     205, 206, 246, 247, 287, 288, 5, 6, 46, 47, 87, 88, 128, 129, 169, 170, 210,
