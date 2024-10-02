@@ -16,7 +16,7 @@ export default function Home() {
       <HideProvider>
         <ModalProvider>
           <Head>
-            <title>Louis Muriuki MERN Full Stack Developer</title>
+            <title>Louis Muriuki Software Developer</title>
             <meta name="louis muriuki" content="louis muriuki's portfolio" />
             <link rel="icon" href="/Louis.png" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />

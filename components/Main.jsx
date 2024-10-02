@@ -16,7 +16,7 @@ const Main = () => {
     const home = document.getElementById("home");
     window.addEventListener("scroll", () => {
       let offsetY = window.scrollY;
-      home.style.transform = `translateY(${offsetY * 0.4}px)`;
+      home.style.transform = `translateY(${offsetY * 0.34}px)`;
     });
 
     return () => {
@@ -69,13 +69,13 @@ const Main = () => {
               <p className="pt-6 md:pt-0 uppercase text-base md:text-xl tracking-widest text-[#fff]  font-fuzzy-bubbles">
                 SOFTWARE DEVELOPER
               </p>
-              <h1 className="py-6 text-base md:text-3xl  text-[#fff]">
+              <h1 className="py-6 font-poppins text-base md:text-3xl  text-[#fff]">
                 Hello, I'm{" "}
-                <span className="text-[#08d1d1] font-fuzzy-bubbles">
+                <span className="text-[#08d1d1] font-poppins">
                   LOUIS MURIUKI
                 </span>
               </h1>
-              <h1 className="py-6 text-xl md:text-3xl  text-[#fff]">
+              <h1 className="py-6 text-xl md:text-2xl font-lato uppercase text-[#fff]">
                 TypeScript and Rust Developer
               </h1>
             </motion.div>
