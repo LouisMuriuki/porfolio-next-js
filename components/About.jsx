@@ -92,8 +92,8 @@ const About = () => {
                   </>
                 )}
                 <button
-                  onClick={() => router.push("mailto:luihugo247@gmail.com")}
-                  className="hover:scale-105 hover:shadow-xl ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100"
+                  onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=luihugo247@gmail.com', '_blank', 'noopener,noreferrer')}
+                  className="hover:scale-105 hover:shadow-xl ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center text-slate-100"
                 >
                   Ping me
                   <AiOutlineMail size={14} className="ml-2 mt-[2px]" />

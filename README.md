@@ -58,7 +58,8 @@ To build and push the portfolio as a Docker image to GitHub Container Registry (
 From your project root directory, build the Docker image:
 
 ```bash````
-docker build -t ghcr.io/louismuriuki/portfolio:latest . 2. Authenticate Docker with GHCR
+docker build -t ghcr.io/louismuriuki/portfolio:latest . 
+2. Authenticate Docker with GHCR
 If your GitHub token is not already valid for authentication, generate a new token:
 
 Go to your GitHub account Settings.

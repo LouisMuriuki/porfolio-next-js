@@ -58,7 +58,7 @@ const Projects = () => {
   return (
     <div className="w-full" id="projects">
       <div className="max-w-[1240px] mx-auto py-8 md:py-16">
-        <p className="py-1 text-xl md:text-2xl  uppercase tracking-widest font-lato text-[#fff]">
+        <p className="py-1 px-2 md:px-0 text-xl md:text-2xl  uppercase tracking-widest font-lato text-[#fff]">
           Projects
         </p>
         <h2 className="font-lato text-sm underline mb-3">What i've build</h2>
