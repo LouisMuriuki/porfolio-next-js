@@ -41,21 +41,24 @@ const About = () => {
             <p className="uppercase text-xl md:text-2xl font-lato tracking-widest text-[#fff]">
               About
             </p>
-            <h2 className="py-4 font-lato text-sm underline">Who i Am</h2>
+            <h2 className="py-1 font-lato text-sm underline">Who i Am</h2>
             <div className="flex flex-col md:flex-row gap-x-8 ">
               <div
                 id="text"
-                className="md:mt-36 pt-2 items-center justify-center col-span-1 flex flex-col z-10 rounded-xl h-max overflow-hidden shadow-teal-900"
+                className="md:mt-16 items-center justify-center flex flex-col md:max-w-[60%] rounded-xl h-max"
               >
-                <p className="py-2 z-10 text-xs md:text-sm lg:text-base font-poppins text-[#fff]">
+                <p className="py-2 z-10 text-xs md:text-base lg:text-base font-poppins text-[#fff]">
                   Hi there👋, I'm{" "}
-                  <span className="text-[#08d1d1] text-sm md:text-lg font-fuzzy-bubbles">
+                  <span className="text-[#08d1d1] text-xs md:text-base lg:text-base font-fuzzy-bubbles">
                     Louis Muriuki Hugo
                   </span>{" "}
                   a software developer based in Nairobi, Kenya, with 4 years of
                   experience shipping production-ready code. My expertise spans
-                  the TypeScript/JavaScript ecosystem, where I build mobile apps
-                  using React Native.
+                  the TypeScript /JavaScript ecosystem, where I build mobile
+                  apps using React-Native /Expo, web applications using React
+                  and NextJS, and spin up servers with NodeJS. I have been
+                  playing around with rust for sometime now and can build
+                  useful applications.
                   {isMobile && hide ? (
                     <span
                       onClick={hideRest}
@@ -72,9 +75,14 @@ const About = () => {
                 ) : (
                   <>
                     <p className=" py-2 z-10 text-xs md:text-base font-poppins  text-[#fff]">
-                      I’m also proficient in Rust, and my experience has shaped
-                      me into a dedicated professional, excelling both as an
-                      individual contributor and as a collaborative team player.
+                      I'm familiar with most ways to deploy applications,
+                      including setting up CI/CD pipelines, setting up bare
+                      servers with various tools like Nginx, running EC2
+                      instances, using docker etc. My experience has shaped me
+                      into a dedicated professional, excelling both as an
+                      individual contributor and as a collaborative team player. 
+                      Lets build the future
+                     
                       {isMobile && (
                         <span
                           onClick={hideRest}
@@ -87,10 +95,16 @@ const About = () => {
                   </>
                 )}
                 <button
-                  onClick={() => router.push("mailto:luihugo247@gmail.com")}
-                  className="hover:scale-105 hover:shadow-xl ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100"
+                  onClick={() =>
+                    window.open(
+                      "https://mail.google.com/mail/?view=cm&fs=1&to=luihugo247@gmail.com",
+                      "_blank",
+                      "noopener,noreferrer"
+                    )
+                  }
+                  className="hover:scale-105 hover:shadow-xl ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center text-slate-100"
                 >
-                  Ping me
+                  Hire me
                   <AiOutlineMail size={14} className="ml-2 mt-[2px]" />
                 </button>
                 <p className="py-2 text-xs md:text-base font-poppins text-[#fff] underline cursor-pointer"></p>

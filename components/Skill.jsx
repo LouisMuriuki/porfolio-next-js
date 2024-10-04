@@ -16,21 +16,21 @@ import { Particles } from "./Reusables/Particles";
 const Skill = () => {
   return (
     <div id="skills" className={`md:mt-20 w-full h-fit  p-2 `}>
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+      <div className="max-w-[1232px] mx-auto flex flex-col justify-center h-full">
         <Particles className="absolute inset-0 -z-10 " />
-        <p className="text-xl md:text-2xl  tracking-widest uppercase font-lato text-[#fff]">
+        <p className="py-1 text-xl md:text-2xl  tracking-widest uppercase font-lato text-[#fff]">
           Skills
         </p>
-        <h2 className="py-4 font-lato text-sm underline ">What is my stack</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+        <h2 className="font-lato text-sm underline mb-3">What is my stack</h2>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-5">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Reactjs}
                   alt="React Native"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -38,14 +38,14 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Typescript}
                   alt="Typescript"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -53,15 +53,15 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Rust}
                   alt="Rust"
                   className="rounded-xl"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -69,14 +69,14 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Reactjs}
                   alt="React JS"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -84,14 +84,14 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Node}
                   alt="Node JS"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -100,14 +100,14 @@ const Skill = () => {
             </div>
           </div>
 
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Next}
                   alt="Next JS"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -116,14 +116,14 @@ const Skill = () => {
             </div>
           </div>
 
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Mongo}
                   alt="MongoDB"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -131,14 +131,14 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Firebase}
                   alt="Firebase"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -146,14 +146,14 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Github}
                   alt="Github"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -161,14 +161,14 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Antdesign}
                   alt="AntDesign"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -176,14 +176,14 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Tailwind}
                   alt="Tailwind CSS"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">
@@ -191,15 +191,15 @@ const Skill = () => {
               </div>
             </div>
           </div>
-          <div className="p-1 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
+          <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
                   src={Storybook}
                   alt="Storybook"
                   className="rounded-xl"
-                  width={isMobile ? 40 : 64}
-                  height={isMobile ? 40 : 64}
+                  width={isMobile ? 32 : 54}
+                  height={isMobile ? 32 : 54}
                 />
               </div>
               <div className="flex text-xs md:text-base flex=col items-center justify-center">

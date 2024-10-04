@@ -38,7 +38,7 @@ const Work = () => {
               <p className="uppercase text-xl md:text-2xl font-lato tracking-widest text-[#fff]">
                 Work
               </p>
-              <h2 className="py-4 font-lato text-sm underline">
+              <h2 className="py-1font-lato text-sm underline">
                 Where I've worked
               </h2>
             </div>

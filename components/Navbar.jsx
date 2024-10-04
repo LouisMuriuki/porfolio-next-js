@@ -120,7 +120,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "md:hidden fixed left-0 top-0 w-full min-h-full md:h-0 bg-opacity-70 backdrop-filter backdrop-blur-lg"
+              ? "md:hidden fixed left-0 top-0 w-full min-h-full md:h-0 bg-opacity-70 bg-[#17153B]backdrop-filter backdrop-blur-lg"
               : ""
           }
         >
@@ -128,7 +128,7 @@ const Navbar = () => {
             className={
               nav
                 ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#17153B] p-10 ease-in duration-500"
-                : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+                : "fixed left-[-100%] top-0 p-10 ease-in duration-500 h-screen"
             }
           >
             <div>
@@ -161,15 +161,14 @@ const Navbar = () => {
               </div>
               <div className="py-4 flex-col">
                 <ul className="uppercase font-kalam font-bold">
-                  <a
-                  className="gap-5"
+                  {/* <a
+                    className="gap-5"
                     href="https://github.com/LouisMuriuki"
                     target="_blank"
                     rel="noreferrer"
-                    
                   >
                     <Image src={Git} alt="Typescript" width={20} height={20} />
-                  </a>
+                  </a> */}
                   <Link href="/#about" scroll={false} legacyBehavior>
                     <li
                       onClick={() => {

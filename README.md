@@ -1,7 +1,9 @@
 # Next.js Portfolio
+
 This is a Next.js portfolio project showcasing my work and skills. It is built using Next.js, a powerful and flexible React framework for building modern web applications.
 
 ## Table of Contents
+
 1. Features
 2. Technologies Used
 3. Getting Started
@@ -16,19 +18,21 @@ This is a Next.js portfolio project showcasing my work and skills. It is built u
 4. Easy customization and extension with Next.js's modular architecture.
 
 ## Technologies Used
+
 1. Next.js - A React framework for building server-rendered applications.
 2. React - A JavaScript library for building user interfaces.
-3. Tailwind CSS - Allows  CSS styling.
+3. Tailwind CSS - Allows CSS styling.
 4. Markdown - Lightweight markup language for formatting text.
 5. GitHub API - Retrieves project data from GitHub.
 6. Deploy to Vercel - Seamless deployment and hosting platform.
 
 ## Getting Started
+
 Follow the steps below to get the portfolio up and running on your local machine:
 
 1. Clone the repository:
 2. Navigate to the project directory:
-3. Install the dependecies  `npm i`
+3. Install the dependecies `npm i`
 4. Open the config.js file and modify the configuration options according to your preferences. Update the githubUsername with your GitHub username to fetch your project data.
 
 ## Start the development server:
@@ -36,14 +40,38 @@ Follow the steps below to get the portfolio up and running on your local machine
 `npm run dev`
 The portfolio will be available at http://localhost:3000.
 
-
 ## Deployment
+
 To deploy the portfolio to Vercel, follow these steps:
 
 1. Create a Vercel account at https://vercel.com/signup if you don't already have one.
 2. upload the project to github
 3. Connect your github to the vercel platform.
 4. Make a change and push new code to github, project will be automatically deployed
+
+## Building and Pushing Docker Image to GHCR
+
+To build and push the portfolio as a Docker image to GitHub Container Registry (GHCR) under `ghcr.io/louismuriuki/portfolio:latest`, follow these steps:
+
+### 1. Build Docker Image
+
+From your project root directory, build the Docker image:
+
+```bash````
+docker build -t ghcr.io/louismuriuki/portfolio:latest . 
+2. Authenticate Docker with GHCR
+If your GitHub token is not already valid for authentication, generate a new token:
+
+Go to your GitHub account Settings.
+Generate a new token with the following permissions:
+write:packages
+read:packages
+delete:packages
+Use the token to log in to GHCR:
+
+echo YOUR_GITHUB_TOKEN | docker login ghcr.io -u YOUR_GITHUB_USERNAME --password-stdin
+
+docker push ghcr.io/louismuriuki/portfolio:latest
 
 Feel free to modify and customize it to suit your needs.
 
