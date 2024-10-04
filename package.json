@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker-build": "docker buildx build -t ghcr.io/louismuriuki/portfolio:latest .",
+    "docker-push": "docker push ghcr.io/louismuriuki/portfolio:latest"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
@@ -22,6 +24,7 @@
     "react-draggable": "^4.4.6",
     "react-icons": "^5.0.1",
     "react-toastify": "^10.0.5",
+    "sharp": "^0.33.5",
     "sparkpost": "^2.1.4"
   },
   "devDependencies": {
