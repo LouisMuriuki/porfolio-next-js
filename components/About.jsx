@@ -54,9 +54,11 @@ const About = () => {
                   </span>{" "}
                   a software developer based in Nairobi, Kenya, with 4 years of
                   experience shipping production-ready code. My expertise spans
-                  the TypeScript /JavaScript ecosystem, where I build mobile apps
-                  using React-Native /Expo, web applications using React and
-                  NextJS, and spin up servers with NodeJS.
+                  the TypeScript /JavaScript ecosystem, where I build mobile
+                  apps using React-Native /Expo, web applications using React
+                  and NextJS, and spin up servers with NodeJS. I have been
+                  playing around with rust for sometime now and can build
+                  useful applications.
                   {isMobile && hide ? (
                     <span
                       onClick={hideRest}
@@ -75,11 +77,12 @@ const About = () => {
                     <p className=" py-2 z-10 text-xs md:text-base font-poppins  text-[#fff]">
                       I'm familiar with most ways to deploy applications,
                       including setting up CI/CD pipelines, setting up bare
-                      servers and using docker. I have been playing around with
-                      rust and can build something useful. My experience has
-                      shaped me into a dedicated professional, excelling both as
-                      an individual contributor and as a collaborative team
-                      player.
+                      servers with various tools like Nginx, running EC2
+                      instances, using docker etc. My experience has shaped me
+                      into a dedicated professional, excelling both as an
+                      individual contributor and as a collaborative team player. 
+                      Lets build the future
+                     
                       {isMobile && (
                         <span
                           onClick={hideRest}
@@ -92,10 +95,16 @@ const About = () => {
                   </>
                 )}
                 <button
-                  onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=luihugo247@gmail.com', '_blank', 'noopener,noreferrer')}
+                  onClick={() =>
+                    window.open(
+                      "https://mail.google.com/mail/?view=cm&fs=1&to=luihugo247@gmail.com",
+                      "_blank",
+                      "noopener,noreferrer"
+                    )
+                  }
                   className="hover:scale-105 hover:shadow-xl ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center text-slate-100"
                 >
-                  Ping me
+                  Hire me
                   <AiOutlineMail size={14} className="ml-2 mt-[2px]" />
                 </button>
                 <p className="py-2 text-xs md:text-base font-poppins text-[#fff] underline cursor-pointer"></p>

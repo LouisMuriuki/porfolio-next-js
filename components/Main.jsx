@@ -99,7 +99,7 @@ const Main = () => {
                 </div>
               </Link>
 
-              <Link href="mailto:luihugo247@gmail.com" target="_blank">
+              <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=luihugo247@gmail.com" target="_blank" rel="noopener noreferrer">
                 <div className="rounded-full shadow-md shadow-teal-500 p-5   md:p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <AiOutlineMail />
                 </div>

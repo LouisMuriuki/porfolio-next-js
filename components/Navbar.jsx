@@ -161,14 +161,14 @@ const Navbar = () => {
               </div>
               <div className="py-4 flex-col">
                 <ul className="uppercase font-kalam font-bold">
-                  <a
+                  {/* <a
                     className="gap-5"
                     href="https://github.com/LouisMuriuki"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <Image src={Git} alt="Typescript" width={20} height={20} />
-                  </a>
+                  </a> */}
                   <Link href="/#about" scroll={false} legacyBehavior>
                     <li
                       onClick={() => {
