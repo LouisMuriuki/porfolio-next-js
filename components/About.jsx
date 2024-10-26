@@ -54,8 +54,8 @@ const About = () => {
                   </span>{" "}
                   a software developer based in Nairobi, Kenya, with 4 years of
                   experience shipping production-ready code. My expertise spans
-                  the TypeScript /JavaScript ecosystem, where I build mobile
-                  apps using React-Native /Expo, web applications using React
+                  the TypeScript/JavaScript ecosystem, where I build mobile
+                  apps using React-Native/Expo, web applications using React
                   and NextJS, and spin up servers with NodeJS. I have been
                   playing around with rust for sometime now and can build
                   useful applications.

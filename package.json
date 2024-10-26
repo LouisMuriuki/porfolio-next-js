@@ -24,7 +24,6 @@
     "react-draggable": "^4.4.6",
     "react-icons": "^5.0.1",
     "react-toastify": "^10.0.5",
-    "sharp": "^0.33.5",
     "sparkpost": "^2.1.4"
   },
   "devDependencies": {
