@@ -37,7 +37,7 @@ const Main = () => {
       body: JSON.stringify("A new visitor is here, welcome them"),
     })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (res.status === 200) {
           return res.json();
         } else {
@@ -45,7 +45,7 @@ const Main = () => {
         }
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setChatlog((chatlog) => [
           ...chatlog,
           { role: data.role, message: data?.message },
@@ -76,7 +76,7 @@ const Main = () => {
                 </span>
               </h1>
               <h1 className="py-6 text-xl md:text-2xl font-lato uppercase text-[#fff]">
-                TypeScript and Rust Developer
+                Android, TypeScript and Rust Developer
               </h1>
             </motion.div>
 

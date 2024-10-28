@@ -132,7 +132,7 @@ export const Floatingwindow = () => {
       refElement.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [inputvalue, chatlog]);
-  console.log(chatlog);
+  // console.log(chatlog);
   return (
     <>
       {modalOpen ? (
@@ -169,7 +169,7 @@ export const Floatingwindow = () => {
             <div className="flex flex-col w-full">
               <div className="flex mt-2 h-[295px] md:h-[400px] w-full mb-0 no-scrollbar overflow-y-scroll flex-col">
                 {chatlog.map((chat, i) => {
-                  console.log(chatlog.length, i);
+                  // console.log(chatlog.length, i);
                   return (
                     <div
                       key={i}
