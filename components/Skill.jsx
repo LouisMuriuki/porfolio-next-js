@@ -15,14 +15,14 @@ import { isMobile } from "react-device-detect";
 import { Particles } from "./Reusables/Particles";
 const Skill = () => {
   return (
-    <div id="skills" className={`md:mt-20 w-full h-fit  p-2 `}>
-      <div className="max-w-[1232px] mx-auto flex flex-col justify-center h-full">
+    <div id="skills" className="flex p-2 py-10 md:py-20">
+      <div className="max-w-[1232px] mx-auto flex flex-col justify-center">
         <Particles className="absolute inset-0 -z-10 " />
         <p className="py-1 text-xl md:text-2xl  tracking-widest uppercase font-lato text-[#fff]">
           Skills
         </p>
         <h2 className="font-lato text-sm underline mb-3">What is my stack</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-10 md:mt-10">
           <div className="p-3 bg-[#17153B] md:p-6 hover:shadow-2xl shadow-sm rounded-xl hover:scale-105 cursor-pointer ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">

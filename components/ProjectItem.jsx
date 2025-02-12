@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaFolder } from "react-icons/fa6";
 import { FaFolderOpen } from "react-icons/fa6";
 import { VscGithubInverted } from "react-icons/vsc";
-import { FaExternalLinkSquareAlt } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { IoLogoAppleAppstore } from "react-icons/io5";
 const ProjectItem = ({
@@ -13,12 +13,13 @@ const ProjectItem = ({
   projectUrl,
   githublink,
   publicrepo,
+  role,
   playstorelink,
   appstorelink,
 }) => {
-  const processedTechonoligies = technologies.join();
+  const processedTechonoligies = technologies.join(" • ");
   return (
-    <div className="relative  bg-[#17153B] px-6 py-6 h-64 md:h-80 mx-6 my-2 md:mx-1 rounded-xl cursor-pointer hover:scale-105 hover:shadow-2xl shadow-sm ease-in duration-300">
+    <div className="relative  bg-[#17153B] px-6 py-6 h-80 md:h-[370px] mx-6 my-2 md:mx-1 rounded-xl cursor-pointer hover:scale-105 hover:shadow-2xl shadow-sm ease-in duration-300">
       <div className="flex items-center justify-between">
         <div className="cursor-default">
           {publicrepo ? <FaFolderOpen /> : <FaFolder />}
@@ -41,12 +42,12 @@ const ProjectItem = ({
           ) : null}
           {projectUrl ? (
             <Link href={projectUrl} target="_blank">
-              <FaExternalLinkSquareAlt className="hover:scale-125 ease-in duration-300" />
+              <FaGlobe className="hover:scale-125 ease-in duration-300" />
             </Link>
           ) : null}
         </div>
       </div>
-      <div className="mx-1 flex flex-col">
+      <div className="flex flex-col">
         <h2 className="mt-6 md:mt-8 text-center text-base md:text-lg text-white ">
           {title}
         </h2>
@@ -54,7 +55,11 @@ const ProjectItem = ({
           {description}
         </p>
       </div>
-      <div className="flex mb-6 items-center justify-center absolute bottom-2">
+
+      <div className="flex mb-2 flex-col justify-center absolute bottom-2">
+        <div className="mb-4 text-slate-300 text-center font-lato text-sm font">
+          Role: {role}
+        </div>
         <p className="ml-1 flex  w-full flex-row text-center font-mono text-sm">
           {processedTechonoligies}
         </p>

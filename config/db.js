@@ -26,10 +26,10 @@ export const workDetails = [
   {
     company: "Monadd",
     responsibility: [
-      "Modelled and simulated code development to aid in testing and validation procedures.",
-      "Analysed requirements allocated to computer software configuration items to better understand requirements and goals.",
-      "Tested for user interface and user experience inconsistency in multiple browsers, operating systems, and breakpoints.",
       "Designed, developed, maintained and executed automated software tests to qualify embedded software products.",
+      "Developed and executed comprehensive test plans and test cases for web and mobile applications.",
+      "Analysed requirements allocated to computer software configuration items to better understand requirements and goals.",
+      "Collaborated with development teams to identify and resolve software defects through systematic testing and debugging.",
     ],
     location: "Remote - UK",
     title: "Software Test Engineer",
@@ -100,48 +100,53 @@ export const projects = [
     externalLink: "https://www.cashlet.co.ke/",
     description:
       "Cashlet is a Kenya-based personal finance mobile app that helps you put your finances in order by helping you to save and invest your money through a tech-driven solution",
-    technologies: ["React Native"],
+
     public: false,
     appstorelink:
       "https://apps.apple.com/ke/app/cashlet-savings-investments/id6463010865",
     playstorelink:
       "https://play.google.com/store/search?q=cashlet+app&c=apps&hl=en_US",
+    role: "Lead Mobile Developer",
+    technologies: ["React Native", "Kotlin", "Swift", "React"],
   },
   {
     name: "Bizplus Pos",
     githubLink: "",
-    externalLink: "",
+    externalLink: "http://bizpluspos.co.ke/",
     description:
-      "An all round point of sale system packed with reports, inventory with a back-office and cashier's app for sales",
-    technologies: ["Node Js", "React Native", "React", "Digital Ocean"],
+      "BizPlus POS is your all-in-one platform for modern day business operations, combining essential tools for sales management, payment transactions, inventory control, and employee management in one intuitive interface.",
+    technologies: ["Node", "React Native", "React"],
     public: false,
     appstorelink: "",
     playstorelink:
-      "https://play.google.com/store/apps/details?id=com.muriuki.BarPointApp&hl=en&gl=US",
+      "https://play.google.com/store/apps/details?id=com.muriuki.bizpluspos",
+    role: "Lead Developer",
   },
   {
-    name: "Mgeni Karibu Smart Visitor System",
+    name: "Smart Visitor System",
     githubLink: "",
     externalLink: "",
     description:
-      "A smart system to keep track and organize visitor, meetings for seemless experiences within corporate world",
-    technologies: ["Node Js", "React Native", "React", "heroku"],
+      "Mgeni Karibu is a smart system I was contracted to build to track and organize hosts, visitors and their respective meetings for seemless experiences within corporate world",
+    technologies: ["Node", "React Native", "React", "heroku"],
     public: false,
     playstorelink:
       "https://play.google.com/store/apps/details?id=com.muriuki.mgenikaribu&hl=en&gl=US",
     appstorelink: "https://apps.apple.com/ke/app/mgeni-karibu/id6447914133",
+    role: "Lead Developer",
   },
 
   {
     name: "Quick Fast Invoices",
     githubLink: "https://github.com/LouisMuriuki/QuickFast",
-    externalLink: "",
+    externalLink: "https://invoice-generator-olive.vercel.app",
     description:
       "An Invoice and Estimate generator to create professional invoices, accurate estimates, and effortlessly manage records for a streamlined financial experience",
-    technologies: ["Node Js", "React", "Render"],
+    technologies: ["Node", "React", "Render"],
     public: true,
     appstorelink: "",
     playstorelink: "",
+    role: "Lead Developer",
   },
   // {
   //   name: "Gobble Food Delivery",

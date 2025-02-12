@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ProjectItem from "./ProjectItem";
 import { projects } from "../config/db";
+import useScreenSize from "../hooks/useScreenSize";
 
 const Projects = () => {
   const [days] = useState(365);
@@ -43,25 +44,14 @@ const Projects = () => {
     "Nov",
     "Dec",
   ];
-  const [width, setWidth] = useState();
-  const handleWidth = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    handleWidth();
-    window.addEventListener("resize", handleWidth);
-    return () => {
-      window.removeEventListener("resize", handleWidth);
-    };
-  }, [width, setWidth]);
+  const { mobile } = useScreenSize();
   return (
     <div className="w-full" id="projects">
-      <div className="max-w-[1240px] mx-auto py-8 md:py-16">
-        <p className="py-1 px-2 md:px-0 text-xl md:text-2xl  uppercase tracking-widest font-lato text-[#fff]">
+      <div className="max-w-[1240px] p-2 mx-auto py-10 md:py-20">
+        <p className="py-1 md:px-0 text-xl md:text-2xl  uppercase tracking-widest font-lato text-[#fff]">
           Projects
         </p>
-        <h2 className="font-lato text-sm underline mb-3">What i've build</h2>
+        <h2 className="font-lato text-sm underline mb-10">What i've build</h2>
         <div className="grid md:grid-cols-4 gap-8 mb-5 ">
           {projects.map((project, i) => {
             return (
@@ -70,6 +60,7 @@ const Projects = () => {
                 title={project.name}
                 description={project.description}
                 technologies={project.technologies}
+                role={project.role}
                 projectUrl={project.externalLink}
                 githublink={project.githubLink}
                 publicrepo={project.public}
@@ -80,7 +71,7 @@ const Projects = () => {
           })}
         </div>
         <div className="githubContainer mt-10 md:mt-20">
-          {width > 728 ? (
+          {mobile ? null : (
             <div className="githubChart">
               <div className="dates">
                 {dates.map((date, i) => {
@@ -91,7 +82,7 @@ const Projects = () => {
                 <Githuboxes />
               </div>
             </div>
-          ) : null}
+          )}
           <a
             href="https://github.com/LouisMuriuki"
             target="_blank"
@@ -99,7 +90,7 @@ const Projects = () => {
           >
             <h2
               className={
-                width < 728
+                mobile
                   ? "githubTitlesmall text-xl font-fuzzy-bubbles mt-5 md:mt-8"
                   : "githubTitle text-x font-fuzzy-bubbles  mt-5 md:mt-8"
               }

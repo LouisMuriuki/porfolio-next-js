@@ -29,10 +29,7 @@ const Work = () => {
   return (
     <AnimatePresence>
       <div ref={ref}>
-        <div
-          id="work"
-          className="w-full mx-auto h-screen p-2 flex pb-8 md:pb-16 "
-        >
+        <div id="work" className="w-full mx-auto px-2 flex py-10 md:py-20">
           <div className="max-w-[1240px] mx-auto flex flex-col">
             <div className="flex flex-col items-start justify-start">
               <p className="uppercase text-xl md:text-2xl font-lato tracking-widest text-[#fff]">
@@ -167,7 +164,7 @@ const Work = () => {
             </div>
             <div className="flex items-center justify-center">
               <a href="/api/downloadcv" download={"Lui's CV.docx"}>
-                <button className="hover:scale-105 hover:shadow-xl ease-in duration-300 flex mt-8 rounded-full py-3 px-8 items-center  text-slate-100">
+                <button className="hover:scale-105 hover:shadow-xl ease-in duration-300 flex mt-12 rounded-full py-2 md:py-3 px-12 items-center  text-slate-100">
                   <HiDocumentDownload
                     size={isClient && isMobile ? 14 : 18}
                     className="ml-2 mt-[2px]"
