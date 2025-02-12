@@ -137,15 +137,14 @@ const Navbar = () => {
                   <div
                     style={{
                       position: "relative",
-                      width: "117px",
-                      height: "97px",
+                      width: "170px",
+                      height: "100px",
                     }}
                   >
                     <Image
                       src={Lui_mobile}
                       alt="lui"
-                      className="object-cover hover:cursor-pointer "
-                      fill
+                      className="hover:cursor-pointer w"
                     />
                   </div>
                 </Link>
