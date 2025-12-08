@@ -95,6 +95,18 @@ export const workDetails = [
 
 export const projects = [
   {
+    name: "PixelCAD AI",
+    githubLink: "",
+    externalLink: "https://www.pixelcad3d.ai/",
+    description:
+      "Revolutionary AI-powered 3D model generator that transforms text descriptions and images into production-ready 3D models in under 60 seconds.",
+    technologies: ["AI/ML", "3D Modeling", "Web Application"],
+    public: true,
+    playstorelink: "",
+    role: "Lead Developer",
+    appstorelink: "",
+  },
+  {
     name: "Cashlet",
     githubLink: "",
     externalLink: "https://www.cashlet.co.ke/",
@@ -110,7 +122,7 @@ export const projects = [
     technologies: ["React Native", "Kotlin", "Swift", "React"],
   },
   {
-    name: "Bizplus Pos",
+    name: "BizPlus POS",
     githubLink: "",
     externalLink: "http://bizpluspos.co.ke/",
     description:
@@ -120,19 +132,6 @@ export const projects = [
     appstorelink: "",
     playstorelink:
       "https://play.google.com/store/apps/details?id=com.muriuki.bizpluspos",
-    role: "Lead Developer",
-  },
-  {
-    name: "Smart Visitor System",
-    githubLink: "",
-    externalLink: "",
-    description:
-      "Mgeni Karibu is a smart system I was contracted to build to track and organize hosts, visitors and their respective meetings for seemless experiences within corporate world",
-    technologies: ["Node", "React Native", "React", "heroku"],
-    public: false,
-    playstorelink:
-      "https://play.google.com/store/apps/details?id=com.muriuki.mgenikaribu&hl=en&gl=US",
-    appstorelink: "https://apps.apple.com/ke/app/mgeni-karibu/id6447914133",
     role: "Lead Developer",
   },
 

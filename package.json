@@ -14,7 +14,8 @@
     "babel-runtime": "^6.26.0",
     "dotenv": "^16.4.5",
     "framer-motion": "^11.0.25",
-    "lottie-react": "^2.4.0",
+    "lottie-react": "^2.4.1",
+    "lottie-web": "^5.13.0",
     "next": "14.1.4",
     "nodemailer": "^6.9.13",
     "openai": "^4.33.0",
@@ -35,6 +36,6 @@
     "tailwindcss": "^3.4.3"
   },
   "engines": {
-    "node": "20.x"
+    "node": ">=24.x"
   }
 }
